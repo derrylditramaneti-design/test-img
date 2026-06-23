@@ -41,12 +41,15 @@ Each article is now its **own microsite on the Global site**, served at `https:/
 | `what-agency-should-deliver` | https://global.pages.yobolabs.ai/what-agency-should-deliver | What a Good Email Marketing Agency Should Actually Deliver |
 | `win-back-campaign-shopify` | https://global.pages.yobolabs.ai/win-back-campaign-shopify | How to Set Up a Win-Back Email Campaign for Shopify Without an Agency |
 
-## Category pages — PLANNED (not built)
-Currently every category link (breadcrumbs, "View all →") points to the blog index as a no-404 stopgap. Real pages pending design (separate microsites, Option A):
-- `/blog/revenue` — Revenue & Retention
-- `/blog/agency` — Agencies & Hiring
-- `/blog/klaviyo` — Klaviyo
-- `/blog/verticals` — Verticals
+## Category pages (LIVE)
+4 category microsites on the Global site. The blog index "View all →" links and each article's breadcrumb category link point here. Own SEO + OG image each.
+
+| Category | URL | Articles |
+|---|---|---|
+| Revenue & Retention | https://global.pages.yobolabs.ai/category-revenue | shopify-plateau, recover-lapsed-customers, ai-flows-vs-manual-campaigns |
+| Agencies & Hiring | https://global.pages.yobolabs.ai/category-agency | agency-vs-hire-vs-ai-growth-marketer, email-marketing-cost-shopify, what-agency-should-deliver |
+| Email & Klaviyo Fundamentals | https://global.pages.yobolabs.ai/category-klaviyo | how-ai-email-marketing-works, klaviyo-contacts-not-converting, managed-email-marketing-shopify |
+| Vertical Playbooks | https://global.pages.yobolabs.ai/category-verticals | beauty-brands-email, shopify-email-deliverability, win-back-campaign-shopify |
 
 ## Cross-link graph (article → articles it links to)
 - **agency-vs-hire-vs-ai-growth-marketer** → email-marketing-cost-shopify, what-agency-should-deliver, shopify-plateau
