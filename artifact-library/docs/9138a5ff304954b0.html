@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="Sample daily brief for bb.q Chicken California from public data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23D2202F'/%3E%3Cpath d='M9 21l5-10 4 6 5-8' stroke='%23FFFFFF' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<title>bb.q Daily Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1A1512; --ink-2:#4F4642; --ink-3:#7F7571;
+    --ground:#FAF8F5; --surface:#FFFFFF; --surface-2:#F3EFEB;
+    --line:#E5DFDA; --line-soft:#EEE9E4;
+    --red:#D2202F; --red-ink:#FFFFFF;
+    --dark:#0B0908;
+    --tint:#FBE1E3; --tint-ink:#8A1520;
+    --yellow:#FFD84D;
+    --sans:'Satoshi','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    --fs-display:32px; --fs-metric:28px; --fs-title:18px; --fs-body:15px; --fs-caption:12px;
+    --r:6px;
+    color-scheme:light;
+  }
+
+  *{box-sizing:border-box; min-width:0}
+  html,body{overflow-x:hidden; max-width:100%}
+  body{ margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased; font-size:var(--fs-body); line-height:1.5}
+  h1,h2,h3,h4{font-family:var(--sans); margin:0; text-wrap:balance; letter-spacing:-.02em}
+  p{margin:0}
+  a{color:inherit}
+  img{max-width:100%}
+  h1,h2,h3,h4,p,dd,dt,li,span,b{overflow-wrap:anywhere}
+
+  .wrap{width:100%; max-width:960px; margin-inline:auto; padding-inline:20px}
+  @media (min-width:768px){ .wrap{padding-inline:32px} }
+
+  /* masthead */
+  .top{background:var(--red); color:var(--red-ink)}
+  .top-in{display:flex; align-items:center; justify-content:flex-start; gap:12px; height:52px}
+  .logo{display:block; height:24px; width:24px; border-radius:5px; flex:none}
+  .for{color:rgba(255,255,255,.9); font-size:var(--fs-caption); line-height:1; font-weight:400; white-space:nowrap; padding-left:12px; border-left:1px solid rgba(255,255,255,.35)}
+
+  /* hero */
+  .hero{background:var(--dark); color:#fff}
+  .hero-in{padding-block:36px 36px}
+  @media (min-width:768px){ .hero-in{padding-block:56px 56px} }
+  .brand{display:block; height:36px; width:auto; margin-bottom:26px}
+  .kicker{ color:var(--eyebrow); font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+  .hero h1{ margin-top:14px; max-width:15ch; font-size:var(--fs-display); line-height:1.08; font-weight:700; letter-spacing:-0.02em}
+  .hero p{ margin-top:16px; color:rgba(255,255,255,.86); max-width:42ch; font-size:var(--fs-body); line-height:1.5}
+
+  /* sections */
+  section + section{border-top:1px solid var(--line)}
+  section{padding-block:34px 40px}
+  @media (min-width:768px){ section{padding-block:50px 58px} }
+  h2{font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .sub{ margin-top:8px; color:var(--ink-2); max-width:58ch; font-size:var(--fs-body); line-height:1.5}
+
+  /* outcome tiles */
+  .tiles{margin-top:18px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px}
+  .tile{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:14px 12px}
+  .tile b{ display:block; letter-spacing:-.025em; font-size:var(--fs-metric); line-height:1; font-weight:700; font-variant-numeric:tabular-nums}
+  .tile span{ display:block; margin-top:6px; color:var(--ink-3); font-size:var(--fs-body); line-height:1.5}
+
+  /* watch-style rows */
+  .watch{margin-top:18px; display:grid; gap:0}
+  .w{display:grid; gap:5px; padding-block:14px; border-bottom:1px solid var(--line-soft)}
+  .w:last-child{border-bottom:none}
+  @media (min-width:700px){ .w{grid-template-columns:190px minmax(0,1fr); gap:24px; align-items:start} }
+  .w h3{font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .w p{ color:var(--ink-2); max-width:64ch; font-size:var(--fs-body); line-height:1.5}
+  .w .sig{ display:block; margin-top:6px; color:var(--red); font-size:var(--fs-body); line-height:1.5}
+
+  /* card with plays */
+  .stages{margin-top:20px; display:grid; gap:10px}
+  .stage{background:var(--surface); border:1px solid var(--red); border-radius:var(--r); overflow:hidden}
+  .s-body{padding:2px 16px 18px}
+  @media (min-width:760px){ .s-body{padding:2px 20px 20px} }
+  .play{padding-top:16px}
+  .play + .play{border-top:1px solid var(--line-soft); margin-top:14px}
+  .play h4{font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .pmeta{ display:flex; flex-wrap:wrap; align-items:center; gap:6px 12px; margin-top:8px; color:var(--ink-3); font-variant-numeric:tabular-nums; font-size:var(--fs-body); line-height:1.5}
+  .to{background:var(--tint); color:var(--tint-ink); font-weight:600; padding:3px 8px; border-radius:4px}
+
+  /* decision */
+  .decide{background:var(--red); color:var(--red-ink); border-radius:var(--r); padding:26px 20px;
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px}
+  @media (min-width:768px){ .decide{padding:32px} }
+  .decide h2{font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .btn{ appearance:none; border:0; cursor:pointer; background:var(--dark); color:#fff; font:inherit;
+    padding:12px 20px; border-radius:var(--r); min-height:44px; text-decoration:none; transition:transform .1s ease; font-size:var(--fs-body); line-height:1.5; font-weight:600}
+  .btn:active{transform:translateY(1px)}
+  .btn:focus-visible{outline:2px solid #fff; outline-offset:2px}
+
+  ::selection{background:var(--tint); color:var(--tint-ink)}
+  p, dd, li{text-wrap:pretty}
+
+  footer{ border-top:1px solid var(--line); padding-block:20px 30px; color:var(--ink-3); font-size:var(--fs-caption); line-height:1.3; font-weight:600;}
+
+  @media (max-width:420px){ .tiles{grid-template-columns:1fr} }
+  @media print{
+    .hero{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .top{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    .w, .play{break-inside:avoid}
+  }
+  @media (prefers-reduced-motion:reduce){ *{transition:none !important; animation:none !important} }
+
+  /* brief lists */
+  .items{margin-top:14px; display:grid; gap:0}
+  .it{padding-block:12px; border-bottom:1px solid var(--line-soft)}
+  .it:last-child{border-bottom:none}
+  .it p{color:var(--ink); font-size:var(--fs-body); line-height:1.5; font-variant-numeric:tabular-nums}
+  .it a{display:block; margin-top:2px; color:var(--red); font-size:var(--fs-body); line-height:1.5; word-break:break-all; overflow-wrap:anywhere; text-decoration:underline; text-underline-offset:2px}
+  .it .note{margin-top:6px; color:var(--ink-2)}
+  section.brief{padding-block:26px 28px}
+
+  /* shared block: hero metric card, tag, eyebrow (identical on all bb.q pages) */
+  :root{--eyebrow:#FF6B76}
+  .tag{display:inline-block; font-size:var(--fs-caption); font-weight:600; line-height:1.3; text-transform:uppercase; letter-spacing:.08em; border:1px solid currentColor; border-radius:6px; padding:3px 8px; white-space:nowrap; background:transparent; color:var(--ink-2); vertical-align:middle}
+  .stat .tag, .tile .tag{justify-self:start}
+  .metric{margin-top:26px; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:center; gap:8px 16px; width:100%; max-width:360px; background:#D2202F; color:#FFFFFF; border-radius:6px; padding:16px 20px}
+  .metric-num{font-size:var(--fs-metric); font-weight:700; line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums; white-space:nowrap}
+  .metric .tag{justify-self:end; color:#FFFFFF; border-color:rgba(255,255,255,.7)}
+  .metric-label{grid-column:1 / -1; font-size:var(--fs-body); font-weight:400; line-height:1.5}
+  .decide .acts{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+  .decide .acts .btn{margin-top:0}
+  .decide .btn.ghost{background:transparent; color:#FFFFFF; box-shadow:inset 0 0 0 1px #FFFFFF}
+  @media print{ .metric{background:#FFFFFF !important; color:var(--ink) !important; border:1.5px solid #D2202F} .metric .tag{color:var(--ink); border-color:var(--ink)} }
+
+@media (max-width:520px){/*stack-grids*/.tiles{grid-template-columns:1fr !important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <img class="logo" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/logos/yobolabs-brand-2026-07/dark/app-icon-dark-256x256.png" alt="YoboLabs">
+    <span class="for">Prepared for bb.q Chicken</span>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap hero-in">
+    <img class="brand" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/logos/bbq-chicken-logo-dark.png" alt="bb.q Chicken">
+    <div class="kicker">DAILY BRIEF &middot; SAMPLE</div>
+    <h1>Your morning read, bb.q.</h1>
+    <p>Bonchon has run the same ad for 120 days. Kyochon pulled 84k video views vs your 12k.</p>
+    <div class="metric"><b class="metric-num">12k</b><span class="tag">Sample</span><span class="metric-label">your video views this week vs Kyochon 84k</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="brief">
+    <h2>Playbook</h2>
+    <div class="items">
+      <div class="it"><p>Restaurant weekday lunch playbook &middot; evergreen</p><a href="https://www.youtube.com/results?search_query=restaurant+lunch+marketing+playbook" target="_blank" rel="noopener">Open playbook</a><p class="note">Copy it, or ask for a draft.</p></div>
+    </div>
+  </section>
+
+  <section class="brief">
+    <h2>Competitor posts</h2>
+    <div class="items">
+      <div class="it"><p>Bonchon &middot; 2,310 likes &middot; 41 comments &middot; 2 days ago <span class="tag">Sample</span></p><a href="https://www.instagram.com/bonchonchicken/" target="_blank" rel="noopener">View post</a></div>
+      <div class="it"><p>Kyochon &middot; 1,870 likes &middot; 33 comments &middot; 4 days ago <span class="tag">Sample</span></p><a href="https://www.instagram.com/kyochonus/" target="_blank" rel="noopener">View post</a></div>
+      <div class="it"><p>Dave's Hot Chicken &middot; 9,640 likes &middot; 212 comments &middot; 1 day ago <span class="tag">Sample</span></p><a href="https://www.instagram.com/daveshotchicken/" target="_blank" rel="noopener">View post</a></div>
+    </div>
+  </section>
+
+  <section class="brief">
+    <h2>Competitor ads</h2>
+    <div class="items">
+      <div class="it"><p>Bonchon &middot; running 120 days <span class="tag">Sample</span></p><a href="https://www.facebook.com/ads/library/?q=bonchon" target="_blank" rel="noopener">View ad</a></div>
+      <div class="it"><p>Wingstop &middot; running 64 days <span class="tag">Sample</span></p><a href="https://www.facebook.com/ads/library/?q=wingstop" target="_blank" rel="noopener">View ad</a></div>
+      <div class="it"><p>Raising Cane's &middot; running 38 days <span class="tag">Sample</span></p><a href="https://www.facebook.com/ads/library/?q=raising%20canes" target="_blank" rel="noopener">View ad</a></div>
+    </div>
+  </section>
+
+  <section class="brief">
+    <h2>Viral now</h2>
+    <div class="items">
+      <div class="it"><p>@kfoodcali &middot; 109,680 views &middot; 1 day ago <span class="tag">Sample</span></p><a href="https://www.tiktok.com/tag/koreanfriedchicken" target="_blank" rel="noopener">Watch</a></div>
+    </div>
+  </section>
+
+  <section id="decide">
+    <div class="decide">
+      <h2>Want me to draft a lunch offer off the playbook?</h2>
+      <div class="acts"><button class="btn" type="button">Draft a lunch offer</button><button class="btn ghost" type="button">Not today</button></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="wrap"><div>Sample brief &middot; bb.q Chicken California &middot; public data, numbers illustrative &middot; sample links point to profiles, live briefs link the exact post</div></footer>
+</body>
+</html>

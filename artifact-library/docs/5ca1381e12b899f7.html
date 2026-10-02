@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="Draft 90-day growth plan for bb.q Chicken California: five pillars, plays, and 30/60/90 gates.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23D2202F'/%3E%3Cpath d='M9 21l5-10 4 6 5-8' stroke='%23FFFFFF' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<title>bb.q Growth Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1A1414; --ink-2:#554A48; --ink-3:#857A77;
+    --ground:#FAF7F5; --surface:#FFFFFF; --surface-2:#F3EEEB;
+    --line:#E6DEDA; --line-soft:#EFE9E6;
+    --red:#D2202F; --red-ink:#FFFFFF; --red-soft:#FBE4E6; --red-deep:#8E1420;
+    --dark:#0B0908; --dark-ink:#F7F3F1;
+    --sans:'Satoshi','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    --fs-display:32px; --fs-metric:28px; --fs-title:18px; --fs-body:15px; --fs-caption:12px;
+    --r:6px; --eyebrow:#FF6B76;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box; min-width:0}
+  html,body{overflow-x:hidden}
+  body{ margin:0; background:var(--ground); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; font-size:var(--fs-body); line-height:1.5}
+  h1,h2,h3,h4{font-family:var(--sans); margin:0; text-wrap:balance; letter-spacing:-.02em}
+  p{margin:0}
+  img{max-width:100%}
+  .wrap{width:100%; max-width:960px; margin-inline:auto; padding-inline:16px}
+  @media (min-width:768px){ .wrap{padding-inline:32px} }
+
+  /* masthead */
+  .top{background:var(--red); color:var(--red-ink)}
+  .top-in{display:flex; align-items:center; justify-content:flex-start; gap:12px; height:52px}
+  .logo{display:block; height:24px; width:24px; border-radius:5px; flex:none}
+  .for{color:rgba(255,255,255,.9); font-size:var(--fs-caption); line-height:1; font-weight:400; white-space:nowrap; padding-left:12px; border-left:1px solid rgba(255,255,255,.35)}
+
+  /* hero */
+  .hero{background:var(--dark); color:var(--dark-ink)}
+  .hero-in{padding-block:32px 36px}
+  @media (min-width:768px){ .hero-in{padding-block:52px 56px} }
+  .brand{display:block; height:36px; width:auto; margin-bottom:22px}
+  .kicker{ color:var(--eyebrow); font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+  .hero h1{ margin-top:12px; max-width:14ch; font-size:var(--fs-display); line-height:1.08; font-weight:700; letter-spacing:-0.02em}
+  .hero p{ margin-top:14px; color:rgba(247,243,241,.82); max-width:40ch; font-size:var(--fs-body); line-height:1.5}
+  .metric{margin-top:24px; display:grid; grid-template-columns:auto auto; justify-content:space-between; align-items:center; column-gap:12px; row-gap:6px; width:100%; max-width:360px; background:var(--red); color:var(--red-ink); border-radius:var(--r); padding:14px 16px}
+  .metric .m-num{font-size:var(--fs-metric); line-height:1; font-weight:700; font-variant-numeric:tabular-nums; letter-spacing:-.02em; white-space:nowrap}
+  .metric .tag{justify-self:end}
+  .metric .m-lbl{grid-column:1 / -1; font-size:var(--fs-body); line-height:1.5; font-weight:400}
+  .tag{display:inline-block; vertical-align:middle; font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em; border:1px solid currentColor; border-radius:6px; padding:3px 8px; white-space:nowrap}
+
+  /* sections */
+  section + section{border-top:1px solid var(--line)}
+  section{padding-block:30px 36px}
+  @media (min-width:768px){ section{padding-block:46px 52px} }
+  h2{font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .sub{ margin-top:6px; color:var(--ink-2); max-width:58ch; font-size:var(--fs-body); line-height:1.5}
+
+  /* outcome tiles */
+  .tiles{margin-top:18px; display:grid; gap:10px}
+  @media (min-width:700px){ .tiles{grid-template-columns:repeat(3,1fr); gap:14px} }
+  .tile{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:16px}
+  .tile .big{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; letter-spacing:-.025em; font-size:var(--fs-metric); line-height:1; font-weight:700; font-variant-numeric:tabular-nums}
+  .tile .tag{color:var(--red)}
+  .tile .cap{ color:var(--ink-2); margin-top:8px; font-size:var(--fs-body); line-height:1.5}
+
+  /* pillar disclosures */
+  .stages{margin-top:18px; display:grid; gap:10px}
+  .stage{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  .stage[open]{border-color:var(--red)}
+  .stage > summary{list-style:none; cursor:pointer; padding:16px; display:grid; gap:10px; transition:background .16s ease, transform .1s ease}
+  .stage > summary::-webkit-details-marker{display:none}
+  .stage > summary:hover{background:var(--surface-2)}
+  .stage > summary:focus-visible{outline:2px solid var(--red); outline-offset:-2px}
+  .stage > summary:active{background:var(--surface-2); transform:translateY(1px)}
+  @media (min-width:760px){ .stage > summary{grid-template-columns:190px minmax(0,1fr) auto; align-items:center; gap:20px; padding:16px 20px} }
+  .stage h3{font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .s-q{ display:block; color:var(--ink-2); font-size:var(--fs-body); line-height:1.5}
+  .s-open{ display:block; margin-top:4px; color:var(--ink-3); font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+  .stage[open] .s-open{color:var(--red)}
+  .move{ display:flex; align-items:center; gap:8px; font-variant-numeric:tabular-nums; flex-wrap:wrap; font-size:var(--fs-body); line-height:1.5}
+  .move .from{color:var(--ink-3)}
+  .move .to{background:var(--red-soft); color:var(--red-deep); font-weight:600; padding:3px 8px; border-radius:4px}
+  .s-body{padding:4px 16px 16px; border-top:1px solid var(--line-soft)}
+  @media (min-width:760px){ .s-body{padding:4px 20px 18px} }
+  .plays{list-style:none; margin:0; padding:0}
+  .plays li{ display:grid; gap:4px; padding-block:12px; border-bottom:1px solid var(--line-soft); font-size:var(--fs-body); line-height:1.5}
+  .plays li:last-child{border-bottom:none}
+  @media (min-width:760px){ .plays li{grid-template-columns:minmax(0,1fr) auto; gap:16px; align-items:baseline} }
+  .plays .what{color:var(--ink); font-weight:600; overflow-wrap:anywhere}
+  .plays .how{ color:var(--ink-2); font-variant-numeric:tabular-nums; overflow-wrap:anywhere; font-size:var(--fs-body); line-height:1.5}
+  .plays .how b{color:var(--red-deep); font-weight:600}
+  .plays .tag{margin-left:6px; color:var(--ink-2)}
+  .move .tag{color:var(--ink-3)}
+  .rrow p .tag{margin-left:6px; color:var(--ink-3)}
+
+  /* gates */
+  .rhythm{margin-top:18px; display:grid; gap:8px}
+  .rrow{display:grid; gap:4px; background:var(--surface-2); border-radius:var(--r); padding:14px 16px}
+  @media (min-width:700px){ .rrow{grid-template-columns:90px minmax(0,1fr); gap:20px; align-items:baseline} }
+  .rrow .rw{ font-weight:600; color:var(--red); font-size:var(--fs-body); line-height:1.5}
+  .rrow p{ color:var(--ink); font-size:var(--fs-body); line-height:1.5}
+  .rrow .k{ color:var(--ink-3); margin-right:6px; font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+
+  /* decide */
+  .decide{background:var(--dark); color:var(--dark-ink); border-radius:var(--r); padding:24px 20px}
+  @media (min-width:768px){ .decide{padding:32px} }
+  .decide .kicker{margin-bottom:10px}
+  .decide h2{font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .btn{ margin-top:18px; appearance:none; border:0; background:var(--red); color:var(--red-ink); font:inherit; padding:13px 22px; border-radius:var(--r); cursor:pointer; min-height:48px; transition:transform .1s ease, background .16s ease; font-size:var(--fs-body); line-height:1.5; font-weight:600}
+  .btn:hover{background:#B81B28}
+  .btn:active{transform:translateY(1px)}
+  .btn:focus-visible{outline:2px solid #FFFFFF; outline-offset:2px}
+  .acts{margin-top:18px; display:flex; flex-wrap:wrap; gap:10px}
+  .acts .btn{margin-top:0}
+  .btn.ghost{background:transparent; color:var(--dark-ink); border:1px solid rgba(247,243,241,.6)}
+  .btn.ghost:hover{background:rgba(247,243,241,.1)}
+  .btn[aria-pressed="true"]{background:#FFFFFF; color:var(--dark)}
+
+  .skip{ position:absolute; left:-9999px; top:0; background:var(--red); color:#fff; padding:10px 16px; font-weight:600; z-index:10; font-size:var(--fs-body); line-height:1.5}
+  .skip:focus{left:0}
+  ::selection{background:var(--red-soft); color:var(--red-deep)}
+  p, li, .s-q{text-wrap:pretty}
+  footer{ border-top:1px solid var(--line); padding-block:18px 28px; color:var(--ink-3); font-size:var(--fs-caption); line-height:1.3; font-weight:600;}
+
+  @media print{
+    .skip,.btn{display:none}
+    .hero,.decide{background:#FFFFFF !important; color:var(--ink) !important; border:1.5px solid var(--red)}
+    .hero p{color:var(--ink-2) !important}
+    details > div{display:block !important}
+    .stage, .rrow, .plays li{break-inside:avoid}
+  }
+  @media (prefers-reduced-motion:reduce){ *{transition:none !important; animation:none !important} }
+
+@media (max-width:520px){/*stack-grids*/.tiles{grid-template-columns:1fr !important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#plan">Skip to the plan</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <img class="logo" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/logos/yobolabs-brand-2026-07/dark/app-icon-dark-256x256.png" alt="YoboLabs">
+    <span class="for">Prepared for bb.q Chicken</span>
+  </div>
+</header>
+
+<main id="plan">
+<div class="hero">
+  <div class="wrap hero-in">
+    <img class="brand" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/logos/bbq-chicken-logo-dark.png" alt="bb.q Chicken">
+    <div class="kicker">90-day growth plan</div>
+    <h1>More guests, back more often.</h1>
+    <p>Five pillars across four stores, checked every 30 days.</p>
+    <div class="metric"><b class="m-num">+25%</b><span class="tag">Target</span><span class="m-lbl">weekly orders by day 90</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <h2>Outcome</h2>
+    <div class="tiles">
+      <div class="tile"><div class="big">1 in 3<span class="tag">Target</span></div><p class="cap">Guests back within 30 days.</p></div>
+      <div class="tile"><div class="big">+$4<span class="tag">Target</span></div><p class="cap">More per ticket.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The five pillars</h2>
+    <p class="sub">Open any pillar. Each play: what, channel, metric, target.</p>
+    <div class="stages">
+
+      <details class="stage" open>
+        <summary>
+          <div><h3>Grow customers</h3><span class="s-open">4 plays</span></div>
+          <span class="s-q">Are new neighbors trying us?</span>
+          <div class="move"><span class="from">180 / wk</span><span class="tag">Estimate</span><span>&rarr;</span><span class="to">240 / wk per store</span><span class="tag">Target</span></div>
+        </summary>
+        <div class="s-body"><ul class="plays">
+          <li><span class="what">Google profile refresh, one post a week<span class="tag">Organic</span></span><span class="how">Google · calls + direction taps &rarr; <b>+20%</b><span class="tag">Target</span></span></li>
+          <li><span class="what">Flavor-led local videos<span class="tag">Organic</span></span><span class="how">Instagram / TikTok · profile visits &rarr; <b>1,500 / wk</b><span class="tag">Target</span></span></li>
+          <li><span class="what">3-mile ads around each store<span class="tag">Paid</span></span><span class="how">Meta · cost per first order &rarr; <b>under $12</b><span class="tag">Target</span></span></li>
+          <li><span class="what">New-guest promo, bag card to direct<span class="tag">Paid</span></span><span class="how">DoorDash / Uber Eats · new guests &rarr; <b>60 / wk per store</b><span class="tag">Target</span></span></li>
+        </ul></div>
+      </details>
+
+      <details class="stage">
+        <summary>
+          <div><h3>Grow repeats</h3><span class="s-open">4 plays</span></div>
+          <span class="s-q">Do first-timers come back?</span>
+          <div class="move"><span class="from">22% in 30 days</span><span class="tag">Estimate</span><span>&rarr;</span><span class="to">33%</span><span class="tag">Target</span></div>
+        </summary>
+        <div class="s-body"><ul class="plays">
+          <li><span class="what">Text-to-join QR at every counter<span class="tag">Organic</span></span><span class="how">QR + SMS · sign-ups per 100 orders &rarr; <b>8</b><span class="tag">Target</span></span></li>
+          <li><span class="what">Welcome offer for visit two<span class="tag">Organic</span></span><span class="how">SMS + email · 30-day return &rarr; <b>30%</b><span class="tag">Target</span></span></li>
+          <li><span class="what">Win-back, dormant 30-45 days: free side, offer to confirm<span class="tag">Organic</span></span><span class="how">SMS + email · reactivation &rarr; <b>12%</b><span class="tag">Target</span></span></li>
+          <li><span class="what">Back within 2 weeks: $3 off second visit, offer to confirm<span class="tag">Organic</span></span><span class="how">SMS · 14-day repeat &rarr; <b>18%</b><span class="tag">Target</span></span></li>
+        </ul></div>
+      </details>
+
+      <details class="stage">
+        <summary>
+          <div><h3>Grow spend per visit</h3><span class="s-open">3 plays</span></div>
+          <span class="s-q">Are orders getting bigger?</span>
+          <div class="move"><span class="from">$24 ticket</span><span class="tag">Estimate</span><span>&rarr;</span><span class="to">$28</span><span class="tag">Target</span></div>
+        </summary>
+        <div class="s-body"><ul class="plays">
+          <li><span class="what">Side prompt: Ddeok-Bokki, fries, rings<span class="tag">Organic</span></span><span class="how">In store + online · attach rate &rarr; <b>35%</b><span class="tag">Target</span></span></li>
+          <li><span class="what">Group bundle for 4+, HQ approval<span class="tag">Paid</span></span><span class="how">Email + Meta · orders over $60 &rarr; <b>40 / wk</b><span class="tag">Target</span></span></li>
+          <li><span class="what">Early flavor taste for members<span class="tag">Organic</span></span><span class="how">Email + SMS · member ticket &rarr; <b>+10%</b><span class="tag">Target</span></span></li>
+        </ul></div>
+      </details>
+
+      <details class="stage">
+        <summary>
+          <div><h3>Grow sales at specific timings</h3><span class="s-open">3 plays</span></div>
+          <span class="s-q">Are quiet hours filling up?</span>
+          <div class="move"><span class="from">45 lunch / day</span><span class="tag">Estimate</span><span>&rarr;</span><span class="to">+30%</span><span class="tag">Target</span></div>
+        </summary>
+        <div class="s-body"><ul class="plays">
+          <li><span class="what">Weekday lunch pickup, 11am to 2pm<span class="tag">Organic</span></span><span class="how">SMS + Google · lunch orders &rarr; <b>+30%</b><span class="tag">Target</span></span></li>
+          <li><span class="what">Game day pre-order by noon<span class="tag">Paid</span></span><span class="how">Meta + Instagram · group orders &rarr; <b>25 / wk</b><span class="tag">Target</span></span></li>
+          <li><span class="what">Late push past 9pm, hours to confirm<span class="tag">Paid</span></span><span class="how">Delivery apps · orders after 8pm &rarr; <b>+15%</b><span class="tag">Target</span></span></li>
+        </ul></div>
+      </details>
+
+      <details class="stage">
+        <summary>
+          <div><h3>Improve conversion</h3><span class="s-open">3 plays</span></div>
+          <span class="s-q">Are more orders coming direct?</span>
+          <div class="move"><span class="from">12% direct</span><span class="tag">Estimate</span><span>&rarr;</span><span class="to">18%</span><span class="tag">Target</span></div>
+        </summary>
+        <div class="s-body"><ul class="plays">
+          <li><span class="what">First direct order offer for app regulars<span class="tag">Organic</span></span><span class="how">Bag card + email · direct share &rarr; <b>18%</b><span class="tag">Target</span></span></li>
+          <li><span class="what">One promo page behind every QR<span class="tag">Organic</span></span><span class="how">QR + SMS · scan to redeem &rarr; <b>25%</b><span class="tag">Target</span></span></li>
+          <li><span class="what">One counter message, clutter removed<span class="tag">Organic</span></span><span class="how">In store · cashier ask rate &rarr; <b>80%</b><span class="tag">Target</span></span></li>
+        </ul></div>
+      </details>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Gates</h2>
+    <p class="sub">Keep what hits, cut what misses.</p>
+    <div class="rhythm">
+      <div class="rrow"><div class="rw">Day 30</div><p><span class="k">Keep</span>QR at 6+ sign-ups per 100 orders. <span class="k">Cut</span>ads over $15 per first order.<span class="tag">Target</span></p></div>
+      <div class="rrow"><div class="rw">Day 60</div><p><span class="k">Keep</span>win-back at 8%+ and lunch up 15%. <span class="k">Cut</span>offers that pull full-price repeats down.<span class="tag">Target</span></p></div>
+      <div class="rrow"><div class="rw">Day 90</div><p><span class="k">Keep</span>winners, rolled to all four stores. <span class="k">Cut</span>any play under half its target.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="decide">
+      <div class="kicker">Decide</div>
+      <h2>Start with all five, or pick two for the first 30 days?</h2>
+      <div class="acts"><button class="btn" type="button">Start all five</button><button class="btn ghost" type="button">Pick two</button></div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="wrap">Draft v1 · bb.q Chicken California · targets, not measurements</footer>
+</body>
+</html>

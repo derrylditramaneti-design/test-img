@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><title>Launch ready, Drunk Elephant</title><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root,:host{--bg:#09090b;--card:#18181b;--active:#252528;--border:#26262b;--border2:#1e1e22;--green:#6FED45;--green-br:#6FED45;--green-line:#166534;--green-dk:#0a1f12;--blue:#3b82f6;--amber:#f59e0b;--red:#ef4444;--t1:#f4f4f5;--t2:#a1a1aa;--t3:#71717a;--ui:'Inter',system-ui,-apple-system,sans-serif;--display:'Satoshi','Inter',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--t1);font-family:var(--ui);font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+body{display:flex;justify-content:center}
+.app{width:100%;max-width:398px;background:var(--bg);color:var(--t1)}
+.btn{background:var(--green);color:#04120a;border:none;border-radius:9px;font-weight:700;cursor:pointer;font-family:var(--ui)}
+.btn:disabled{background:#1f2a17;color:#5b6b4a;cursor:not-allowed}
+.btnghost{background:transparent;border:1px solid #3f3f46;color:var(--t1);border-radius:9px;cursor:pointer;font-weight:600;font-family:var(--ui)}
+.top{display:flex;align-items:center;justify-content:space-between;padding:13px 15px;border-bottom:1px solid var(--border)}
+.top .hlogo{display:inline-flex;align-items:center}.top .hlogo svg{height:20px;width:auto;display:block}
+.step{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600}
+.step .dots{display:flex;gap:5px}.step .d{width:6px;height:6px;border-radius:50%;background:var(--t3)}.step .d.on{background:var(--green)}
+.body-pad{padding:22px 16px 26px}
+/* states */
+input[name="ls"]{position:absolute;opacity:0;pointer-events:none;width:0;height:0;margin:0}
+.stage{display:none}
+#ls-ready:checked ~ .body-pad .stage-ready{display:block}
+#ls-live:checked ~ .body-pad .stage-live{display:block}
+#ls-block:checked ~ .body-pad .stage-block{display:block}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--green-br)}
+.eyebrow.warn{color:var(--amber)}
+.eyebrow svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.4}
+.h1{font-family:var(--display);font-size:24px;font-weight:800;letter-spacing:-.03em;line-height:1.15;margin:10px 0 0}
+.sub{font-size:13.5px;color:var(--t2);line-height:1.5;margin-top:9px}
+.camp{border:1px solid var(--border);border-radius:13px;background:var(--card);padding:15px;margin-top:16px}
+.camp .ct{font-size:15px;font-weight:700}.camp .cm{font-size:12px;color:var(--t3);margin-top:3px}
+.money{display:flex;align-items:center;gap:10px;border:1px solid var(--green-line);border-radius:11px;background:linear-gradient(180deg,var(--green-dk),#0a0a0c);padding:13px 15px;margin-top:14px}
+.money .ml{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--t3)}
+.money .mv{font-size:24px;font-weight:800;color:var(--green-br);margin-left:auto}
+.money .mb{font-size:11px;color:var(--t3);flex-basis:100%;margin-top:-2px}
+.cta{width:100%;padding:14px;font-size:15px;margin-top:18px}
+.gline{width:100%;padding:12px;font-size:13.5px;margin-top:10px}
+.micro{font-size:12px;color:var(--t3);text-align:center;margin-top:13px;line-height:1.5}
+/* live */
+.tl{margin-top:20px;display:flex;flex-direction:column;gap:0}
+.tli{display:flex;gap:13px;padding-bottom:18px;position:relative}
+.tli::before{content:"";position:absolute;left:11px;top:24px;bottom:0;width:2px;background:var(--border)}
+.tli:last-child::before{display:none}
+.tli .tk{width:24px;height:24px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;z-index:1}
+.tli.done .tk{background:var(--green-dk);border:1px solid var(--green-line)}
+.tli.done .tk svg{width:13px;height:13px;stroke:var(--green-br);fill:none;stroke-width:2.6}
+.tli.now .tk{background:transparent;border:2px solid var(--green);animation:pl 1.2s ease-in-out infinite}
+@keyframes pl{50%{box-shadow:0 0 0 4px rgba(111,237,69,.15)}}
+.tli.wait .tk{background:transparent;border:2px solid var(--border)}
+.tli .ttx b{font-size:14px;font-weight:700;display:block}
+.tli .ttx span{font-size:12px;color:var(--t3);display:block;margin-top:2px}
+.tli.wait .ttx b{color:var(--t3)}
+/* block */
+.blockbox{display:flex;gap:12px;align-items:flex-start;border:1px solid rgba(245,158,11,.4);background:linear-gradient(180deg,rgba(245,158,11,.08),#0c0c0f);border-radius:12px;padding:14px;margin-top:16px}
+.blockbox svg{width:20px;height:20px;stroke:var(--amber);fill:none;stroke-width:2;flex:0 0 auto;margin-top:1px}
+.blockbox .btx b{font-size:13.5px;color:var(--t1);display:block}
+.blockbox .btx span{font-size:12.5px;color:var(--t2);line-height:1.5;display:block;margin-top:3px}
+.field{margin-top:14px}
+.field input{width:100%;height:44px;background:#0c0c0f;border:1px solid var(--border);border-radius:9px;padding:0 13px;color:var(--t1);font-family:inherit;font-size:14px;outline:none}
+.field input:focus{border-color:var(--blue);box-shadow:0 0 0 2px rgba(59,130,246,.4)}
+</style>
+<div class="app">
+  <input type="radio" name="ls" id="ls-ready" checked>
+  <input type="radio" name="ls" id="ls-live">
+  <input type="radio" name="ls" id="ls-block">
+  <div class="top">
+    <span class="hlogo" role="img" aria-label="YoboLabs"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/dd53a1d331c97bc7.png" alt="YoboLabs" style="height:20px;width:auto;display:block"></span>
+    <div class="step"><span>Launch</span><span class="dots"><i class="d on"></i><i class="d on"></i><i class="d on"></i><i class="d on"></i><i class="d on"></i><i class="d on"></i><i class="d on"></i></span></div>
+  </div>
+  <div class="body-pad">
+    <!-- READY -->
+    <div class="stage stage-ready">
+      <span class="eyebrow"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg>One tap to go live</span>
+      <div class="h1">Launch your Win-Back</div>
+      <div class="sub">3 emails, scheduled Day 0 / 7 / 14 to 2,540 lapsed customers. This is the campaign chasing the money below.</div>
+      <div class="camp"><div class="ct">Win-Back · Come Back and Glow</div><div class="cm">email · 3 msgs · Lapsed Enthusiasts</div></div>
+      <div class="money"><span class="ml">Now chasing</span><span class="mv">~$7.7K</span><span class="mb">2,540 lapsed × 4.5% × $68 AOV</span></div>
+      <button class="btn cta">Launch campaign</button>
+      <button class="btnghost gline">Review messages once more</button>
+      <div class="micro">You can pause or edit any time after launch.</div>
+    </div>
+    <!-- LIVE (checking → live) -->
+    <div class="stage stage-live">
+      <span class="eyebrow"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Campaign is live</span>
+      <div class="h1">Win-Back is sending</div>
+      <div class="sub">Day 0 is going out now. Here's what happens next — no action needed.</div>
+      <div class="tl">
+        <div class="tli done"><span class="tk"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span><div class="ttx"><b>Connected &amp; verified</b><span>Shopify + Klaviyo live, sender confirmed</span></div></div>
+        <div class="tli now"><span class="tk"></span><div class="ttx"><b>Sending Day 0 — “We miss your glow”</b><span>2,540 recipients · in progress</span></div></div>
+        <div class="tli wait"><span class="tk"></span><div class="ttx"><b>Day 7 &amp; Day 14 queued</b><span>Auto-send on schedule</span></div></div>
+        <div class="tli wait"><span class="tk"></span><div class="ttx"><b>Results land in Mission Control</b><span>First opens within hours</span></div></div>
+      </div>
+      <div class="money"><span class="ml">Chasing</span><span class="mv">~$7.7K</span><span class="mb">tracked against real orders as they come in</span></div>
+    </div>
+    <!-- BLOCKED — verify before a paid send (closes F10 gate) -->
+    <div class="stage stage-block">
+      <span class="eyebrow warn"><svg viewBox="0 0 24 24"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9L2 18a2 2 0 0 0 1.7 3h16.6a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>One step before we send</span>
+      <div class="h1">Confirm your email to launch</div>
+      <div class="sub">Sending on your behalf needs a verified sender — a spam-and-deliverability rule, not ours. Everything else is ready.</div>
+      <div class="blockbox"><svg viewBox="0 0 24 24"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg><div class="btx"><b>We emailed derryl@drunkelephant.com</b><span>Enter the 6-digit code or tap the link — takes 20 seconds, then Launch unlocks.</span></div></div>
+      <div class="field"><input inputmode="numeric" placeholder="6-digit code" value=""></div>
+      <button class="btn cta" disabled>Launch campaign · locked until verified</button>
+      <div class="micro">Not you? <b style="color:var(--green-br)">Resend</b> or <b style="color:var(--green-br)">change email</b>.</div>
+    </div>
+  </div>
+</div>
+
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html><html lang="en" class="h-full overflow-hidden __variable_c22fe1 __variable_876a94 __variable_2b17f2 __variable_164d0d __variable_a2484d __variable_1773dd __variable_6dc098 __variable_3c3578 __variable_184d01 __variable_587b49 __variable_d65ff6 __variable_659eae __variable_a5811e __variable_4cc5e5 __variable_5c6d1b __variable_13e87b"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"/><link rel="stylesheet" href="https://gruns.pages.yobolabs.ai/_next/static/css/5b1b688d84f285d6.css?dpl=dpl_Bg1yAn3tgTnKq3QQzWxR3pp9RdUb" data-precedence="next"/><link rel="stylesheet" href="https://gruns.pages.yobolabs.ai/_next/static/css/32474e6f63c8fd33.css?dpl=dpl_Bg1yAn3tgTnKq3QQzWxR3pp9RdUb" data-precedence="next"/><link rel="stylesheet" href="https://gruns.pages.yobolabs.ai/_next/static/css/8baafc4be7cef424.css?dpl=dpl_Bg1yAn3tgTnKq3QQzWxR3pp9RdUb" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="https://gruns.pages.yobolabs.ai/_next/static/chunks/webpack-f1ecb8f02ad86f3d.js?dpl=dpl_Bg1yAn3tgTnKq3QQzWxR3pp9RdUb"/><link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-WZQBS6BD" as="script"/><meta name="next-size-adjust" content=""/><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"/><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#ffffff"/></head><body class="h-full overflow-hidden"><div hidden=""><!--$?--><template id="B:0"></template><!--/$--></div><style>html, body { height: auto !important; overflow-y: scroll !important; overflow-x: hidden !important; scroll-behavior: smooth !important; background: #ffffff !important; color-scheme: light; }</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"YOBO LABS PTE. LTD.","url":"https://gruns.pages.yobolabs.ai","logo":"https://d33nglz4qemo28.cloudfront.net/logos/YOBO-Web-1200x630-0513.png","address":{"@type":"PostalAddress","addressLocality":"Singapore","addressCountry":"SG"},"sameAs":["https://www.linkedin.com/company/yoboai","https://www.instagram.com/yobolabs.ai/"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"YOBO LABS PTE. LTD.","url":"https://gruns.pages.yobolabs.ai"}</script><div data-site-label="gruns" data-page-slug="busines-dna" style="display:contents"><style>
+        html, body {
+          height: auto !important;
+          overflow-y: scroll !important;
+          /* Never let a wide block force a sideways drag on a phone. */
+          max-width: 100vw !important;
+          /* Momentum scrolling, and no grey tap flash on touch. */
+          -webkit-overflow-scrolling: touch;
+          -webkit-tap-highlight-color: transparent;
+          /* iOS inflates font sizes on rotate without this. */
+          -webkit-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+          overflow-x: hidden !important;
+          scroll-behavior: smooth !important;
+          /* Published landing pages render on WHITE to match the editor canvas.
+             The slides app shell is dark (body defaults to zinc-950 rgb(9,9,11));
+             without this the page's light-designed content sits on black. */
+          background: #ffffff !important;
+          color-scheme: light;
+          scrollbar-width: auto;
+          scrollbar-color: rgba(120,120,120,0.6) rgba(241,241,241,1);
+        }
+        /* The reserved scrollbar gutter below is a DESKTOP affordance. On a
+           touch device there is no scrollbar to reserve room for, and the
+           gutter reads as an unexplained strip down the edge. */
+        @media (hover: none) and (pointer: coarse) {
+          html, body { overflow-y: auto !important; scrollbar-width: none; }
+          html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; }
+        }
+        html::-webkit-scrollbar, body::-webkit-scrollbar { width: 12px; height: 12px; }
+        html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+          background: rgba(241,241,241,1);
+        }
+        html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+          background: rgba(120,120,120,0.6); border-radius: 6px;
+          border: 2px solid rgba(241,241,241,1);
+        }
+        html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
+          background: rgba(90,90,90,0.85);
+        }
+        /* Fill exactly one screen and centre the content, so a short page (a
+           signup form, say) needs no scroll at all.
+
+           Both min-height lines are deliberate and must stay in this order.
+           dvh tracks the LIVE viewport; vh on mobile Safari is sized to the
+           browser chrome's collapsed state, so a 100vh page is taller than what
+           you can actually see and scrolls by exactly the height of the address
+           bar. An engine without dvh support keeps the vh line. This cannot be
+           expressed in a React style object - the second key would simply win
+           and the fallback would be lost.
+           NOTE: no backticks in this block. It lives inside a template literal,
+           so a backtick here ends the literal and breaks the whole file. */
+        .mc-page {
+          min-height: 100vh;
+          min-height: 100dvh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        /* Content taller than the screen must still scroll normally rather than
+           being clipped by the centring above. */
+        @media (max-height: 560px) {
+          .mc-page { justify-content: flex-start; }
+        }
+        /* Card hover lift */
+        [data-mc-card] { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important; }
+        [data-mc-card]:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(0,0,0,0.35); }
+        /* Image hover zoom (opt-in via data attribute) */
+        [data-mc-image-zoom] { transition: transform 0.4s ease !important; }
+        [data-mc-image-zoom]:hover { transform: scale(1.03); }
+        /* Button hover lift + brightness */
+        [data-mc-btn] { transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease !important; }
+        [data-mc-btn]:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 10px 24px rgba(0,0,0,0.25); }
+        /* Pulse animation (for CTA buttons w/ animate=pulse) */
+        @keyframes mc-pulse {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(0,255,127,0.7); }
+          50% { box-shadow: 0 0 0 14px rgba(0,255,127,0); }
+        }
+        [data-mc-animate="pulse"] { animation: mc-pulse 2s ease-in-out infinite; }
+        /* Glow animation */
+        @keyframes mc-glow {
+          0%, 100% { box-shadow: 0 0 8px rgba(0,255,127,0.4); }
+          50% { box-shadow: 0 0 20px rgba(0,255,127,0.8); }
+        }
+        [data-mc-animate="glow"] { animation: mc-glow 2.4s ease-in-out infinite; }
+      </style><div class="mc-page" style="padding-top:env(safe-area-inset-top, 0px);padding-bottom:env(safe-area-inset-bottom, 0px);padding-left:env(safe-area-inset-left, 0px);padding-right:env(safe-area-inset-right, 0px)"><div><div class="microsite-custom-code" style="overflow:visible"><style>/* ============================================================
+   GR&#220;NS &mdash; BUSINESS DNA
+   Format ported 1:1 from the bb.q Chicken "Business DNA alt 2"
+   band system. All rules scoped to .dna2 so the block can be
+   pasted straight into a YoboLabs microsite custom-code field.
+   ============================================================ */
+
+.microsite-custom-code .dna2{
+  --green:#007e40;
+  --green-dk:#00552b;
+  --ink:#002613;
+  --ink-2:#073d22;
+  --mint:#dfefe7;
+  --yellow:#ffcc2e;
+  --neutral:#f0f1f3;
+  --gray:#5c6b62;
+  --faint:#93a29a;
+  --line:#e2e7e4;
+
+  font-family:"Work Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:var(--ink);
+  background:#fff;
+  max-width:460px;
+  margin:0 auto;
+  padding:0;
+  line-height:1.45;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.microsite-custom-code .dna2 *{box-sizing:border-box;min-width:0;overflow-wrap:break-word}
+.microsite-custom-code .dna2 h2,.microsite-custom-code .dna2 h3,.microsite-custom-code .dna2 h4,.microsite-custom-code .dna2 p,.microsite-custom-code .dna2 ol,.microsite-custom-code .dna2 ul,.microsite-custom-code .dna2 dl,.microsite-custom-code .dna2 dd,.microsite-custom-code .dna2 dt{margin:0;padding:0}
+.microsite-custom-code .dna2 ol,.microsite-custom-code .dna2 ul{list-style:none}
+.microsite-custom-code .dna2 img{max-width:100%}
+
+/* ---- masthead ---- */
+.microsite-custom-code .dna2 .d2-hd{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 66px 12px 16px}
+.microsite-custom-code .dna2 .d2-logo{height:26px;width:auto;display:block;flex:0 0 auto;color:var(--green)}
+.microsite-custom-code .dna2 .d2-prep{font-size:12px;line-height:1.4;color:var(--gray);text-align:right}
+.microsite-custom-code .dna2 .d2-prep b{color:var(--ink);font-weight:800}
+
+/* ---- bands ---- */
+.microsite-custom-code .dna2 .d2-band{position:relative;padding:24px 16px 26px}
+.microsite-custom-code .dna2 .d2-band.d2-tight{padding:24px 0 26px}
+.microsite-custom-code .dna2 .d2-green{background:var(--green);color:#fff}
+.microsite-custom-code .dna2 .d2-ink{background:var(--ink);color:#fff}
+.microsite-custom-code .dna2 .d2-mint{background:var(--mint)}
+.microsite-custom-code .dna2 .d2-yellow{background:var(--yellow)}
+.microsite-custom-code .dna2 .d2-white{background:#fff}
+.microsite-custom-code .dna2 .d2-white + .d2-white{border-top:1px solid var(--line)}
+
+/* ---- section kicker ---- */
+.microsite-custom-code .dna2 .d2-kicker{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.microsite-custom-code .dna2 .d2-kicker.d2-kicker-pad{padding:0 16px}
+.microsite-custom-code .dna2 .d2-kicker b{font-size:22px;font-weight:900;line-height:1;letter-spacing:-.03em;color:rgba(255,255,255,.5);flex:0 0 auto}
+.microsite-custom-code .dna2 .d2-kicker.dark b{color:rgba(0,38,19,.4)}
+.microsite-custom-code .dna2 .d2-kicker span{font-size:14.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.92);line-height:1.25}
+.microsite-custom-code .dna2 .d2-kicker.dark span{color:var(--ink)}
+.microsite-custom-code .dna2 .d2-verify{display:inline-block;font-weight:700;text-transform:none;letter-spacing:0;font-size:11.5px;color:#bfdfcf}
+.microsite-custom-code .dna2 .d2-kicker.dark .d2-verify{color:var(--green)}
+
+/* ---- 01 hero ---- */
+.microsite-custom-code .dna2 .d2-hero{padding-bottom:30px}
+.microsite-custom-code .dna2 .d2-plaque{background:#fff;border-radius:2px;padding:24px 16px;display:grid;place-items:center;margin-bottom:18px}
+.microsite-custom-code .dna2 .d2-plaque svg{width:70%;max-width:260px;height:auto;display:block;color:var(--green)}
+.microsite-custom-code .dna2 .d2-display{font-size:clamp(30px,9.4vw,50px);line-height:.94;font-weight:900;letter-spacing:-.035em;text-transform:uppercase}
+.microsite-custom-code .dna2 .d2-lede{font-size:14.5px;line-height:1.55;margin-top:12px;color:rgba(255,255,255,.86);max-width:42em}
+
+/* ---- 02 positioning ---- */
+.microsite-custom-code .dna2 .d2-quote{font-size:clamp(34px,11.6vw,58px);line-height:.9;font-weight:900;letter-spacing:-.04em;text-transform:uppercase}
+.microsite-custom-code .dna2 .d2-quote em{font-style:normal;color:var(--yellow);display:inline-block}
+
+/* ---- 03 channels ---- */
+.microsite-custom-code .dna2 .d2-outs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.microsite-custom-code .dna2 .d2-out{background:var(--neutral);padding:12px 12px 13px}
+.microsite-custom-code .dna2 .d2-out-wide{grid-column:1/-1;background:var(--ink);color:#fff}
+.microsite-custom-code .dna2 .d2-out-soon{background:var(--mint);color:var(--ink)}
+.microsite-custom-code .dna2 .d2-out h3{font-size:18px;font-weight:900;letter-spacing:-.025em;line-height:1.1}
+.microsite-custom-code .dna2 .d2-out dl{margin-top:8px;display:grid;grid-template-columns:auto 1fr;gap:2px 8px;align-items:baseline}
+.microsite-custom-code .dna2 .d2-out dt{font-size:10px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.microsite-custom-code .dna2 .d2-out-wide dt{color:rgba(255,255,255,.5)}
+.microsite-custom-code .dna2 .d2-out-soon dt{color:var(--faint)}
+.microsite-custom-code .dna2 .d2-out dd{font-size:13.5px;font-weight:600}
+.microsite-custom-code .dna2 .d2-flag{display:inline-block;margin-top:6px;border-radius:999px;padding:3px 9px;font-size:10.5px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;background:var(--green);color:#fff}
+.microsite-custom-code .dna2 .d2-out-wide .d2-flag{background:var(--yellow);color:var(--ink)}
+.microsite-custom-code .dna2 .d2-flag-soon{background:var(--yellow);color:var(--ink)}
+.microsite-custom-code .dna2 .d2-note{margin-top:12px;font-size:13px;line-height:1.5;color:var(--gray)}
+.microsite-custom-code .dna2 .d2-note.light{color:rgba(255,255,255,.6)}
+.microsite-custom-code .dna2 .d2-note.light b{color:#fff}
+
+/* ---- 04 bento features ---- */
+.microsite-custom-code .dna2 .d2-feats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.microsite-custom-code .dna2 .d2-feat{position:relative;overflow:hidden;background:var(--ink-2);border-radius:2px;padding:14px 13px 15px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.microsite-custom-code .dna2 .d2-feat-hero{grid-column:1/-1;background:var(--green)}
+.microsite-custom-code .dna2 .d2-feat-wide{grid-column:1/-1;background:var(--yellow);color:var(--ink);box-shadow:none}
+.microsite-custom-code .dna2 .d2-feat i{position:absolute;top:6px;right:10px;font-style:normal;font-size:40px;font-weight:900;line-height:1;letter-spacing:-.04em;color:rgba(255,255,255,.14)}
+.microsite-custom-code .dna2 .d2-feat-wide i{color:rgba(0,38,19,.16)}
+.microsite-custom-code .dna2 .d2-feat h4{position:relative;font-size:18px;font-weight:900;letter-spacing:-.025em;line-height:1.1;margin:0 0 5px;max-width:80%}
+.microsite-custom-code .dna2 .d2-feat p{position:relative;font-size:13.5px;line-height:1.5;color:rgba(255,255,255,.74);margin:0}
+.microsite-custom-code .dna2 .d2-feat-wide p{color:rgba(0,38,19,.74)}
+
+/* ---- 05 product wall ---- */
+.microsite-custom-code .dna2 .d2-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}
+.microsite-custom-code .dna2 .d2-fl{position:relative;overflow:hidden;display:block;aspect-ratio:1/1;max-width:100%;background:var(--ink);border-radius:2px}
+.microsite-custom-code .dna2 .d2-fl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.microsite-custom-code .dna2 .d2-fl b{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:16px 6px 6px;text-align:center;color:#fff;font-size:10.5px;font-weight:900;line-height:1.1;letter-spacing:-.01em;text-transform:uppercase;background:linear-gradient(to top,rgba(0,20,10,.88),rgba(0,20,10,.38) 55%,rgba(0,20,10,0))}
+.microsite-custom-code .dna2 .d2-fl-hero{grid-area:span 2/span 2}
+.microsite-custom-code .dna2 .d2-fl-hero b{padding-top:26px;font-size:clamp(15px,4.4vw,22px);letter-spacing:-.03em;line-height:1.02}
+.microsite-custom-code .dna2 .d2-fl-wide{grid-column:span 2;aspect-ratio:2/1}
+.microsite-custom-code .dna2 .d2-fl-wide b{font-size:13px}
+
+/* ---- 06 palette ---- */
+.microsite-custom-code .dna2 .d2-swatches{display:grid;grid-template-columns:1fr 1fr}
+.microsite-custom-code .dna2 .d2-sw{min-height:104px;padding:12px;display:flex;flex-direction:column;justify-content:flex-end}
+.microsite-custom-code .dna2 .d2-sw-line{box-shadow:inset 0 0 0 1px var(--line)}
+.microsite-custom-code .dna2 .d2-sw b{font-size:15px;font-weight:900;letter-spacing:-.02em;line-height:1.2}
+.microsite-custom-code .dna2 .d2-sw span{display:block;margin-top:3px;font-size:11.5px;font-weight:800;letter-spacing:.09em;opacity:.72}
+
+/* ---- 07 personality ---- */
+.microsite-custom-code .dna2 .d2-vals{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.microsite-custom-code .dna2 .d2-vtile{display:flex;align-items:flex-end;overflow-wrap:anywhere;min-height:88px;padding:12px 12px 13px;border-radius:2px;font-size:clamp(18px,5.4vw,24px);font-weight:900;letter-spacing:-.03em;line-height:1.02;text-transform:uppercase}
+.microsite-custom-code .dna2 .d2-vtile-green{background:var(--green);color:#fff}
+.microsite-custom-code .dna2 .d2-vtile-ink{background:var(--ink);color:#fff}
+.microsite-custom-code .dna2 .d2-vtile-yellow{background:var(--yellow);color:var(--ink)}
+.microsite-custom-code .dna2 .d2-body{margin-top:12px;font-size:15px;line-height:1.55;color:var(--ink-2)}
+
+/* ---- 08 audience ---- */
+.microsite-custom-code .dna2 .d2-auds{display:grid;gap:8px}
+.microsite-custom-code .dna2 .d2-aud{background:var(--neutral);padding:12px 13px}
+.microsite-custom-code .dna2 .d2-aud b{display:block;font-size:11px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:var(--green);margin-bottom:5px}
+.microsite-custom-code .dna2 .d2-aud p{font-size:13.5px;line-height:1.5;color:var(--ink-2)}
+.microsite-custom-code .dna2 .d2-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.microsite-custom-code .dna2 .d2-tag{background:var(--ink);color:#fff;border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:700}
+
+/* ---- 09 social proof + comp set ---- */
+.microsite-custom-code .dna2 .d2-poster{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.16)}
+.microsite-custom-code .dna2 .d2-poster-3{grid-template-columns:repeat(3,1fr)}
+.microsite-custom-code .dna2 .d2-pn{background:var(--ink);padding:14px 10px 12px}
+.microsite-custom-code .dna2 .d2-pn b{display:block;font-size:clamp(26px,7.4vw,40px);font-weight:900;line-height:.9;letter-spacing:-.045em}
+.microsite-custom-code .dna2 .d2-pn span{display:block;overflow-wrap:normal;margin-top:6px;font-size:10.5px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.microsite-custom-code .dna2 .d2-pn-hi b{color:var(--yellow)}
+.microsite-custom-code .dna2 .d2-subhead{margin:22px 0 10px;padding-top:14px;border-top:1px solid rgba(255,255,255,.18);font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.9)}
+.microsite-custom-code .dna2 .d2-comps{display:grid;gap:1px;background:rgba(255,255,255,.18)}
+.microsite-custom-code .dna2 .d2-comp{background:var(--ink);padding:11px 0}
+.microsite-custom-code .dna2 .d2-comp b{display:block;font-size:15.5px;font-weight:900;letter-spacing:-.02em;color:var(--yellow)}
+.microsite-custom-code .dna2 .d2-comp span{display:block;margin-top:2px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.72)}
+
+/* ---- footer ---- */
+.microsite-custom-code .dna2 .d2-ft{display:flex;flex-direction:column;gap:3px;text-align:center;padding:16px;background:#fff;border-top:2px solid var(--ink);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray)}
+
+/* ---- quick nav ---- */
+.microsite-custom-code .dna2 .d2-navbtn{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:14px;z-index:60;width:44px;height:44px;border:0;border-radius:10px;cursor:pointer;background:var(--ink);color:#fff;display:grid;place-items:center;box-shadow:0 3px 12px rgba(0,0,0,.28)}
+.microsite-custom-code .dna2 .d2-navbars{display:grid;gap:4px;width:20px}
+.microsite-custom-code .dna2 .d2-navbars i{display:block;height:2.5px;border-radius:2px;background:#fff;transition:transform .25s,opacity .2s}
+.microsite-custom-code .dna2.d2-navopen .d2-navbtn{background:var(--green)}
+.microsite-custom-code .dna2.d2-navopen .d2-navbars i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.microsite-custom-code .dna2.d2-navopen .d2-navbars i:nth-child(2){opacity:0}
+.microsite-custom-code .dna2.d2-navopen .d2-navbars i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.microsite-custom-code .dna2 .d2-nav{position:fixed;top:0;right:0;bottom:0;z-index:55;width:min(84vw,320px);background:var(--ink);color:#fff;transform:translateX(100%);transition:transform .3s cubic-bezier(.22,.8,.3,1);display:flex;flex-direction:column;padding:calc(18px + env(safe-area-inset-top,0px)) 18px calc(22px + env(safe-area-inset-bottom,0px));box-shadow:-8px 0 30px rgba(0,0,0,.35);overflow-y:auto}
+.microsite-custom-code .dna2.d2-navopen .d2-nav{transform:none}
+.microsite-custom-code .dna2 .d2-navback{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.5);opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.microsite-custom-code .dna2.d2-navopen .d2-navback{opacity:1;visibility:visible}
+.microsite-custom-code .dna2 .d2-navhead{display:flex;align-items:center;justify-content:space-between;margin:2px 0 16px}
+.microsite-custom-code .dna2 .d2-navttl{font-size:11px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--yellow)}
+.microsite-custom-code .dna2 .d2-navx{background:none;border:0;color:#fff;font-size:30px;line-height:1;cursor:pointer;padding:0 2px}
+.microsite-custom-code .dna2 .d2-navlist{display:grid;gap:2px}
+.microsite-custom-code .dna2 .d2-navlist a{display:flex;align-items:baseline;gap:11px;text-decoration:none;padding:12px 8px;border-radius:6px;color:#fff;font-size:15px;font-weight:800;letter-spacing:-.01em;border-bottom:1px solid rgba(255,255,255,.08)}
+.microsite-custom-code .dna2 .d2-navlist a:hover,.microsite-custom-code .dna2 .d2-navlist a:focus{background:rgba(255,255,255,.08)}
+.microsite-custom-code .dna2 .d2-navlist i{font-style:normal;font-size:11px;font-weight:900;color:var(--yellow);letter-spacing:.04em;min-width:16px}
+.microsite-custom-code .dna2 :focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+@media print{.microsite-custom-code .dna2 .d2-navbtn,.microsite-custom-code .dna2 .d2-nav,.microsite-custom-code .dna2 .d2-navback{display:none!important}}
+
+/* ---- desktop: 12-col poster grid ---- */
+@media (min-width:760px){
+  .microsite-custom-code .dna2{max-width:1080px;display:grid;grid-template-columns:repeat(12,1fr);align-items:stretch}
+  .microsite-custom-code .dna2 .d2-hd,.microsite-custom-code .dna2 .d2-ft{grid-column:1/-1}
+  .microsite-custom-code .dna2 .d2-band{padding:32px 28px 34px}
+  .microsite-custom-code .dna2 .d2-band.d2-tight{padding:32px 0 34px}
+  .microsite-custom-code .dna2 .d2-hero{grid-column:1/-1;padding-bottom:38px}
+  .microsite-custom-code .dna2 .d2-hero .d2-plaque{max-width:420px}
+  .microsite-custom-code .dna2 .d2-hero .d2-display{max-width:17ch}
+  .microsite-custom-code .dna2 .d2-band:nth-of-type(2){grid-column:1/-1}
+  .microsite-custom-code .dna2 .d2-band:nth-of-type(3){grid-column:1/-1}
+  .microsite-custom-code .dna2 .d2-band:nth-of-type(4){grid-column:1/7}
+  .microsite-custom-code .dna2 .d2-band:nth-of-type(5){grid-column:7/13}
+  .microsite-custom-code .dna2 .d2-band:nth-of-type(6){grid-column:1/7}
+  .microsite-custom-code .dna2 .d2-band:nth-of-type(7){grid-column:7/13}
+  .microsite-custom-code .dna2 .d2-band:nth-of-type(8){grid-column:1/6}
+  .microsite-custom-code .dna2 .d2-band:nth-of-type(9){grid-column:6/13}
+  .microsite-custom-code .dna2 .d2-outs{grid-template-columns:repeat(3,1fr)}
+  .microsite-custom-code .dna2 .d2-out-wide{grid-column:span 1}
+  .microsite-custom-code .dna2 .d2-swatches{grid-template-columns:repeat(3,1fr)}
+  .microsite-custom-code .dna2 .d2-sw{min-height:132px}
+  .microsite-custom-code .dna2 .d2-auds{grid-template-columns:1fr;gap:10px}
+  .microsite-custom-code .dna2 .d2-kicker b{font-size:26px}
+  .microsite-custom-code .dna2 .d2-kicker.d2-kicker-pad{padding:0 28px}
+  .microsite-custom-code .dna2 .d2-lede{font-size:16px}
+  .microsite-custom-code .dna2 .d2-ft{flex-direction:row;justify-content:center;padding:18px 28px}
+}</style><div><div><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&display=swap">
+<div class="dna2" data-d2-nav="1">
+
+  <!-- QUICK NAV -->
+  <button class="d2-navbtn" type="button" aria-label="Open quick navigation" aria-expanded="false" aria-controls="d2-navmenu">
+    <span class="d2-navbars"><i></i><i></i><i></i></span>
+  </button>
+  <nav class="d2-nav" id="d2-navmenu" aria-hidden="true">
+    <div class="d2-navhead">
+      <span class="d2-navttl">Business DNA</span>
+      <button class="d2-navx" type="button" aria-label="Close navigation">&times;</button>
+    </div>
+    <ul class="d2-navlist">
+      <li><a href="#d2-s-hero"><i>01</i>Brand reveal</a></li>
+      <li><a href="#d2-s-pos"><i>02</i>Positioning</a></li>
+      <li><a href="#d2-s-channels"><i>03</i>Where it sells</a></li>
+      <li><a href="#d2-s-diff"><i>04</i>What makes it Gr&uuml;ns</a></li>
+      <li><a href="#d2-s-wall"><i>05</i>The drop wall</a></li>
+      <li><a href="#d2-s-color"><i>06</i>Color palette</a></li>
+      <li><a href="#d2-s-personality"><i>07</i>Brand personality</a></li>
+      <li><a href="#d2-s-aud"><i>08</i>Audience</a></li>
+      <li><a href="#d2-s-comp"><i>09</i>Social proof</a></li>
+    </ul>
+  </nav>
+
+  <!-- MASTHEAD -->
+  <header class="d2-hd">
+    <svg class="d2-logo" viewBox="0 0 200 70" role="img" aria-label="Gr&uuml;ns" fill="currentColor">
+      <path d="M33.7 49.5c-.9 6.7-4.8 9.3-11.6 9.3s-8-.6-12.7-1.5c-.6-.1-1.2.3-1.3.9l-1.3 9.2c0 .6.3 1.1.8 1.2 3.9.9 8.1 1.3 12.8 1.3 15.6 0 23.4-7.4 25-20.4l2.4-18.8L50.2 18c.3-1.5-.5-1.9-1.7-1.6l-6.7 2.1c-1.8.6-2.7.3-3.9-.4-2.5-1.4-5.8-2.4-9.3-2.4-10.2 0-18.2 5.8-20.1 19-1.6 11.6 3.3 18 12.3 18s9.1-2.3 12.5-5c.6-.5.5.7.4 1.7Zm2-14c-.5 3.2-1.7 5.4-3.5 6.2-1.8.8-3.7 1.3-5.8 1.3-6 0-8.1-3.4-7.4-8.5.6-4.5 3.9-7.6 11.2-7.6 1.6 0 3.2 0 4.8.3 1.6.3 1.7.6 1.2 4.1l-.6 4.2ZM74.2 30h-.1c-5.5.2-9.7 1.7-10.3 7.2l-1.9 17.5c-.1 1.3-1.2 2.2-2.5 2.2h-7.8c-1.5 0-2.7-1.3-2.5-2.8L53 26.8l.7-8.3c0-1 .9-1.7 1.8-1.7h7.4c.7 0 1.3.6 1.3 1.3l.4 6.1c0 .8.5.7.7.4 3.2-4.8 6.8-8.5 10.6-8.5s1.6.8 1.5 1.7l-1.5 11c-.1.8-.8 1.4-1.6 1.4ZM130.8 38 129 54.5c-.1 1.3-1.1 2.3-2.8 2.3h-7c-2.3 0-2.7-1.4-2.5-2.9l3.9-27.3.6-8.3c0-1 .9-1.7 1.9-1.7h6.8c.9 0 1.7.7 1.7 1.6l.3 6c0 1.1.4.9.6.6 4.6-5.5 9.8-8.9 15.2-8.9s11 4.3 9.3 17.6l-2.6 21.1c-.2 1.3-1.1 2.2-3 2.2h-6.3c-2.7 0-3.2-1.4-3-2.9l3-19.1c.9-5.1-1-6.6-4-6.6s-3.4.6-5 1.5c-2.9 1.8-4.8 4.9-5.2 8.3ZM90.4 38.1c-.6 5.5.3 7.7 5.2 7.7s6.8-3 7.5-8l2.4-19.5c.1-1 1-1.8 2-1.8h8.7c.8 0 1.5.8 1.3 1.6l-2.2 18.4c-1.8 16.3-9.1 21.3-20.2 21.3S76 50.4 78.4 37l2.3-18.6c.1-1 1-1.8 2-1.8h9.2c.8 0 1.5.8 1.3 1.6l-2.9 20M177.2 32.4c9.7 1 15.8 4.1 14.5 13.2-1.2 8.3-9.6 11.9-18.2 11.9S164 57 160 56c-1.2-.3-2-1-1.8-2.7l1.1-7.6c.1-1.1.8-1.4 1.4-1.2 4.3 1.3 7.9 2.3 14.5 2.3s5.7-1 5.9-2.6c.2-1.7-1.4-2.6-4.1-3.1-11-1.5-16.5-3.7-15.3-13.1 1.2-8.6 9.8-12.3 17.9-12.3s8.5.6 11.6 1.6c1.1.4 1.9.8 1.7 2.6l-1.1 8.3c0 .7-.9 1.1-1.5.8-3-1.4-7-2.6-13-2.6s-5.1.9-5.3 2.7c-.3 1.9 1.6 2.7 5.1 3.3ZM90.9 12.8c3.7 0 6.7-2.8 6.7-6.4S94.6 0 90.9 0s-6.7 2.8-6.7 6.4 3 6.4 6.7 6.4ZM109.4 12.8c3.7 0 6.7-2.8 6.7-6.4s-3-6.4-6.7-6.4-6.7 2.8-6.7 6.4 3 6.4 6.7 6.4Z"></path>
+    </svg>
+    <div class="d2-prep">Prepared by <b>YoboLabs</b> &middot; yobolabs.ai</div>
+  </header>
+
+  <!-- 01 BRAND REVEAL -->
+  <section id="d2-s-hero" class="d2-band d2-green d2-hero">
+    <div class="d2-kicker"><b>01</b><span>Brand reveal</span></div>
+    <div class="d2-plaque">
+      <svg viewBox="0 0 200 70" role="img" aria-label="Gr&uuml;ns wordmark" fill="currentColor">
+        <path d="M33.7 49.5c-.9 6.7-4.8 9.3-11.6 9.3s-8-.6-12.7-1.5c-.6-.1-1.2.3-1.3.9l-1.3 9.2c0 .6.3 1.1.8 1.2 3.9.9 8.1 1.3 12.8 1.3 15.6 0 23.4-7.4 25-20.4l2.4-18.8L50.2 18c.3-1.5-.5-1.9-1.7-1.6l-6.7 2.1c-1.8.6-2.7.3-3.9-.4-2.5-1.4-5.8-2.4-9.3-2.4-10.2 0-18.2 5.8-20.1 19-1.6 11.6 3.3 18 12.3 18s9.1-2.3 12.5-5c.6-.5.5.7.4 1.7Zm2-14c-.5 3.2-1.7 5.4-3.5 6.2-1.8.8-3.7 1.3-5.8 1.3-6 0-8.1-3.4-7.4-8.5.6-4.5 3.9-7.6 11.2-7.6 1.6 0 3.2 0 4.8.3 1.6.3 1.7.6 1.2 4.1l-.6 4.2ZM74.2 30h-.1c-5.5.2-9.7 1.7-10.3 7.2l-1.9 17.5c-.1 1.3-1.2 2.2-2.5 2.2h-7.8c-1.5 0-2.7-1.3-2.5-2.8L53 26.8l.7-8.3c0-1 .9-1.7 1.8-1.7h7.4c.7 0 1.3.6 1.3 1.3l.4 6.1c0 .8.5.7.7.4 3.2-4.8 6.8-8.5 10.6-8.5s1.6.8 1.5 1.7l-1.5 11c-.1.8-.8 1.4-1.6 1.4ZM130.8 38 129 54.5c-.1 1.3-1.1 2.3-2.8 2.3h-7c-2.3 0-2.7-1.4-2.5-2.9l3.9-27.3.6-8.3c0-1 .9-1.7 1.9-1.7h6.8c.9 0 1.7.7 1.7 1.6l.3 6c0 1.1.4.9.6.6 4.6-5.5 9.8-8.9 15.2-8.9s11 4.3 9.3 17.6l-2.6 21.1c-.2 1.3-1.1 2.2-3 2.2h-6.3c-2.7 0-3.2-1.4-3-2.9l3-19.1c.9-5.1-1-6.6-4-6.6s-3.4.6-5 1.5c-2.9 1.8-4.8 4.9-5.2 8.3ZM90.4 38.1c-.6 5.5.3 7.7 5.2 7.7s6.8-3 7.5-8l2.4-19.5c.1-1 1-1.8 2-1.8h8.7c.8 0 1.5.8 1.3 1.6l-2.2 18.4c-1.8 16.3-9.1 21.3-20.2 21.3S76 50.4 78.4 37l2.3-18.6c.1-1 1-1.8 2-1.8h9.2c.8 0 1.5.8 1.3 1.6l-2.9 20M177.2 32.4c9.7 1 15.8 4.1 14.5 13.2-1.2 8.3-9.6 11.9-18.2 11.9S164 57 160 56c-1.2-.3-2-1-1.8-2.7l1.1-7.6c.1-1.1.8-1.4 1.4-1.2 4.3 1.3 7.9 2.3 14.5 2.3s5.7-1 5.9-2.6c.2-1.7-1.4-2.6-4.1-3.1-11-1.5-16.5-3.7-15.3-13.1 1.2-8.6 9.8-12.3 17.9-12.3s8.5.6 11.6 1.6c1.1.4 1.9.8 1.7 2.6l-1.1 8.3c0 .7-.9 1.1-1.5.8-3-1.4-7-2.6-13-2.6s-5.1.9-5.3 2.7c-.3 1.9 1.6 2.7 5.1 3.3ZM90.9 12.8c3.7 0 6.7-2.8 6.7-6.4S94.6 0 90.9 0s-6.7 2.8-6.7 6.4 3 6.4 6.7 6.4ZM109.4 12.8c3.7 0 6.7-2.8 6.7-6.4s-3-6.4-6.7-6.4-6.7 2.8-6.7 6.4 3 6.4 6.7 6.4Z"></path>
+      </svg>
+    </div>
+    <h2 class="d2-display">THE GREENS<br>YOU'LL ACTUALLY<br>CRAVE.</h2>
+    <p class="d2-lede">Founded 2023 by Chad Janis &middot; 60+ ingredients in one grab-and-go pack &middot; A &#220;&nbsp;Snacks brand, acquired by Unilever for a reported $1.2B in June 2026.</p>
+  </section>
+
+  <!-- 02 POSITIONING -->
+  <section id="d2-s-pos" class="d2-band d2-ink">
+    <div class="d2-kicker"><b>02</b><span>Positioning</span></div>
+    <h2 class="d2-quote">SNACKABLE.<br>PACKABLE.<br><em>CLINICALLY TESTED.</em></h2>
+    <p class="d2-lede">For the ~90% of people who aren't nutrient-sufficient and won't stick to a powder or a pill stack: comprehensive daily nutrition in a gummy you look forward to taking.</p>
+  </section>
+
+  <!-- 03 WHERE IT SELLS -->
+  <section id="d2-s-channels" class="d2-band d2-white">
+    <div class="d2-kicker dark"><b>03</b><span>Where it sells &middot; 7,000+ doors</span></div>
+    <div class="d2-outs">
+      <article class="d2-out d2-out-wide">
+        <h3>gruns.co</h3>
+        <span class="d2-flag">DTC flagship</span>
+        <dl><dt>Since</dt><dd>Aug 2023 &middot; subscription-first</dd></dl>
+      </article>
+      <article class="d2-out">
+        <h3>Amazon</h3>
+        <dl><dt>Since</dt><dd>Dec 2023</dd></dl>
+      </article>
+      <article class="d2-out">
+        <h3>Sprouts</h3>
+        <dl><dt>Since</dt><dd>Dec 2024 &middot; first retail</dd></dl>
+      </article>
+      <article class="d2-out">
+        <h3>Target</h3>
+        <dl><dt>Since</dt><dd>Apr 2025</dd></dl>
+      </article>
+      <article class="d2-out">
+        <h3>Walmart</h3>
+        <dl><dt>Since</dt><dd>Apr 2025</dd></dl>
+      </article>
+      <article class="d2-out d2-out-soon">
+        <h3>Costco &amp; Kroger</h3>
+        <span class="d2-flag d2-flag-soon">newest &middot; 2026</span>
+        <dl><dt>Since</dt><dd>club + grocery</dd></dl>
+      </article>
+    </div>
+    <p class="d2-note">Subscription from <b>$29.99</b> per 28 packs (~$1.07/day) &middot; one-time <b>$66.65</b> (~$2.38/day) &middot; free shipping, 30-day guarantee, HSA/FSA eligible via Truemed.</p>
+  </section>
+
+  <!-- 04 WHAT MAKES IT GR&#220;NS -->
+  <section id="d2-s-diff" class="d2-band d2-ink">
+    <div class="d2-kicker"><b>04</b><span>What makes it Gr&uuml;ns</span></div>
+    <div class="d2-feats">
+      <article class="d2-feat d2-feat-hero">
+        <i>01</i>
+        <h4>Gummy, not powder</h4>
+        <p>60+ whole-food ingredients, 21 vitamins &amp; minerals and 6g fiber in one pectin-based pack. No shaker, no chalk, no pill stack.</p>
+      </article>
+      <article class="d2-feat">
+        <i>02</i>
+        <h4>Proven absorption</h4>
+        <p>12-week randomized, double-blind, placebo-controlled study in 120 adults: folate +20.5%, vitamin C +40.1%</p>
+      </article>
+      <article class="d2-feat">
+        <i>03</i>
+        <h4>The drop engine</h4>
+        <p>Licensed limited editions &mdash; Shrek, Minions, Popsicle&reg; &mdash; make a supplement behave like a sneaker release</p>
+      </article>
+      <article class="d2-feat d2-feat-wide">
+        <i>04</i>
+        <h4>Creator-led scale</h4>
+        <p>~10M gummies a day, $300M+ annualized, 1M+ members &mdash; and the fastest billion-dollar exit in CPG, 32 months from first sale.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 05 THE DROP WALL -->
+  <section id="d2-s-wall" class="d2-band d2-yellow">
+    <div class="d2-kicker dark"><b>05</b><span>The drop wall &middot; core + LTO</span></div>
+    <div class="d2-wall">
+      <span class="d2-fl d2-fl-hero"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/7c70fdf85afe5aa5.webp" alt="Gr&uuml;ns Original Adults 28-pack pouch"><b>Original Adults</b></span>
+      <span class="d2-fl"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/d0b64b56f05d22ef.webp" alt="Gr&uuml;ns Kids pouch" loading="lazy"><b>Original Kids</b></span>
+      <span class="d2-fl"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/41fa5d3682df2eb8.webp" alt="Gr&uuml;ns Shrek Berry Far Far Away pouch" loading="lazy"><b>Berry Far Far Away</b></span>
+      <span class="d2-fl"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/3305922e74a6b30d.webp" alt="Gr&uuml;ns Kids Shrek edition pouch" loading="lazy"><b>Shrek Kids</b></span>
+      <span class="d2-fl"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/b0f2b104c5df60b0.webp" alt="Gr&uuml;ns Minions edition pouch" loading="lazy"><b>Minions</b></span>
+      <span class="d2-fl"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/cb925698d7a1ccee.webp" alt="Gr&uuml;ns Raspberry Lemonade pouch" loading="lazy"><b>Raspberry Lemonade</b></span>
+      <span class="d2-fl d2-fl-wide"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/f0a7ff7d7d3f787f.webp" alt="Popsicle Firecracker Gr&uuml;ns pouch" loading="lazy"><b>Popsicle&reg; Firecracker</b></span>
+    </div>
+  </section>
+
+  <!-- 06 COLOR PALETTE -->
+  <section id="d2-s-color" class="d2-band d2-white d2-tight">
+    <div class="d2-kicker dark d2-kicker-pad"><b>06</b><span>Color palette</span></div>
+    <div class="d2-swatches">
+      <div class="d2-sw" style="background:#007e40;color:#fff"><b>Gr&uuml;ns Green</b><span>#007E40</span></div>
+      <div class="d2-sw" style="background:#002613;color:#fff"><b>Deep Forest</b><span>#002613</span></div>
+      <div class="d2-sw" style="background:#ffcc2e;color:#002613"><b>Gummy Yellow</b><span>#FFCC2E</span></div>
+      <div class="d2-sw" style="background:#dfefe7;color:#002613"><b>Mint</b><span>#DFEFE7</span></div>
+      <div class="d2-sw d2-sw-line" style="background:#ffffff;color:#002613"><b>White</b><span>#FFFFFF</span></div>
+      <div class="d2-sw" style="background:#f0f1f3;color:#002613"><b>UI Neutral</b><span>#F0F1F3</span></div>
+    </div>
+  </section>
+
+  <!-- 07 BRAND PERSONALITY -->
+  <section id="d2-s-personality" class="d2-band d2-mint">
+    <div class="d2-kicker dark"><b>07</b><span>Brand personality</span></div>
+    <div class="d2-vals">
+      <span class="d2-vtile d2-vtile-green">Delicious</span>
+      <span class="d2-vtile d2-vtile-ink">Portable</span>
+      <span class="d2-vtile d2-vtile-yellow">Rigorous</span>
+      <span class="d2-vtile d2-vtile-green">Playful</span>
+    </div>
+    <p class="d2-body">Tone across the channels: friendly, funny, low-jargon &mdash; then the receipts. Claims land next to a clinical result or a lab date, never alone. <b>&ldquo;Rip. Tip. Enjoy.&rdquo;</b></p>
+  </section>
+
+  <!-- 08 AUDIENCE -->
+  <section id="d2-s-aud" class="d2-band d2-white">
+    <div class="d2-kicker dark"><b>08</b><span>Audience</span></div>
+    <div class="d2-auds">
+      <article class="d2-aud"><b>Primary</b><p>Adults who have already bounced off greens powders and multivitamin stacks &mdash; convenience-led, subscription-comfortable, price-aware at roughly a dollar a day</p></article>
+      <article class="d2-aud"><b>Secondary</b><p>Parents buying Gr&uuml;ns Kids, plus mass-retail shoppers meeting the brand cold on shelf at Target, Walmart, Costco, Kroger and Sprouts</p></article>
+    </div>
+    <div class="d2-tags">
+      <span class="d2-tag">Won't drink a powder</span>
+      <span class="d2-tag">Grab-and-go routine</span>
+      <span class="d2-tag">Kids who refuse vegetables</span>
+      <span class="d2-tag">Saw it from a creator</span>
+      <span class="d2-tag">GLP-1 nutrition gaps</span>
+    </div>
+  </section>
+
+  <!-- 09 SOCIAL PROOF + COMPETITIVE SET -->
+  <section id="d2-s-comp" class="d2-band d2-ink">
+    <div class="d2-kicker"><b>09</b><span>Social proof <span class="d2-verify">@grunsdaily &middot; Sep 2026</span></span></div>
+    <div class="d2-poster d2-poster-3">
+      <div class="d2-pn"><b>169K</b><span>followers</span></div>
+      <div class="d2-pn d2-pn-hi"><b>1M+</b><span>members</span></div>
+      <div class="d2-pn"><b>4.8&#9733;</b><span>reviews</span></div>
+    </div>
+    <p class="d2-note light">Rated <b>4.8 from 100,000 reviews</b>. Earned coverage in <b>Forbes, GQ, TODAY, People, Good Housekeeping</b>. Investors include Joe Burrow, Shaun White and Anna Kendrick via Plus Capital; $35M Series B led by Headline (May 2025).</p>
+    <div class="d2-subhead">Competitive set</div>
+    <div class="d2-comps">
+      <article class="d2-comp"><b>AG1</b><span>the powder incumbent &middot; ~$79&ndash;99/month &middot; the exact routine Gr&uuml;ns is built to replace</span></article>
+      <article class="d2-comp"><b>Bloom Nutrition</b><span>greens gummies &middot; ~$35 per 30 servings &middot; mass retail, TikTok-native, fewer ingredients</span></article>
+      <article class="d2-comp"><b>Goli &middot; Olly &middot; 8Greens &middot; Lemme</b><span>the drugstore gummy shelf &middot; single-benefit, low ingredient counts, no clinical story</span></article>
+      <article class="d2-comp"><b>Indirect</b><span>Ritual, MaryRuth's &middot; the pill and liquid multivitamin stack people are already paying for</span></article>
+    </div>
+  </section>
+
+  <footer class="d2-ft"><span>YoboLabs.ai &mdash; Gr&uuml;ns &mdash; Confidential</span></footer>
+  <div class="d2-navback"></div>
+</div></div></div></div></div></div></div><!--$?--><template id="B:1"></template><!--/$--><div data-toast-container="true" class="fixed top-0 z-[10001] pointer-events-none flex max-h-screen w-full flex-col-reverse p-4 sm:top-4 sm:right-4 sm:flex-col md:max-w-[420px]"></div><script>requestAnimationFrame(function(){$RT=performance.now()});</script><script>(self.__next_f=self.__next_f||[]).push([0])</script><title>Grüns-Business-DNA</title><meta name="robots" content="index, follow"/><link rel="canonical" href="https://gruns.pages.yobolabs.ai/busines-dna"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta property="og:title" content="Grüns-Business-DNA"/><meta property="og:url" content="https://gruns.pages.yobolabs.ai/busines-dna"/><meta property="og:site_name" content="LP-testing-apps"/><meta property="og:locale" content="en_US"/><meta property="og:image" content="https://d33nglz4qemo28.cloudfront.net/logos/YOBO-Web-1200x630-0513.png"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Grüns-Business-DNA"/><meta name="twitter:image" content="https://d33nglz4qemo28.cloudfront.net/logos/YOBO-Web-1200x630-0513.png"/><div hidden id="S:1"></div><script>$RB=[];$RV=function(b){$RT=performance.now();for(var a=0;a<b.length;a+=2){var c=b[a],e=b[a+1];null!==e.parentNode&&e.parentNode.removeChild(e);var f=c.parentNode;if(f){var g=c.previousSibling,h=0;do{if(c&&8===c.nodeType){var d=c.data;if("/$"===d||"/&"===d)if(0===h)break;else h--;else"$"!==d&&"$?"!==d&&"$~"!==d&&"$!"!==d&&"&"!==d||h++}d=c.nextSibling;f.removeChild(c);c=d}while(c);for(;e.firstChild;)f.insertBefore(e.firstChild,c);g.data="$";g._reactRetry&&g._reactRetry()}}b.length=0};
+$RC=function(b,a){if(a=document.getElementById(a))(b=document.getElementById(b))?(b.previousSibling.data="$~",$RB.push(b,a),2===$RB.length&&(b="number"!==typeof $RT?0:$RT,a=performance.now(),setTimeout($RV.bind(null,$RB),2300>a&&2E3<a?2300-a:b+300-a))):a.parentNode.removeChild(a)};$RC("B:1","S:1")</script><div hidden id="S:0"></div><script>$RC("B:0","S:0")</script></body></html>

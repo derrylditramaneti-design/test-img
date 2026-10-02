@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="Draft competitor research for bb.q Chicken California from public data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23D2202F'/%3E%3Cpath d='M9 21l5-10 4 6 5-8' stroke='%23FFFFFF' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<title>bb.q Competitor Research</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Forked from the Gruns plan system (garda-ref). Palette swapped to bb.q. */
+  :root{
+    --ink:#1A1716; --ink-2:#4D4745; --ink-3:#7A7371;
+    --ground:#FAF8F6; --surface:#FFFFFF; --surface-2:#F3EFEC;
+    --line:#E4DEDA; --line-soft:#EEE9E6;
+    --red:#D2202F; --red-ink:#FFFFFF;
+    --dark:#0B0908; --dark-ink:#FFFFFF;
+    --tint:#FBE1E3; --tint-ink:#8A1520;
+    --yellow:#F3E6C8;
+    --sans:'Satoshi','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    --fs-display:32px; --fs-metric:28px; --fs-title:18px; --fs-body:15px; --fs-caption:12px;
+    --r:6px; --eyebrow:#FF6B76;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box; min-width:0}
+  html,body{overflow-x:hidden; max-width:100%}
+  body{ margin:0; background:var(--ground); color:var(--ink); font-family:var(--sans); -webkit-font-smoothing:antialiased; font-size:var(--fs-body); line-height:1.5}
+  h1,h2,h3,h4{font-family:var(--sans); margin:0; text-wrap:balance; letter-spacing:-.02em}
+  p{margin:0} a{color:inherit}
+  img,svg,table{max-width:100%}
+  h1,h2,h3,h4,p,dd,dt,li,span,b,.chip{overflow-wrap:anywhere}
+  p, dd, li, .s-q{text-wrap:pretty}
+
+  .wrap{width:100%; max-width:960px; margin-inline:auto; padding-inline:20px}
+  @media (min-width:768px){ .wrap{padding-inline:32px} }
+
+  /* masthead */
+  .top{background:var(--red)}
+  .top-in{display:flex; align-items:center; justify-content:flex-start; gap:12px; height:52px}
+  .logo{display:block; height:24px; width:24px; border-radius:5px; flex:none}
+  .for{color:rgba(255,255,255,.9); font-size:var(--fs-caption); line-height:1; font-weight:400; white-space:nowrap; padding-left:12px; border-left:1px solid rgba(255,255,255,.35)}
+
+  /* hero */
+  .hero{background:var(--dark); color:var(--dark-ink)}
+  .hero-in{padding-block:34px 34px}
+  @media (min-width:768px){ .hero-in{padding-block:56px 52px} }
+  .brand{display:block; height:36px; width:auto; max-width:100%; margin-bottom:22px}
+  .kicker{ color:var(--eyebrow); font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+  .hero h1{ margin-top:14px; max-width:15ch; font-size:var(--fs-display); line-height:1.08; font-weight:700; letter-spacing:-0.02em}
+  .hero p{ margin-top:14px; color:rgba(255,255,255,.88); max-width:40ch; font-size:var(--fs-body); line-height:1.5}
+  .metric{margin-top:24px; display:grid; grid-template-columns:auto auto; justify-content:space-between; align-items:center; column-gap:12px; row-gap:6px; width:100%; max-width:360px; background:var(--red); color:var(--red-ink); border-radius:var(--r); padding:14px 16px}
+  .metric .m-num{font-size:var(--fs-metric); line-height:1; font-weight:700; font-variant-numeric:tabular-nums; letter-spacing:-.02em; white-space:nowrap}
+  .metric .tag{justify-self:end}
+  .metric .m-lbl{grid-column:1 / -1; font-size:var(--fs-body); line-height:1.5; font-weight:400}
+  .tag{display:inline-block; vertical-align:middle; font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em; border:1px solid currentColor; border-radius:6px; padding:3px 8px; white-space:nowrap}
+
+  /* sections */
+  section{padding-block:34px 40px}
+  @media (min-width:768px){ section{padding-block:50px 58px} }
+  section + section{border-top:1px solid var(--line)}
+  h2{font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .sub{ margin-top:8px; color:var(--ink-2); max-width:58ch; font-size:var(--fs-body); line-height:1.5}
+
+  /* hanging-label statements */
+  .stmts{margin:18px 0 0; display:grid}
+  .stmt{display:grid; gap:4px; padding-block:14px; border-top:1px solid var(--line-soft)}
+  .stmt:first-child{border-top:none; padding-top:6px}
+  @media (min-width:700px){ .stmt{grid-template-columns:160px minmax(0,1fr); gap:24px; align-items:baseline} }
+  .stmt dt{ color:var(--red); font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+  .stmt dd{ margin:0; color:var(--ink-2); max-width:62ch; font-size:var(--fs-body); line-height:1.5}
+  .chips{display:flex; flex-wrap:wrap; gap:6px}
+  .chip{ background:var(--surface-2); border:1px solid var(--line); padding:4px 9px; border-radius:4px; color:var(--ink-2); font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+  .sw{ display:inline-flex; align-items:center; gap:7px; color:var(--ink-2); margin:0 12px 6px 0; font-size:var(--fs-body); line-height:1.5}
+  .sw i{display:inline-block; width:18px; height:18px; border-radius:4px; border:1px solid var(--line)}
+
+  /* outcome tiles */
+  .stats{margin-top:18px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:14px 12px; display:grid; gap:4px; align-content:start}
+  .stat b{ letter-spacing:-.03em; font-size:var(--fs-metric); line-height:1; font-weight:700; font-variant-numeric:tabular-nums}
+  .stat span:not(.tag){ color:var(--ink-3); font-size:var(--fs-body); line-height:1.5}
+
+  .stat .tag{justify-self:start; color:var(--ink-2)}
+  .stmt .tag, .ln .tag, .sub .tag{margin-left:6px; color:var(--ink-2)}
+
+  /* cards (Garda stage disclosures) */
+  .stages{margin-top:20px; display:grid; gap:10px}
+  .stage{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  .stage[open]{border-color:var(--red)}
+  .stage > summary{list-style:none; cursor:pointer; padding:16px; display:grid; gap:6px; transition:background .16s ease, transform .1s ease}
+  .stage > summary::-webkit-details-marker{display:none}
+  .stage > summary:hover{background:var(--surface-2)}
+  .stage > summary:active{background:var(--surface-2); transform:translateY(1px)}
+  .stage > summary:focus-visible{outline:2px solid var(--red); outline-offset:-2px}
+  @media (min-width:760px){ .stage > summary{grid-template-columns:200px minmax(0,1fr); align-items:center; gap:20px; padding:16px 20px} }
+  .stage h3{font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .s-q{ display:block; color:var(--ink-2); font-size:var(--fs-body); line-height:1.5}
+  .s-open{ display:block; margin-top:4px; color:var(--ink-3); font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+  .stage[open] .s-open{color:var(--red)}
+  .s-body{padding:4px 16px 16px; border-top:1px solid var(--line-soft)}
+  @media (min-width:760px){ .s-body{padding:4px 20px 18px} }
+  .quote{ margin-top:14px; border-left:4px solid var(--red); padding:2px 0 2px 14px; max-width:56ch; font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .ln{ display:grid; gap:4px; padding-block:12px; border-bottom:1px solid var(--line-soft); color:var(--ink-2); font-size:var(--fs-body); line-height:1.5}
+  .ln:last-child{border-bottom:none}
+  @media (min-width:700px){ .ln{grid-template-columns:170px minmax(0,1fr); gap:20px; align-items:baseline} }
+  .ln b{ color:var(--ink); font-weight:700; font-size:var(--fs-body); line-height:1.5}
+  .ln .mv{font-size:var(--fs-body); line-height:1.5}
+  .ln .mv em{font-style:normal; background:var(--tint); color:var(--tint-ink); font-weight:600; padding:1px 6px; border-radius:4px}
+
+  /* decide */
+  .decide{background:var(--dark); color:var(--dark-ink); border-radius:var(--r); padding:26px 20px}
+  @media (min-width:768px){ .decide{padding:32px} }
+  .decide h2{ max-width:30ch; font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .btn{ margin-top:18px; display:inline-flex; align-items:center; min-height:48px; padding:12px 20px; border:0; border-radius:var(--r);
+    background:var(--red); color:#fff; font-family:var(--sans); line-height:1.2; cursor:pointer; max-width:100%; transition:transform .1s ease, filter .16s ease; font-size:var(--fs-body); font-weight:600}
+  .btn:hover{filter:brightness(1.08)}
+  .btn:active{transform:translateY(1px)}
+  .btn:focus-visible{outline:2px solid #fff; outline-offset:2px}
+
+  .disc{border:1px solid var(--line); border-radius:var(--r); background:var(--surface); margin-top:16px}
+  .disc > summary{ padding:14px 16px; cursor:pointer; font-weight:600; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:14px; min-height:48px; font-size:var(--fs-body); line-height:1.5}
+  .disc > summary::-webkit-details-marker{display:none}
+  .disc > summary::after{ content:"+"; color:var(--ink-3); font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .disc[open] > summary::after{content:"-"}
+  .dbody{ padding:0 16px 16px; color:var(--ink-2); font-size:var(--fs-body); line-height:1.5}
+
+  ::selection{background:var(--tint); color:var(--tint-ink)}
+  footer{ border-top:1px solid var(--line); padding-block:20px 30px; color:var(--ink-3); font-size:var(--fs-caption); line-height:1.3; font-weight:600;}
+  @media print{
+    .top,.hero,.metric,.decide,.btn{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+    details > div{display:block !important}
+    .stage,.ln{break-inside:avoid}
+  }
+  @media (prefers-reduced-motion:reduce){ *{transition:none !important; animation:none !important} }
+
+@media (max-width:520px){/*stack-grids*/.stats{grid-template-columns:1fr !important}}
+
+  /* competitor research blocks (built on the house tokens above) */
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat .cap{color:var(--ink-3); font-size:var(--fs-body); line-height:1.4}
+  .rank{display:inline-block; color:var(--red); font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+  .stage > summary .s-q{margin-top:2px}
+  .ln .tag{white-space:nowrap}
+  .move p .tag, .stmt dd .tag{margin-left:6px; color:var(--ink-2)}
+
+  .h2h{margin-top:18px; background:var(--surface); border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  .h2h table{width:100%; border-collapse:collapse; table-layout:fixed; font-size:13px; line-height:1.35}
+  .h2h th,.h2h td{padding:10px 6px; text-align:left; vertical-align:top; border-top:1px solid var(--line-soft); overflow-wrap:anywhere}
+  .h2h thead th{border-top:none; background:var(--surface-2); color:var(--ink); font-weight:700}
+  .h2h th:first-child{width:24%; color:var(--ink-3); font-weight:600}
+  .h2h thead th.you{background:var(--red); color:#fff}
+  .h2h td.you{background:var(--tint); color:var(--tint-ink); font-weight:600}
+  .h2h .tag{display:block; margin-top:4px; width:max-content; max-width:100%; padding:1px 4px; font-size:10px; letter-spacing:.04em; color:var(--ink-2)}
+  .h2h td.you .tag{color:var(--tint-ink)}
+  .h2h .na{color:var(--ink-3)}
+  .note{margin-top:10px; color:var(--ink-3); font-size:var(--fs-caption); line-height:1.4; font-weight:600}
+
+  .risk{display:inline-block; margin-top:6px; font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--red)}
+  .risk.med{color:var(--ink-3)}
+
+  .moves{margin-top:18px; display:grid; gap:10px; counter-reset:mv}
+  .move{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:16px; display:grid; gap:6px}
+  .move:first-child{border-color:var(--red)}
+  .move .n{color:var(--red); font-size:var(--fs-caption); line-height:1.3; font-weight:600; text-transform:uppercase; letter-spacing:.08em}
+  .move h3{font-size:var(--fs-title); line-height:1.25; font-weight:700}
+  .move p{color:var(--ink-2)}
+  .pmeta{display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px; margin-top:4px; color:var(--ink-3); font-variant-numeric:tabular-nums; font-size:var(--fs-body); line-height:1.5}
+  .to{background:var(--tint); color:var(--tint-ink); font-weight:600; padding:3px 8px; border-radius:4px}
+  .pmeta .tag{color:var(--ink-2)}
+  .decide p{margin-top:8px; color:rgba(255,255,255,.86)}
+  a.btn{text-decoration:none}
+  @media (max-width:520px){ .stats{grid-template-columns:repeat(2,minmax(0,1fr)) !important} }
+  .h2h table{font-size:12px}
+  .h2h th,.h2h td{padding:9px 4px}
+  .h2h th:first-child{width:20%; padding-left:8px}
+  .h2h thead th{font-size:11px; letter-spacing:0; overflow-wrap:normal; word-break:keep-all}
+  .h2h .tag{font-size:9px; letter-spacing:.02em; padding:1px 3px; white-space:nowrap}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <img class="logo" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/logos/yobolabs-brand-2026-07/dark/app-icon-dark-256x256.png" alt="YoboLabs">
+    <span class="for">Prepared for bb.q Chicken</span>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap hero-in">
+    <img class="brand" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/logos/bbq-chicken-logo-dark.png" alt="bb.q Chicken">
+    <div class="kicker">Competitor research</div>
+    <h1>Three Korean chains want your dinner order.</h1>
+    <p>Bonchon, Kyochon and Pelicana sell the same craving in California. Three more chase the same night.</p>
+    <div class="metric"><b class="m-num">3 direct</b><span class="tag">Public</span><span class="m-lbl">Korean chicken chains on Yelp in California</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <h2>You, in four numbers</h2>
+    <p class="sub">What a guest sees before choosing.</p>
+    <div class="stats">
+      <div class="stat"><b>12</b><span class="cap">sauces on your US menu</span><span class="tag">Public</span></div>
+      <div class="stat"><b>4.3</b><span class="cap">Chino Hills, 702 Yelp reviews</span><span class="tag">Public</span></div>
+      <div class="stat"><b>4.8</b><span class="cap">DoorDash, 4,000+ ratings</span><span class="tag">Public</span></div>
+      <div class="stat"><b>87K</b><span class="cap">followers on @bbqchickenus, US account</span><span class="tag">Public</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Direct rivals</h2>
+    <p class="sub">Korean fried chicken, operating in California.</p>
+    <div class="stages">
+
+      <details class="stage" open>
+        <summary><div><span class="rank">Rival 01</span><h3>Bonchon</h3></div><span class="s-q">Same crunch, same sauce pair.</span></summary>
+        <div class="s-body">
+          <div class="ln"><b>What they sell</b><span>Double-fried crispy chicken, soy garlic and spicy. Similar price tier.</span></div>
+          <div class="ln"><b>Where</b><span>San Gabriel, Costa Mesa, Fountain Valley, Los Angeles.<span class="tag">Public</span></span></div>
+          <div class="ln"><b>Size</b><span>~150 US units. Your brand has more.<span class="tag">Estimate</span></span></div>
+          <div class="ln"><b>Flavors</b><span>2 core sauces.<span class="tag">Estimate</span></span></div>
+        </div>
+      </details>
+
+      <details class="stage">
+        <summary><div><span class="rank">Rival 02</span><h3>Kyochon</h3></div><span class="s-q">Premium, and first in the US.</span></summary>
+        <div class="s-body">
+          <div class="ln"><b>What they sell</b><span>Premium Korean fried chicken. Honey and soy signatures.</span></div>
+          <div class="ln"><b>Their claim</b><span>Authenticity, same ground as yours. First US store 2007.<span class="tag">Public</span></span></div>
+          <div class="ln"><b>Where</b><span>Los Angeles, Irvine, Pasadena.<span class="tag">Public</span></span></div>
+          <div class="ln"><b>Flavors</b><span>~5 flavors.<span class="tag">Estimate</span></span></div>
+        </div>
+      </details>
+
+      <details class="stage">
+        <summary><div><span class="rank">Rival 03</span><h3>Pelicana</h3></div><span class="s-q">Closest flavor for flavor.</span></summary>
+        <div class="s-body">
+          <div class="ln"><b>What they sell</b><span>Korean fried chicken at a similar franchise scale.</span></div>
+          <div class="ln"><b>Where</b><span>LA Koreatown.<span class="tag">Public</span></span></div>
+          <div class="ln"><b>Size</b><span>28 US locations since 2014, several states.<span class="tag">Estimate</span></span></div>
+          <div class="ln"><b>Source note</b><span>Location count from a secondary article, not from Pelicana.</span></div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Same craving</h2>
+    <p class="sub">Not Korean. Same dinner, same price point.</p>
+    <div class="stmts">
+      <div class="stmt"><dt>Dave's Hot Chicken</dt><dd>Founded in LA. The fastest moving fried chicken challenger in SoCal. Near your stores, to confirm.</dd></div>
+      <div class="stmt"><dt>Wingstop</dt><dd>The flavor variety wings story. Hard to beat on the delivery apps. Near your stores, to confirm.</dd></div>
+      <div class="stmt"><dt>Raising Cane's</dt><dd>One product done fast. Takes the ordinary weeknight order. Near your stores, to confirm.</dd></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Side by side</h2>
+    <div class="h2h">
+      <table>
+        <thead><tr><th scope="col"></th><th scope="col" class="you">bb.q</th><th scope="col">Bonchon</th><th scope="col">Kyochon</th><th scope="col">Pelicana</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Flavors</th><td class="you">12<span class="tag">Public</span></td><td>2 core<span class="tag">Estimate</span></td><td>~5<span class="tag">Estimate</span></td><td class="na">Not read</td></tr>
+          <tr><th scope="row">US stores</th><td class="you">250+<span class="tag">Estimate</span></td><td>~150<span class="tag">Estimate</span></td><td class="na">Not read</td><td>28<span class="tag">Estimate</span></td></tr>
+          <tr><th scope="row">In US since</th><td class="you na">Not read</td><td class="na">Not read</td><td>2007<span class="tag">Public</span></td><td>2014<span class="tag">Estimate</span></td></tr>
+          <tr><th scope="row">Their ads</th><td class="you na">Not read</td><td class="na">Not read</td><td class="na">Not read</td><td class="na">Not read</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">You lead on flavor range. Ads are blank for everyone until I read the Meta Ad Library.</p>
+  </section>
+
+  <section>
+    <h2>Where you are exposed</h2>
+    <div class="stmts">
+      <div class="stmt"><dt>Reviews</dt><dd>Review volume is the visible fight. All three rivals hold Yelp in your trade areas. No paid-review tactic seen.<br><span class="risk">Risk high</span></dd></div>
+      <div class="stmt"><dt>Delivery apps</dt><dd>Wingstop is strong there. Many of your orders leave no contact you own, about 40%.<span class="tag">Estimate</span><br><span class="risk">Risk high</span></dd></div>
+      <div class="stmt"><dt>National voice</dt><dd>Your 87K account posts reels with KFC comparison humor. It never names Chino Hills or Alhambra.<span class="tag">Public</span><br><span class="risk med">Risk medium</span></dd></div>
+      <div class="stmt"><dt>Authenticity</dt><dd>Kyochon sells the same Korean story, in the US since 2007.<br><span class="risk med">Risk medium</span></dd></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What I could not see</h2>
+    <p class="sub">Needed before I judge any rival move.</p>
+    <dl class="stmts">
+      <div class="stmt"><dt>Their ads</dt><dd>Meta Ad Library not reached yet. First task.</dd></div>
+      <div class="stmt"><dt>Prices</dt><dd>Delivery app pages blocked my read, yours and theirs.</dd></div>
+      <div class="stmt"><dt>Google</dt><dd>Only Yelp was read. Google ratings to pull.</dd></div>
+      <div class="stmt"><dt>Distance</dt><dd>How close Dave's, Wingstop and Cane's sit to each store.</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Four moves</h2>
+    <p class="sub">Test first. Numbers are targets.</p>
+    <div class="moves">
+      <div class="move"><span class="n">Move 1</span><h3>Win the review fight.</h3><p>Work your Google and Yelp listings. Reply, fix hours, add photos.</p><p class="pmeta"><span>maps</span><span>taps &rarr;</span><span class="to">+20%</span><span class="tag">Target</span><span class="tag">Organic</span></p></div>
+      <div class="move"><span class="n">Move 2</span><h3>Say 12 where they choose.</h3><p>Tell the 12-flavor story on every listing and post. Bonchon and Kyochon show 2 to 5.<span class="tag">Estimate</span></p></div>
+      <div class="move"><span class="n">Move 3</span><h3>Give each store a voice.</h3><p>Local videos that name the store, not the national account.</p><p class="pmeta"><span>Instagram</span><span>visits &rarr;</span><span class="to">1,500 / wk</span><span class="tag">Target</span><span class="tag">Organic</span></p></div>
+      <div class="move"><span class="n">Move 4</span><h3>Read their ads, then run yours.</h3><p>Pull rival ads first. Then 3-mile Meta ads around each store.</p><p class="pmeta"><span>Meta</span><span>per first order &rarr;</span><span class="to">under $12</span><span class="tag">Target</span><span class="tag">Paid</span></p></div>
+    </div>
+    <details class="disc">
+      <summary>Sources</summary>
+      <div class="dbody"><p>Yelp searches for Bonchon and Kyochon, Los Angeles, 21 September 2026. bbqchicken.com and menu. instagram.com/bbqchickenus. looxk.com article on Korean chicken chains in the US (Pelicana footprint, secondary). Unit and flavor counts for Bonchon, Kyochon and bb.q from your earlier Business DNA draft, 7 September 2026, not re-checked. Review counts move, re-read before quoting.</p></div>
+    </details>
+  </section>
+
+  <section>
+    <div class="decide">
+      <h2>Start with reviews, where rivals already compete?</h2>
+      <a class="btn" href="#">Start move 1</a>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer class="wrap"><div>Draft v1 &middot; bb.q Chicken California &middot; targets, not measurements</div></footer>
+</body>
+</html>

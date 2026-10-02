@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Growth Plan, Apollo Wu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --page:#ffffff; --dk:#0b0b0d; --dk2:#3a3a42; --dkm:#6a6a74;
+    --bg:#000; --ink:#f5f5f7; --muted:#8a8a92; --faint:#5a5a61; --line:#26262b; --line2:#333339;
+    --accent:#6fed45; --onacc:#08240a; --accdk:#2b8a12;
+    --gold:#d9a441;
+    --wa-bg:#0b141a; --wa-in:#1f2c33; --wa-out:#005c4b; --wa-ink:#e9edef; --wa-time:#8696a0; --wa-link:#53bdeb; --wa-cta:#25d366;
+    --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --mono:'JetBrains Mono','Geist Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--page);color:var(--dk);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:34px 26px 70px}
+  h1{font-size:22px;font-weight:800;margin:0;letter-spacing:-.02em;display:flex;align-items:center;gap:10px;color:var(--dk)}
+  h1 svg{width:24px;height:24px}
+  .sub{color:var(--dkm);font-size:13px;margin-top:9px;max-width:900px;line-height:1.55}
+  .sub b{color:var(--accdk);font-weight:700}
+  .rule{border:none;border-top:1px solid #ececee;margin:20px 0 6px}
+
+  /* rung header */
+  .rung{margin-top:34px}
+  .rhead{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
+  .rhead .rn{width:30px;height:30px;flex:0 0 30px;border-radius:9px;background:var(--dk);color:var(--accent);font-weight:800;font-size:13px;display:grid;place-items:center;margin-top:1px}
+  .rhead .rt{font-size:17px;font-weight:700;letter-spacing:-.01em;color:var(--dk)}
+  .rhead .rk{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:999px;margin-left:4px;vertical-align:middle}
+  .rk.term{background:#e7f9e0;color:var(--accdk);border:1px solid rgba(111,237,69,.5)}
+  .rk.beta{background:#fff3e0;color:#b5771f;border:1px solid #f0d9a8}
+  .rk.next{background:#f0f0f2;color:#8a8a92;border:1px solid #e2e2e6}
+  .rhead .rd{font-size:12px;color:var(--dkm);margin-top:3px;line-height:1.5}
+
+  /* deliverable / evidence / clarity strip */
+  .strip{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px 42px}
+  .chip{border:1px solid #e3e3e6;border-radius:9px;padding:7px 11px;font-size:11px;line-height:1.35;background:#fafafa;max-width:340px}
+  .chip .cl{font-size:8.5px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--dkm);display:block;margin-bottom:2px}
+  .chip.deliv{background:#f2fbee;border-color:#cdeec0}
+  .chip.deliv .cl{color:var(--accdk)}
+  .chip.deliv .cv{color:var(--dk);font-weight:700}
+  .chip.evid .cl{color:#4650c8}
+  .chip.clar .cl{color:#b5771f}
+  .chip .cv{color:var(--dk2)}
+
+  .row{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start;margin-left:42px}
+  .cell{display:flex;flex-direction:column;gap:9px}
+  .cap{width:288px;font-size:11px;color:var(--dkm);line-height:1.35;display:flex;align-items:center;gap:7px;min-height:18px}
+  .cap .k{flex:0 0 auto;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:2px 7px;border-radius:999px}
+  .cap .k.chat{background:#e7f9e0;color:var(--accdk)}
+  .cap .k.canvas{background:#eef0ff;color:#4650c8}
+  .cap .k.preview{background:#fff6df;color:#a9791a}
+  .arrow{align-self:center;color:#c7c7cc;height:624px;display:grid;place-items:center;flex:0 0 22px}
+  .arrow svg{width:18px;height:18px}
+
+  /* phone */
+  .phone{position:relative;width:288px;height:624px;border:1px solid #d8d8dc;border-radius:40px;overflow:hidden;background:var(--bg);display:flex;flex-direction:column;box-shadow:0 0 0 5px #0b0b0d,0 12px 30px rgba(0,0,0,.22)}
+  .phone.wa{background:var(--wa-bg)}
+  .phone.term{box-shadow:0 0 0 5px #0b0b0d,0 0 0 8px var(--accent),0 12px 34px rgba(111,237,69,.28)}
+  .island{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:86px;height:23px;background:#000;border-radius:16px;z-index:6}
+  .sbar{height:38px;flex:0 0 38px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 19px 5px;font-size:11px;color:#e9edef;font-weight:600;z-index:5}
+  .sbar .r{font-size:9px}
+
+  .wahead{display:flex;align-items:center;gap:9px;padding:5px 11px 7px;background:var(--wa-bg);border-bottom:1px solid rgba(255,255,255,.05)}
+  .wahead .bk{color:var(--wa-link);font-size:18px}
+  .wahead .av{width:30px;height:30px;border-radius:50%;flex:0 0 30px;background:#20303a center/cover no-repeat;background-image:url('https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/yobo-avatar.png');display:grid;place-items:center;color:transparent;font-size:0}
+  .wahead .nm{font-size:13px;font-weight:600;color:#e9edef;line-height:1.15}
+  .wahead .st{font-size:10px;color:var(--wa-time)}
+  .wahead .ic{margin-left:auto;display:flex;gap:14px;color:var(--wa-link)}
+  .wahead .ic svg{width:17px;height:17px}
+
+  .wabody{flex:1;overflow:hidden;padding:11px 10px 6px;display:flex;flex-direction:column;gap:6px}
+  .bub{max-width:88%;padding:7px 9px 5px;border-radius:9px;font-size:11.5px;line-height:1.42;color:var(--wa-ink);position:relative}
+  .bub.in{background:var(--wa-in);align-self:flex-start;border-top-left-radius:2px}
+  .bub.out{background:var(--wa-out);align-self:flex-end;border-top-right-radius:2px}
+  .bub b{font-weight:700}
+  .bub p{margin:0 0 7px}
+  .bub p:last-of-type{margin-bottom:0}
+  .bub ul{margin:7px 0 0;padding-left:1px;list-style:none}
+  .bub li{margin:3px 0;line-height:1.4}
+  .bub .tm{float:right;font-size:9.5px;color:var(--wa-time);margin:6px 0 0 10px}
+  .bub.out .tm{color:#a7c7bd}
+  .wacta{margin:8px -9px -5px;border-top:1px solid rgba(255,255,255,.13);padding:9px;text-align:center;color:var(--wa-cta);font-weight:600;font-size:12px;display:flex;align-items:center;justify-content:center;gap:7px}
+  .wacta svg{width:14px;height:14px}
+  .typing{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--wa-ink)}
+  .typing .dots{display:flex;gap:3px}
+  .typing .dots i{width:5px;height:5px;border-radius:50%;background:var(--wa-cta)}
+  .waopts{display:flex;flex-direction:column;gap:6px;margin-top:2px}
+  .waopt{border:1px solid rgba(83,189,235,.4);border-radius:8px;padding:8px;text-align:center;color:var(--wa-link);font-size:11.5px;font-weight:600}
+  .wacomp{flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:7px 10px 12px;background:var(--wa-bg)}
+  .wacomp .plus{color:var(--wa-link);font-size:19px}
+  .wacomp .box{flex:1;background:#1f2c33;border-radius:18px;padding:8px 12px;color:var(--wa-time);font-size:12px}
+  .wacomp .mic{color:var(--wa-link);font-size:16px}
+
+  .wanative{display:flex;align-items:center;gap:9px;padding:8px 12px;background:#0d1418;border-bottom:1px solid rgba(255,255,255,.06)}
+  .wanative .x{color:#e9edef;font-size:15px}
+  .wanative .kb{color:#e9edef;font-size:15px}
+  .wanative .wl{flex:1;text-align:center;line-height:1.2}
+  .wanative .wl .t{font-size:11px;font-weight:600;color:#f2f4f5}
+  .wanative .wl .u{font-size:9.5px;color:#8696a0}
+
+  .yhead{display:flex;align-items:center;gap:10px;padding:10px 13px;border-bottom:1px solid var(--line)}
+  .yhead .ham{display:flex;flex-direction:column;gap:3px}
+  .yhead .ham i{width:15px;height:2px;background:#e9e9ee;border-radius:2px}
+  .yhead .mark{width:17px;height:17px}
+  .yhead .wm{font-size:13px;font-weight:700;color:var(--ink)}
+  .yhead .wmlogo{height:16px;width:auto;display:block}
+  .yhead .rt2{margin-left:auto;display:flex;align-items:center;gap:9px}
+  .yhead .flag{font-size:13px}
+  .yhead .ava{width:23px;height:23px;border-radius:50%;background:#1c1c20;border:1px solid var(--line2);display:grid;place-items:center;font-size:10px;color:var(--muted)}
+
+  .cbody{flex:1;overflow:hidden;padding:13px 13px 126px;position:relative;color:var(--ink)}
+  .eye{font-size:9.5px;letter-spacing:.09em;color:var(--accent);text-transform:uppercase;font-weight:700}
+  .cbody h2{font-size:17px;line-height:1.2;margin:7px 0 6px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+  .lede{font-size:11.5px;color:var(--muted);line-height:1.5;margin:0}
+  .lede b{color:var(--ink);font-weight:600}
+  .cite{font-size:10px;color:var(--accent);margin-top:7px;line-height:1.45;display:flex;gap:6px;align-items:flex-start}
+  .cite svg{width:12px;height:12px;flex:0 0 12px;margin-top:1px}
+  .seclabel{font-size:9.5px;letter-spacing:.09em;color:var(--faint);text-transform:uppercase;font-weight:700;margin:15px 0 8px}
+
+  .cpl{display:flex;flex-direction:column;gap:8px}
+  .cp{border:1px solid var(--line);border-radius:10px;padding:10px}
+  .cp.rdy{border-left:2px solid var(--accent)}
+  .cp .top{display:flex;align-items:center;gap:8px}
+  .cp .nm{font-size:12.5px;font-weight:600;color:var(--ink)}
+  .cp .ty{margin-left:auto;font-size:9.5px;color:var(--accent);border:1px solid rgba(111,237,69,.45);border-radius:999px;padding:2px 9px;font-weight:600;white-space:nowrap}
+  .cp .cmeta{font-size:10.5px;color:var(--faint);margin-top:7px;line-height:1.5}
+  .cp .cmeta b{color:var(--muted);font-weight:600}
+  .cp .ctx{font-size:10.5px;color:var(--faint);margin-top:6px;line-height:1.5}
+  .cp .mrow{display:flex;gap:20px;margin-top:10px}
+  .cp .m{display:flex;flex-direction:column;gap:2px}
+  .cp .m .ml{font-size:8px;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);font-weight:700}
+  .cp .m .mv{font-size:12.5px;color:var(--ink);font-weight:700;font-family:var(--mono);letter-spacing:-.01em}
+
+  /* sequence (flow at a glance) */
+  .seq{display:flex;flex-direction:column;gap:0}
+  .sn{display:flex;gap:10px;align-items:flex-start}
+  .sn .dot{width:11px;height:11px;border-radius:50%;flex:0 0 11px;margin-top:3px;border:2px solid var(--accent);background:#000}
+  .sn .dot.trig{background:var(--accent)}
+  .sn .ln{flex:0 0 11px;display:flex;justify-content:center}
+  .sn .ln i{width:2px;height:22px;background:var(--line2)}
+  .sn .txt{font-size:11px;color:var(--ink);line-height:1.4;padding-bottom:4px}
+  .sn .txt .w{color:var(--faint);font-size:10px}
+
+  /* rendered email preview (rung 4a) */
+  .mail{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0e0e10}
+  .mail .hero{position:relative;padding:20px 15px 22px;background:radial-gradient(120% 90% at 70% 20%,#3a2a12,#120d07 70%);border-bottom:1px solid #241a0c}
+  .mail .brand{font-size:9px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;font-weight:700}
+  .mail .htitle{font-size:19px;line-height:1.15;color:#f6ecd8;font-weight:800;margin:8px 0 6px;letter-spacing:-.01em}
+  .mail .hsub{font-size:10.5px;color:#cdbfa6;line-height:1.5}
+  .mail .gift{margin-top:12px;display:inline-block;background:var(--gold);color:#241606;font-size:11px;font-weight:800;padding:8px 16px;border-radius:7px}
+  .mail .body{padding:13px 15px;font-size:11px;color:var(--muted);line-height:1.6}
+  .mail .body b{color:var(--ink)}
+  .qbadge{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:10px;color:var(--accent);font-weight:700}
+
+  .sticky{position:absolute;left:0;right:0;bottom:0;padding:12px 13px 18px;background:linear-gradient(180deg,transparent,#000 26%)}
+  .btn{width:100%;border:none;border-radius:11px;padding:12px;font-weight:700;font-size:12.5px;font-family:inherit;display:flex;justify-content:center;align-items:center;gap:7px}
+  .btn.go{background:var(--accent);color:var(--onacc)}
+  .btn.ghost{background:#0d0d0f;color:#e9edef;border:1px solid var(--line2)}
+  .sticky .btn+.btn{margin-top:8px}
+  .pbar{height:4px;border-radius:99px;background:#1a1a1f;overflow:hidden;margin:16px 0 10px}
+  .pbar i{display:block;height:100%;width:38%;border-radius:99px;background:var(--accent)}
+  .genwrap{display:flex;flex-direction:column;justify-content:center;height:100%;padding-bottom:40px}
+  .bubimg{padding:4px 4px 5px;max-width:92%}
+  .bubimg .mail{border-radius:7px;border-color:rgba(255,255,255,.12)}
+  .bubimg .note{font-size:11.5px;color:var(--wa-ink);padding:7px 5px 2px;line-height:1.42}
+  .adjust{text-align:center;font-size:9.5px;color:var(--muted);margin-top:8px}
+  .adjust b{color:#e9edef}
+  .hint{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--muted);padding:8px 13px;border-bottom:1px solid var(--line)}
+  .hint b{color:#e9edef;font-weight:700}
+
+  /* next-phase card */
+  .nextcard{margin-left:42px;border:1px dashed #d3d3d8;border-radius:12px;padding:14px 16px;background:#fafafa;max-width:620px;opacity:.9}
+  .nextcard .nt{font-size:13px;font-weight:700;color:#6a6a74;display:flex;align-items:center;gap:8px}
+  .nextcard .nd{font-size:11.5px;color:#8a8a92;margin-top:6px;line-height:1.55}
+  .nextcard .nd b{color:#6a6a74}
+
+  .foot{font-size:11.5px;color:var(--dkm);border-top:1px solid #ececee;margin-top:40px;padding-top:18px;line-height:1.65;max-width:960px}
+  .foot b{color:var(--dk)}
+  .foot code{color:#0b0b0d;background:#f1f1f3;padding:1px 5px;border-radius:4px;font-size:11px}
+  @media(max-width:1000px){ .arrow{display:none} .strip,.row,.nextcard{margin-left:0} }
+</style>
+<style>
+/* standalone wrapper: phone frame removed, canvas kept at mobile width */
+body{background:#f4f4f5}
+.art{width:100%;max-width:420px;margin:24px auto;background:var(--bg);position:relative;min-height:624px;display:flex;flex-direction:column;overflow:hidden;color:var(--ink)}
+.art .cbody{overflow:visible;flex:1}
+.stack{display:flex;flex-direction:column;gap:0}
+</style>
+</head>
+<body>
+<div class="stack">
+<div class="art">
+          <div class="yhead"><div class="ham"><i></i><i></i><i></i></div><img class="wmlogo" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/logos/yobo-horizontal-nobox-dark.svg" alt="YoboLabs"><div class="rt2"><span class="flag">🇮🇩</span><span class="ava">A</span></div></div>
+          <div class="cbody">
+            <div class="eye">Your Growth Plan · campaign 1 of 2</div>
+            <h2>Mid-Autumn Lunar Reunion</h2>
+            <p class="lede">Upsell campaign. <b>Your VIP diners</b> get a reunion-dinner offer.</p>
+            <div class="cpl" style="margin-top:12px">
+              <div class="cp rdy">
+                <div class="top"><span class="nm">Mid-Autumn Lunar Reunion</span><span class="ty">Upsell</span></div>
+                <div class="mrow">
+                  <div class="m"><span class="ml">Forecast</span><span class="mv">~5k reach</span></div>
+                  <div class="m"><span class="ml">Window</span><span class="mv">through Sep 25</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="cite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Reach ~5,000, estimated from your public profile. Tell me the real number in chat and I'll redo the math.</div>
+          </div>
+          <div class="sticky"><button class="btn go">Approve · next campaign</button><div class="adjust">Want changes? Tap <b>✕</b> top left and tell me in chat</div></div>
+</div>
+<div class="art">
+          <div class="yhead"><div class="ham"><i></i><i></i><i></i></div><img class="wmlogo" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/logos/yobo-horizontal-nobox-dark.svg" alt="YoboLabs"><div class="rt2"><span class="flag">🇮🇩</span><span class="ava">A</span></div></div>
+          <div class="cbody">
+            <div class="eye">Your Growth Plan · campaign 2 of 2</div>
+            <h2>The Artisan Return</h2>
+            <p class="lede">Win-back campaign. Bring <b>first-timers</b> back. Yobo suggests this one.</p>
+            <div class="cpl" style="margin-top:12px">
+              <div class="cp">
+                <div class="top"><span class="nm">The Artisan Return</span><span class="ty">Win-Back</span></div>
+                <div class="mrow">
+                  <div class="m"><span class="ml">Forecast</span><span class="mv">~1.8k reach</span></div>
+                  <div class="m"><span class="ml">Window</span><span class="mv">2 weeks</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="cite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Not this one? Skip it, the first campaign still builds.</div>
+          </div>
+          <div class="sticky"><button class="btn go">Approve and build</button><button class="btn ghost">Skip this one</button><div class="adjust">Stay here, the build opens by itself. Or close, I ping you in chat</div></div>
+</div>
+</div>
+</body>
+</html>

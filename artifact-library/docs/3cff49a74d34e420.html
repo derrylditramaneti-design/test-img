@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><title>Campaign ready, Drunk Elephant</title><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root,:host{--bg:#09090b;--card:#18181b;--active:#252528;--border:#26262b;--border2:#1e1e22;--green:#6FED45;--green-br:#6FED45;--green-line:#166534;--green-dk:#0a1f12;--blue:#3b82f6;--red:#ef4444;--amber:#f59e0b;--t1:#f4f4f5;--t2:#a1a1aa;--t3:#71717a;--ui:'Inter',system-ui,-apple-system,sans-serif;--display:'Satoshi','Inter',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--t1);font-family:var(--ui);font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+body{display:flex;justify-content:center}
+.app{width:100%;max-width:398px;background:var(--bg);color:var(--t1)}
+.btn{background:var(--green);color:#04120a;border:none;border-radius:9px;font-weight:700;cursor:pointer;font-family:var(--ui)}
+.btnghost{background:transparent;border:1px solid #3f3f46;color:var(--t1);border-radius:9px;cursor:pointer;font-weight:600;font-family:var(--ui)}
+.top{display:flex;align-items:center;justify-content:space-between;padding:13px 15px;border-bottom:1px solid var(--border)}
+.top .hlogo{display:inline-flex;align-items:center}.top .hlogo svg{height:20px;width:auto;display:block}
+.step{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600}
+.step .dots{display:flex;gap:5px}.step .d{width:6px;height:6px;border-radius:50%;background:var(--t3)}.step .d.on{background:var(--green)}
+.body-pad{padding:16px 16px 26px}
+/* state is driven from a control OUTSIDE the screen (board-level, under the phone) */
+input[name="st"]{position:absolute;opacity:0;pointer-events:none;width:0;height:0;margin:0}
+.stage-load,.stage-ready{display:none}
+#s-load:checked ~ .stage-load{display:block}
+#s-ready:checked ~ .stage-ready{display:block}
+/* ready */
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--green-br)}
+.eyebrow svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.4}
+.h1{font-family:var(--display);font-size:24px;font-weight:800;letter-spacing:-.03em;line-height:1.15;margin:10px 0 14px}
+.mail{border:1px solid var(--border);border-radius:13px;overflow:hidden;background:var(--card)}
+.mail .mh{display:flex;align-items:center;gap:9px;padding:11px 13px;border-bottom:1px solid var(--border2)}
+.mail .mav{width:26px;height:26px;border-radius:7px;background:var(--green-dk);color:var(--green-br);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;font-family:var(--display)}
+.mail .mfrom b{font-size:12.5px;font-weight:700;display:block;line-height:1.2}
+.mail .mfrom span{font-size:11px;color:var(--t3)}
+.mail .msub{padding:12px 13px 0;font-size:14.5px;font-weight:700;line-height:1.3}
+.mail .mprev{padding:5px 13px 0;font-size:12.5px;color:var(--t2);line-height:1.45}
+.mail .mhero{margin:13px;border-radius:10px;background:linear-gradient(135deg,#1c1207,#0d0d10);border:1px solid var(--border2);padding:18px 15px;text-align:center}
+.mail .mhero .mt{font-family:var(--display);font-size:17px;font-weight:800;color:#f4f4f5}
+.mail .mhero .mp{font-size:12px;color:var(--t2);margin-top:5px;line-height:1.45}
+.mail .mhero .mcta{display:inline-block;margin-top:12px;background:var(--green);color:#04120a;font-weight:700;font-size:12px;padding:8px 16px;border-radius:8px}
+.flow{display:flex;gap:7px;margin-top:13px}
+.fchip{flex:1;border:1px solid var(--border);border-radius:9px;background:var(--card);padding:9px 10px}
+.fchip .fd{font-size:11px;font-weight:700;color:var(--t1)}
+.fchip .fm{font-size:10.5px;color:var(--t3);margin-top:2px}
+.fore{display:flex;align-items:center;gap:9px;border:1px solid var(--green-line);border-radius:11px;background:linear-gradient(180deg,var(--green-dk),#0a0a0c);padding:13px 15px;margin-top:13px}
+.fore .fl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--t3)}
+.fore .fv{font-size:22px;font-weight:800;color:var(--green-br);margin-left:auto}
+.fore .fb{font-size:11px;color:var(--t3);width:100%;flex-basis:100%;margin-top:-2px}
+.cta{width:100%;padding:14px;font-size:15px;margin-top:16px}
+.editln{width:100%;padding:12px;font-size:13.5px;margin-top:9px}
+/* loading skeleton */
+.loadhd{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:700;margin:2px 0 4px}
+.spin{width:16px;height:16px;border:2px solid var(--border);border-top-color:var(--green);border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.loadsub{font-size:12.5px;color:var(--t3);margin-bottom:16px}
+.prog{height:6px;border-radius:999px;background:var(--border);overflow:hidden;margin-bottom:18px}
+.prog i{display:block;height:100%;width:64%;background:var(--green);border-radius:999px;animation:grow 2.4s ease-in-out infinite alternate}
+@keyframes grow{from{width:22%}to{width:82%}}
+.sk{border-radius:8px;background:linear-gradient(90deg,#141417 25%,#1d1d21 37%,#141417 63%);background-size:400% 100%;animation:shim 1.4s ease infinite}
+@keyframes shim{0%{background-position:100% 0}100%{background-position:-100% 0}}
+.sk.line{height:13px;margin-bottom:10px}.sk.w70{width:70%}.sk.w90{width:90%}.sk.w50{width:50%}
+.skcard{border:1px solid var(--border);border-radius:13px;padding:15px;margin-top:6px}
+.sk.block{height:96px;margin-top:6px}
+.tasks{margin-top:16px;display:flex;flex-direction:column;gap:9px}
+.task{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--t2)}
+.task .tk{width:15px;height:15px;stroke:var(--green-br);fill:none;stroke-width:2.4}
+.task.pending{color:var(--t3)}.task.pending .dotp{width:13px;height:13px;border:2px solid var(--border);border-radius:50%;margin:1px}
+</style>
+<div class="app">
+  <div class="top">
+    <span class="hlogo" role="img" aria-label="YoboLabs"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/dd53a1d331c97bc7.png" alt="YoboLabs" style="height:20px;width:auto;display:block"></span>
+    <div class="step"><span>Build campaign</span><span class="dots"><i class="d on"></i><i class="d on"></i><i class="d on"></i><i class="d on"></i><i class="d on"></i><i class="d on"></i><i class="d"></i></span></div>
+  </div>
+  <div class="body-pad">
+    <input type="radio" name="st" id="s-ready" checked>
+    <input type="radio" name="st" id="s-load">
+    <div class="stage-load">
+      <div class="loadhd"><span class="spin"></span>Generating your campaign…</div>
+      <div class="loadsub">Writing 3 emails from your Brand DNA · about 30 seconds</div>
+      <div class="prog"><i></i></div>
+      <div class="tasks">
+        <div class="task"><svg class="tk" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Matched offer to “Lapsed Enthusiasts”</div>
+        <div class="task"><svg class="tk" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Chose Win-Back structure (3 messages)</div>
+        <div class="task pending"><span class="dotp"></span>Writing message copy…</div>
+      </div>
+      <div class="skcard"><div class="sk line w50"></div><div class="sk line w90"></div><div class="sk block"></div></div>
+    </div>
+
+    <div class="stage-ready">
+      <span class="eyebrow"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Generated in 24s from your Brand DNA</span>
+      <div class="h1">Your Win-Back is ready to launch</div>
+      <div class="mail">
+        <div class="mh"><div class="mav">DE</div><div class="mfrom"><b>Drunk Elephant</b><span>to lapsed customers · Day 0</span></div></div>
+        <div class="msub">We miss your glow</div>
+        <div class="mprev">It's been a while since your last restock — here's $20 off $100+…</div>
+        <div class="mhero"><div class="mt">Come back and glow</div><div class="mp">$20 off your comeback order. Your skin remembers.</div><span class="mcta">Shop now</span></div>
+      </div>
+      <div class="flow">
+        <div class="fchip"><div class="fd">Day 0</div><div class="fm">Miss your glow</div></div>
+        <div class="fchip"><div class="fd">Day 7</div><div class="fm">Shelf empty?</div></div>
+        <div class="fchip"><div class="fd">Day 14</div><div class="fm">Last chance</div></div>
+      </div>
+      <div class="fore"><span class="fl">Forecast</span><span class="fv">~$7.7K</span><span class="fb">2,540 lapsed × 4.5% × $68 AOV</span></div>
+      <button class="btn cta">Launch campaign</button>
+      <button class="btnghost editln">Edit messages first</button>
+    </div>
+  </div>
+</div>
+
+</html>

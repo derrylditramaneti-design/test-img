@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Grüns Three Levers</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23007e40'/%3E%3Cpath d='M9 21l5-10 4 6 5-8' stroke='%23ffcc2e' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>html,body{margin:0;background:#ffffff}</style>
+</head>
+<body>
+<div class="microsite-custom-code" style="background-color:#ffffff;overflow:visible">
+<style>@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800;900&display=swap');
+
+/* ============================================================
+   Format ported from the YoboLabs growth-plan microsite system.
+   Brand accent remapped: bb.q red -> Grüns green (#007e40).
+   Positive/KPI semantic remapped to Grüns gold so it does not
+   collide with the brand green.
+   ============================================================ */
+.microsite-custom-code .dna{--brand:#007e40;--brand-dk:#00552b;--ink:#002613;--ink-2:#073d22;--mint:#dfefe7;--yellow:#ffcc2e;
+  --neutral:#f0f1f3;--gray:#5c6b62;--faint:#93a29a;--line:#e2e7e4;
+  --tile:#f0f1f3;--pos:#00552b;--posbg:#dfefe7;--posln:#007e40;--pop:#ffcc2e;
+  font-family:"Work Sans",Inter,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);
+  background:#fff;max-width:480px;margin:0 auto;padding:18px 14px 28px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.microsite-custom-code .dna *{box-sizing:border-box}
+.microsite-custom-code .dna .hd{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;padding:0 4px}
+.microsite-custom-code .dna .logotype{font-size:27px;font-weight:900;letter-spacing:-.04em;color:var(--brand);line-height:1}
+.microsite-custom-code .dna .logotype sup{font-size:11px;font-weight:600;vertical-align:super;color:var(--faint);letter-spacing:0}
+.microsite-custom-code .dna .prep{font-size:12.5px;line-height:1.4;color:var(--gray);text-align:right}
+.microsite-custom-code .dna .prep b{color:var(--ink);font-weight:800}
+
+.microsite-custom-code .dna .tile{background:var(--tile);border-radius:16px;padding:16px 15px 18px;margin-bottom:12px}
+.microsite-custom-code .dna .tile.dark{background:var(--ink)}
+.microsite-custom-code .dna .tile.hero{background:var(--brand)}
+.microsite-custom-code .dna .tnum{font-size:14.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--gray);margin-bottom:12px}
+.microsite-custom-code .dna .tnum.light{color:rgba(255,255,255,.75)}
+
+.microsite-custom-code .dna .herotag{color:#fff;font-size:clamp(30px,9.4vw,50px);line-height:.94;font-weight:900;letter-spacing:-.035em;text-transform:uppercase}
+.microsite-custom-code .dna .herotag .dim{color:rgba(255,255,255,.55)}
+.microsite-custom-code .dna .herosub{color:rgba(255,255,255,.86);font-size:14.5px;margin-top:10px;line-height:1.5}
+
+.microsite-custom-code .dna .chip{background:#fff;border-radius:999px;padding:7px 13px;font-size:11.5px;font-weight:700;color:#2a2a30}
+.microsite-custom-code .dna .para{font-size:19px;margin:10px 0 0;color:var(--ink-2)}
+.microsite-custom-code .dna .para.light{color:rgba(255,255,255,.8)}
+.microsite-custom-code .dna .para.soft{color:var(--faint);font-size:11px}
+
+.microsite-custom-code .dna .diffgrid{display:grid;grid-template-columns:1fr;gap:8px}
+.microsite-custom-code .dna .diff{background:#fff;border-radius:10px;padding:13px 14px;font-size:19px;color:var(--gray);line-height:1.45}
+.microsite-custom-code .dna .diff b{display:block;font-size:23px;color:var(--ink);font-weight:900;letter-spacing:-.025em;margin-bottom:4px}
+.microsite-custom-code .dna .diff b span{font-weight:600;color:var(--gray)}
+
+.microsite-custom-code .dna .mi{background:#fff;border-radius:10px;padding:10px 12px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:6px}
+.microsite-custom-code .dna .mi:last-child{margin-bottom:0}
+.microsite-custom-code .dna .mi b{font-size:18px;font-weight:900;letter-spacing:-.025em}
+.microsite-custom-code .dna .mi span{font-size:16px;color:var(--faint);text-align:right;font-variant-numeric:tabular-nums}
+
+.microsite-custom-code .dna .outgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.microsite-custom-code .dna .out{background:#fff;border-radius:10px;padding:11px 12px;font-size:19px;color:var(--ink-2);line-height:1.4}
+.microsite-custom-code .dna .out b{display:block;font-size:23px;font-weight:900;letter-spacing:-.025em;margin-bottom:2px}
+.microsite-custom-code .dna .out .ol{display:block;font-size:14px;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-top:7px}
+.microsite-custom-code .dna .out .flag{display:inline-block;background:var(--brand);color:#fff;border-radius:999px;padding:3px 10px;font-size:14px;font-weight:900;margin-top:4px;text-transform:uppercase;letter-spacing:.05em}
+.microsite-custom-code .dna .out .flag.coming{background:var(--yellow);color:var(--ink)}
+
+.microsite-custom-code .dna .src{font-size:14px;color:var(--faint);margin:16px 4px 0;line-height:1.6}
+.microsite-custom-code .dna .ft{border-top:2px solid var(--ink);margin:16px 4px 0;padding-top:12px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);text-align:center}
+
+@media(min-width:760px){
+  .microsite-custom-code .dna{max-width:960px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+  .microsite-custom-code .dna .hd,.microsite-custom-code .dna .src,.microsite-custom-code .dna .ft{grid-column:1/-1}
+  .microsite-custom-code .dna .tile{margin-bottom:0}
+  .microsite-custom-code .dna .tile.hero{grid-column:1/-1}
+  .microsite-custom-code .dna .herotag{font-size:50px}
+}
+
+/* growth plan additions */
+.microsite-custom-code .gp .say{color:#fff;font-size:30px;font-weight:900;line-height:1.2;letter-spacing:-.025em}
+.microsite-custom-code .gp .say.sm{font-size:30px;margin-bottom:12px}
+.microsite-custom-code .gp .say.pop{color:var(--pop);margin-top:14px;margin-bottom:0}
+.microsite-custom-code .gp .tile.brand{background:var(--brand)}
+.microsite-custom-code .gp .tile.yellow{background:var(--yellow)}
+.microsite-custom-code .gp .tile.yellow .tnum{color:rgba(0,38,19,.55)}
+.microsite-custom-code .gp .tile.brand .para.light{color:rgba(255,255,255,.85)}
+.microsite-custom-code .gp .changrid{display:flex;flex-direction:column;gap:8px}
+.microsite-custom-code .gp .chan{background:#fff;border-radius:10px;padding:12px 13px;font-size:19px;color:var(--ink-2);line-height:1.5}
+.microsite-custom-code .gp .chan.win{outline:2px solid var(--brand)}
+.microsite-custom-code .gp .chan .pct{float:right;font-size:23px;font-weight:900;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.microsite-custom-code .gp .chan b{display:block;font-size:23px;font-weight:900;letter-spacing:-.025em}
+.microsite-custom-code .gp .chan .cs{display:block;font-size:16px;color:var(--faint);margin-bottom:4px}
+.microsite-custom-code .gp .chan .cap{display:block;font-size:16px;font-weight:700;margin-top:6px}
+.microsite-custom-code .gp .cap.bad{color:var(--ink)} .microsite-custom-code .gp .cap.mid{color:var(--pos)} .microsite-custom-code .gp .cap.good{color:var(--brand-dk)}
+.microsite-custom-code .gp .callout{background:var(--ink);color:#fff;border-radius:10px;padding:12px 14px;font-size:19px;font-weight:600;line-height:1.5;margin-top:10px}
+.microsite-custom-code .gp .callout b{color:var(--pop)}
+.microsite-custom-code .gp .callout.tight{background:#fff;color:var(--ink);border:1px solid var(--line);font-weight:600}
+.microsite-custom-code .gp .callout.tight b{color:var(--brand-dk)}
+.microsite-custom-code .gp .drow{display:flex;flex-direction:column;align-items:flex-start;gap:8px;background:#fff;border-radius:10px;padding:12px;margin-bottom:7px}
+.microsite-custom-code .gp .dc{flex:1;font-size:19px;color:var(--gray);line-height:1.4}
+.microsite-custom-code .gp .dc b{display:block;font-size:23px;color:var(--ink);font-weight:900;letter-spacing:-.025em}
+.microsite-custom-code .gp .act{flex:0 0 auto;background:var(--mint);color:var(--brand-dk);border-radius:999px;padding:5px 11px;font-size:14px;font-weight:800;white-space:nowrap;text-transform:uppercase;letter-spacing:.02em}
+.microsite-custom-code .gp .act.none{background:var(--neutral);color:var(--gray)}
+.microsite-custom-code .gp .steps{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.microsite-custom-code .gp .step{background:#fff;border-radius:10px;padding:12px 13px;font-size:19px;color:var(--ink-2);line-height:1.45;position:relative;padding-left:48px}
+.microsite-custom-code .gp .step i{position:absolute;left:12px;top:12px;width:27px;height:27px;border-radius:50%;background:var(--brand);color:#fff;font-style:normal;font-weight:800;font-size:15px;display:grid;place-items:center;line-height:1}
+.microsite-custom-code .gp .step b{display:block;font-size:23px;font-weight:900;letter-spacing:-.025em;line-height:27px}
+.microsite-custom-code .gp .levgrid{display:grid;grid-template-columns:1fr;gap:8px}
+.microsite-custom-code .gp .lev{background:#fff;border-radius:10px;padding:12px 13px 13px 48px;font-size:19px;color:var(--gray);line-height:1.45;position:relative}
+.microsite-custom-code .gp .lev i{position:absolute;left:12px;top:12px;width:27px;height:27px;border-radius:50%;background:var(--ink);color:#fff;font-style:normal;font-weight:800;font-size:15px;display:grid;place-items:center;line-height:1}
+.microsite-custom-code .gp .lev b{display:block;font-size:23px;color:var(--ink);font-weight:900;letter-spacing:-.025em;line-height:27px}
+.microsite-custom-code .gp .lev .how{display:block;border-top:1px solid var(--line);margin-top:7px;padding-top:6px;font-size:16px;color:var(--ink-2);line-height:1.45}
+.microsite-custom-code .gp .lev .how em{font-style:normal;font-weight:800;color:var(--ink)}
+.microsite-custom-code .gp .kpi{display:block;font-size:16px;color:var(--pos);font-weight:700;margin-top:5px}
+.microsite-custom-code .gp .ex{display:block;background:var(--tile);border-radius:7px;padding:6px 9px;font-size:16px;color:var(--ink-2);margin-top:6px;font-style:italic}
+.microsite-custom-code .gp .phase{background:#fff;border-radius:10px;padding:12px 13px;margin-bottom:8px}
+.microsite-custom-code .gp .ph{font-size:16px;color:var(--faint)}
+.microsite-custom-code .gp .ph b{font-size:23px;color:var(--brand);font-weight:900;margin-right:8px}
+.microsite-custom-code .gp .phase .para{font-size:19px;margin-top:6px}
+.microsite-custom-code .gp .gate{background:var(--yellow);color:var(--ink);border-radius:8px;padding:8px 11px;font-size:16px;font-weight:700;margin-top:9px}
+.microsite-custom-code .gp .xgrid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:6px}
+.microsite-custom-code .gp .xc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:15px 16px 16px}
+.microsite-custom-code .gp .xc b{display:block;color:#fff;font-size:23px;font-weight:900;letter-spacing:-.025em;margin-bottom:11px}
+.microsite-custom-code .gp .xc ul{margin:0;padding-left:20px;color:rgba(255,255,255,.82);font-size:19px;line-height:1.45;list-style:disc}
+.microsite-custom-code .gp .xc li{margin-bottom:10px}
+.microsite-custom-code .gp .xc li:last-child{margin-bottom:0}
+.microsite-custom-code .gp .xc li::marker{color:var(--pop)}
+.microsite-custom-code .gp .phimg{border:1.5px dashed var(--faint);border-radius:10px;padding:22px 14px;text-align:center;font-size:14px;
+  font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-top:12px;line-height:1.6;background:rgba(255,255,255,.5)}
+.microsite-custom-code .gp .phimg span{display:block;text-transform:none;letter-spacing:0;font-weight:600;font-size:16px;margin-top:3px}
+.microsite-custom-code .gp .phimg.light{border-color:rgba(255,255,255,.45);color:rgba(255,255,255,.8);background:rgba(255,255,255,.08)}
+.microsite-custom-code .gp .phrow{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.microsite-custom-code .gp .phrow .phimg{margin-top:0}
+@media(min-width:760px){
+  .microsite-custom-code .gp .phrow{grid-template-columns:1fr 1fr}
+  .microsite-custom-code .gp .phrow:has(> :nth-child(3)){grid-template-columns:1fr 1fr 1fr}
+  .microsite-custom-code .gp .levgrid{grid-template-columns:1fr 1fr 1fr}
+  .microsite-custom-code .gp .changrid{flex-direction:row} .microsite-custom-code .gp .chan{flex:1}
+  .microsite-custom-code .gp .xgrid{grid-template-columns:1fr 1fr}
+  .microsite-custom-code .gp .drow{flex-direction:row;align-items:center;gap:10px}
+  .microsite-custom-code .gp .tile{grid-column:1/-1}
+  .microsite-custom-code .dna .diffgrid{grid-template-columns:1fr 1fr}
+}
+
+/* ============ built visuals ============ */
+.microsite-custom-code .gp .gpv{background:#fff;border-radius:10px;padding:12px 12px 11px;margin-top:12px}
+.microsite-custom-code .gp .phrow .gpv{margin-top:0}
+.microsite-custom-code .gp .gpv .vcap{font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-bottom:9px;line-height:1.5}
+.microsite-custom-code .gp .gpv svg{display:block;width:100%;height:auto;overflow:visible}
+.microsite-custom-code .gp .gpv .vnote{font-size:16px;color:var(--gray);line-height:1.55;margin-top:8px}
+.microsite-custom-code .gp .gpv .vnote i{font-style:normal;font-weight:800;color:var(--pos)}
+
+/* doors bar */
+.microsite-custom-code .gp .doors{display:flex;height:22px;border-radius:6px;overflow:hidden;margin-bottom:10px}
+.microsite-custom-code .gp .doors i{display:block;height:100%}
+
+/* flow + systems diagrams */
+.microsite-custom-code .gp .fx-b{fill:#fff;stroke:var(--line);stroke-width:1.3}
+.microsite-custom-code .gp .fx-b.win{stroke:var(--brand);stroke-width:2}
+.microsite-custom-code .gp .fx-b.off{fill:#fff;stroke:var(--faint);stroke-width:1.4;stroke-dasharray:5 4}
+.microsite-custom-code .gp .fx-hub{fill:var(--ink)}
+.microsite-custom-code .gp .fx-t{font-size:17px;font-weight:800;fill:var(--ink)}
+.microsite-custom-code .gp .fx-s{font-size:13px;fill:var(--gray)}
+.microsite-custom-code .gp .fx-ht{font-size:18px;font-weight:800;fill:#fff}
+.microsite-custom-code .gp .fx-hs{font-size:11px;fill:rgba(255,255,255,.72)}
+.microsite-custom-code .gp .fx-a{fill:none;stroke:var(--faint);stroke-width:1.7}
+.microsite-custom-code .gp .fx-a.g{stroke:var(--brand);stroke-width:2.1}
+.microsite-custom-code .gp .fx-a.cut{stroke:var(--faint);stroke-width:1.4;stroke-dasharray:5 4}
+.microsite-custom-code .gp .fx-xc{fill:#fff;stroke:var(--ink);stroke-width:1.4}
+.microsite-custom-code .gp .fx-x{stroke:var(--ink);stroke-width:1.8;stroke-linecap:round}
+
+/* renewal bars */
+.microsite-custom-code .gp .hmark,.microsite-custom-code .gp .hbars{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.microsite-custom-code .gp .hmk{grid-column:2/4;font-size:13px;font-weight:800;color:var(--ink);text-align:center;border-bottom:1.5px dashed var(--yellow);padding-bottom:3px}
+.microsite-custom-code .gp .hbars{align-items:end;height:112px;margin-top:5px}
+.microsite-custom-code .gp .hb{height:100%;display:flex;flex-direction:column;justify-content:flex-end}
+.microsite-custom-code .gp .hb i{display:block;background:var(--mint);border-radius:3px 3px 0 0}
+.microsite-custom-code .gp .hb.lift i{background:var(--yellow)}
+.microsite-custom-code .gp .hb em{font-style:normal;font-size:12px;color:var(--faint);text-align:center;margin-top:4px;height:9px;white-space:nowrap}
+
+/* lifecycle loop */
+.microsite-custom-code .gp .lc{display:flex;flex-direction:column}
+.microsite-custom-code .gp .lcn{background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:19px;font-weight:700;color:var(--ink-2);display:flex;align-items:center;gap:8px}
+.microsite-custom-code .gp .lcn i{flex:0 0 auto;width:17px;height:17px;border-radius:50%;background:var(--ink);color:#fff;font-style:normal;font-weight:800;font-size:9px;display:grid;place-items:center}
+.microsite-custom-code .gp .lcn.loop{border-color:var(--brand);background:var(--mint)}
+.microsite-custom-code .gp .lcn.loop i{background:var(--brand)}
+.microsite-custom-code .gp .lcn.loop b{font-weight:800;color:var(--brand-dk)}
+.microsite-custom-code .gp .lca{text-align:center;font-size:11px;line-height:13px;color:var(--faint)}
+
+/* Insiders card */
+.microsite-custom-code .gp .ic{position:relative;overflow:hidden;max-width:290px;margin:0 auto;aspect-ratio:1.586;border-radius:12px;
+  background:linear-gradient(145deg,var(--ink-2) 0%,#001a0c 62%);padding:13px 14px;display:flex;flex-direction:column;justify-content:space-between}
+.microsite-custom-code .gp .ic::after{content:'';position:absolute;inset:0;background:radial-gradient(120px 120px at 88% 6%,rgba(0,126,64,.45),rgba(0,126,64,0) 72%)}
+.microsite-custom-code .gp .icgold{position:absolute;z-index:2;top:12px;right:12px;background:linear-gradient(135deg,#f7e2a6,#c9a24a);color:#3b2c07;
+  border-radius:999px;padding:3px 9px;font-size:10px;font-weight:900;letter-spacing:.12em}
+.microsite-custom-code .gp .icbrand{position:relative;z-index:2;color:#bfdfcf;font-size:21px;font-weight:900;letter-spacing:-.03em;line-height:1}
+.microsite-custom-code .gp .icfoot{position:relative;z-index:2}
+.microsite-custom-code .gp .icname{color:#fff;font-size:18px;font-weight:900;letter-spacing:-.025em}
+.microsite-custom-code .gp .ictag{color:rgba(255,255,255,.72);font-size:12px;font-weight:700;letter-spacing:.15em;margin-top:6px}
+
+/* rollout timeline */
+.microsite-custom-code .gp .tl4{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.microsite-custom-code .gp .tl4::before{content:'';position:absolute;left:12.5%;right:12.5%;top:8px;height:2px;background:var(--line)}
+.microsite-custom-code .gp .tln{position:relative;text-align:center;padding:0 3px}
+.microsite-custom-code .gp .tln i{display:block;position:relative;z-index:2;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--brand);margin:0 auto 8px}
+.microsite-custom-code .gp .tln b{display:block;font-size:16px;font-weight:900;color:var(--ink);letter-spacing:-.01em}
+.microsite-custom-code .gp .tln span{display:block;font-size:12px;color:var(--gray);line-height:1.35;margin-top:2px}
+.microsite-custom-code .gp .tln em{display:block;font-style:normal;font-size:11px;color:var(--faint);line-height:1.45;margin-top:5px}
+.microsite-custom-code .gp .tln.fin i{border-color:var(--yellow);background:var(--yellow)}
+.microsite-custom-code .gp .tln.fin b,.microsite-custom-code .gp .tln.fin span{color:var(--ink)}
+
+/* nine-lever overview grid */
+.microsite-custom-code .gp .ovgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.microsite-custom-code .gp .ov{background:#fff;border-radius:9px;padding:10px 10px 10px 40px;position:relative;line-height:1.35;min-width:0}
+.microsite-custom-code .gp .ov i{position:absolute;left:9px;top:12px;width:24px;height:24px;border-radius:50%;background:var(--neutral);color:var(--gray);
+  font-style:normal;font-weight:800;font-size:13px;display:grid;place-items:center;line-height:1}
+.microsite-custom-code .gp .ov b{display:block;font-size:clamp(14px,3.9vw,17px);font-weight:900;color:var(--ink);letter-spacing:-.02em;line-height:1.25;overflow-wrap:break-word;hyphens:auto}
+.microsite-custom-code .gp .ov span{display:block;font-size:14px;color:var(--faint);margin-top:2px;line-height:1.35}
+.microsite-custom-code .gp .ov span:empty{display:none}
+
+/* burger section nav */
+.microsite-custom-code .gp .navbtn{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:14px;z-index:120;width:44px;height:44px;border:0;border-radius:10px;background:var(--ink);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.28);transition:background .2s}
+.microsite-custom-code .gp .navbtn span{display:block;width:20px;height:2.5px;background:#fff;border-radius:2px;transition:transform .25s,opacity .2s}
+.microsite-custom-code .gp .navbtn.open{background:var(--brand)}
+.microsite-custom-code .gp .navbtn.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.microsite-custom-code .gp .navbtn.open span:nth-child(2){opacity:0}
+.microsite-custom-code .gp .navbtn.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.microsite-custom-code .gp .navmenu{position:fixed;top:0;right:0;bottom:0;z-index:119;width:min(84vw,320px);background:var(--ink);color:#fff;box-shadow:-8px 0 30px rgba(0,0,0,.35);transform:translateX(105%);transition:transform .3s cubic-bezier(.22,.8,.3,1);padding:calc(64px + env(safe-area-inset-top,0px)) 18px 22px;overflow-y:auto;display:flex;flex-direction:column}
+.microsite-custom-code .gp .navmenu.open{transform:none}
+.microsite-custom-code .gp .navmenu .navhd{font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.16em;color:var(--pop);margin:0 6px 14px}
+.microsite-custom-code .gp .navmenu a{display:flex;align-items:baseline;gap:12px;padding:14px 8px;font-size:18px;font-weight:800;letter-spacing:-.01em;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.08)}
+.microsite-custom-code .gp .navmenu a i{font-style:normal;font-size:15px;font-weight:900;color:var(--pop);min-width:20px}
+.microsite-custom-code .gp .navmenu a:active,.microsite-custom-code .gp .navmenu a:hover{background:rgba(255,255,255,.08)}
+.microsite-custom-code .gp .navscrim{position:fixed;inset:0;z-index:118;background:rgba(0,0,0,.5)}
+.microsite-custom-code .gp .tile{scroll-margin-top:16px}
+.microsite-custom-code .gp.dna .hd{padding-right:54px}
+.microsite-custom-code .gp a:focus-visible,.microsite-custom-code .gp button:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.microsite-custom-code .gp .navmenu,.microsite-custom-code .gp .navbtn,.microsite-custom-code .gp .navbtn span{transition:none}}</style>
+<style>/* ============================================================
+   v2 additions: lever-by-channel matrix, 13-week calendar strip.
+   Same tokens as the house system. Light mode only.
+   ============================================================ */
+:root{color-scheme:light}
+html,body{background:#ffffff;margin:0}
+.microsite-custom-code .gp .sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* three-lever overview */
+.microsite-custom-code .gp .ovgrid.three>:last-child{grid-column:1/-1}
+.microsite-custom-code .gp .ov.lva i{background:var(--brand);color:#fff}
+.microsite-custom-code .gp .ov.lvr i{background:var(--brand-dk);color:#fff}
+.microsite-custom-code .gp .ov.lvs i{background:var(--yellow);color:var(--ink)}
+
+/* play meta: channel + run line */
+.microsite-custom-code .gp .lev .act{display:inline-block;margin:0 0 6px;white-space:normal}
+.microsite-custom-code .gp .run{display:block;font-size:15px;color:var(--gray);margin-top:6px;padding-top:6px;border-top:1px dashed var(--line);line-height:1.45}
+.microsite-custom-code .gp .run em{font-style:normal;font-weight:800;color:var(--ink)}
+
+/* lever tags (text + colour, never colour alone) */
+.microsite-custom-code .gp .lv{display:inline-block;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-style:normal;line-height:1.5;white-space:nowrap}
+.microsite-custom-code .gp .lv.a{background:var(--brand);color:#fff}
+.microsite-custom-code .gp .lv.r{background:var(--brand-dk);color:#fff;box-shadow:inset 0 0 0 2px var(--ink)}
+.microsite-custom-code .gp .lv.s{background:var(--yellow);color:var(--ink)}
+.microsite-custom-code .gp .lv.h{background:var(--neutral);color:var(--gray);box-shadow:inset 0 0 0 1px var(--faint)}
+
+/* lever-by-channel matrix: per-lever blocks on mobile, real grid from 760px */
+.microsite-custom-code .gp .mx{margin-top:12px}
+.microsite-custom-code .gp .mx-head{display:none}
+.microsite-custom-code .gp .mx-row{background:#fff;border-radius:10px;padding:10px 12px 6px;margin-bottom:8px;border-top:5px solid var(--brand)}
+.microsite-custom-code .gp .mx-row.r{border-top-color:var(--brand-dk)}
+.microsite-custom-code .gp .mx-row.s{border-top-color:var(--yellow)}
+.microsite-custom-code .gp .mx-lev{font-size:20px;font-weight:900;letter-spacing:-.02em;color:var(--ink);margin-bottom:4px}
+.microsite-custom-code .gp .mx-c{display:grid;grid-template-columns:104px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.4;color:var(--ink-2)}
+.microsite-custom-code .gp .mx-ch{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--gray);padding-top:2px}
+.microsite-custom-code .gp .mx-p{min-width:0;overflow-wrap:break-word}
+.microsite-custom-code .gp .mx-no{color:var(--faint);font-weight:800}
+.microsite-custom-code .gp .mx-note{font-size:15px;color:var(--gray);margin-top:4px}
+
+/* 13-week calendar strip: vertical week list on mobile, 7-up strip from 760px */
+.microsite-custom-code .gp .legend{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin:2px 0 10px;font-size:14px;color:var(--gray)}
+.microsite-custom-code .gp .legend .lg{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.microsite-custom-code .gp .legend .keyd{display:inline-block;border:2px solid var(--ink);border-radius:6px;padding:0 6px;font-size:12px;font-weight:800;color:var(--ink);text-transform:uppercase;letter-spacing:.04em}
+.microsite-custom-code .gp .cal{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.microsite-custom-code .gp .cw{display:grid;grid-template-columns:62px 1fr;gap:8px;background:var(--tile);border-radius:9px;padding:8px}
+.microsite-custom-code .gp .cw-wk{font-size:12px;line-height:1.3;color:var(--gray);text-transform:uppercase;letter-spacing:.04em;font-weight:700;padding-top:4px}
+.microsite-custom-code .gp .cw-wk b{display:block;font-size:17px;color:var(--ink);font-weight:900;letter-spacing:-.01em}
+.microsite-custom-code .gp .cw-m{display:flex;flex-direction:column;gap:6px;min-width:0}
+.microsite-custom-code .gp .cm{background:#fff;border-radius:8px;padding:7px 9px;font-size:14px;line-height:1.35;color:var(--ink-2);border:1px solid var(--line);min-width:0;overflow-wrap:break-word}
+.microsite-custom-code .gp .cm b{display:block;font-size:13px;font-weight:800;color:var(--gray);letter-spacing:.01em}
+.microsite-custom-code .gp .cm strong{display:block;font-size:15px;font-weight:800;color:var(--ink);margin-bottom:4px}
+.microsite-custom-code .gp .cm .lvs{display:flex;flex-wrap:wrap;gap:4px}
+.microsite-custom-code .gp .cm.key{border:2px solid var(--ink)}
+.microsite-custom-code .gp .cm.key b::after{content:" \00b7\00a0key";color:var(--ink);text-transform:uppercase;font-size:11px;letter-spacing:.05em}
+.microsite-custom-code .gp .cm.hold{background:transparent;border-style:dashed;border-color:var(--faint)}
+.microsite-custom-code .gp .cw.next{background:var(--ink)}
+.microsite-custom-code .gp .cw.next .cw-wk,.microsite-custom-code .gp .cw.next .cw-wk b{color:var(--pop)}
+.microsite-custom-code .gp .calnote{font-size:14px;color:var(--gray);margin-top:8px;line-height:1.5}
+.microsite-custom-code .gp .tcall{display:grid;grid-template-columns:1fr;gap:0}
+
+@media(min-width:760px){
+  .microsite-custom-code .gp .mx-head,.microsite-custom-code .gp .mx-row{display:grid;grid-template-columns:118px repeat(6,minmax(0,1fr));gap:0;align-items:stretch}
+  .microsite-custom-code .gp .mx-head{background:var(--ink);border-radius:10px 10px 0 0}
+  .microsite-custom-code .gp .mx-head span{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#fff;padding:9px 8px}
+  .microsite-custom-code .gp .mx-row{border-radius:0;margin-bottom:0;padding:0;border-top:0;border-left:6px solid var(--brand);border-bottom:1px solid var(--line)}
+  .microsite-custom-code .gp .mx-row:last-of-type{border-radius:0 0 10px 10px}
+  .microsite-custom-code .gp .mx-row.r{border-left-color:var(--brand-dk)}
+  .microsite-custom-code .gp .mx-row.s{border-left-color:var(--yellow)}
+  .microsite-custom-code .gp .mx-lev{font-size:17px;margin:0;padding:10px 8px}
+  .microsite-custom-code .gp .mx-c{display:block;border-top:0;border-left:1px solid var(--line);padding:10px 8px;font-size:14.5px}
+  .microsite-custom-code .gp .mx-ch{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+  .microsite-custom-code .gp .cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+  .microsite-custom-code .gp .cw{display:flex;flex-direction:column;gap:6px;padding:7px 6px}
+  .microsite-custom-code .gp .cw-wk{padding:0 2px 5px;border-bottom:2px solid var(--line)}
+  .microsite-custom-code .gp .cw.next .cw-wk{border-bottom-color:rgba(255,255,255,.2)}
+  .microsite-custom-code .gp .cm{padding:6px 7px;font-size:12.5px}
+  .microsite-custom-code .gp .cm strong{font-size:13.5px}
+  .microsite-custom-code .gp .cm b{font-size:12px}
+  .microsite-custom-code .gp .lv{font-size:10.5px;padding:1px 6px}
+  .microsite-custom-code .gp .tcall{grid-template-columns:1fr 1fr 1fr;gap:10px}
+  .microsite-custom-code .gp .ovgrid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .microsite-custom-code .gp .ovgrid.three>:last-child{grid-column:auto}
+}
+/* mobile readability: lift 11px house text to 12px+ (house CSS left untouched above) */
+.microsite-custom-code .gp .tln em{font-size:12.5px}
+.microsite-custom-code .dna .para.soft{font-size:12.5px}
+.microsite-custom-code .dna .ft{font-size:12px}
+</style>
+<div>
+<div>
+<div class="dna gp">
+
+  <header class="hd">
+    <div class="logotype">grüns<sup>®</sup></div>
+    <div class="prep">Prepared by <b>YoboLabs</b></div>
+  </header>
+
+  <button class="navbtn" id="gpBtn" type="button" aria-label="Open section menu" aria-expanded="false" aria-controls="gpNav"><span></span><span></span><span></span></button>
+  <div class="navscrim" id="gpScrim" hidden></div>
+  <nav class="navmenu" id="gpNav" aria-hidden="true" aria-label="Sections" inert>
+    <div class="navhd">Growth Plan v2</div>
+    <a href="#s-situation"><i>01</i>The situation</a>
+    <a href="#s-channels"><i>02</i>How orders reach you</a>
+    <a href="#s-matrix"><i>03</i>Three levers, every channel</a>
+    <a href="#s-acquire"><i>04</i>Acquire</a>
+    <a href="#s-retain"><i>05</i>Retain</a>
+    <a href="#s-spend"><i>06</i>Spend per customer</a>
+    <a href="#s-timing"><i>07</i>Timing, across all three</a>
+    <a href="#s-rollout"><i>08</i>90-day rollout</a>
+    <a href="#s-roles"><i>09</i>Roles</a>
+    <a href="#s-exchange"><i>10</i>What we need · what you get</a>
+  </nav>
+
+  <section id="gp-top" class="tile hero">
+    <div class="herotag">THREE LEVERS.<br>EVERY CHANNEL.<br><span class="dim">TIMED TO<br>THE CALENDAR.</span></div>
+    <p class="herosub">Acquire, retain and grow spend per customer through every channel you run, with each push timed to the 13 weeks from Prime Day to New Year.</p>
+  </section>
+
+  <section id="s-situation" class="tile dark">
+    <div class="tnum light">01 · The situation</div>
+    <p class="para light">Grüns sits in about 6,300 doors and passed a $300M annualised rate in month 24. The subscription is $29.99 for 28 packs every 4 weeks, $1.07 a day, against $66.65 one-time. That discount only pays back if the household renews. About 10 seasonals land in 2026, and Junip holds 100,000+ reviews at 4.8.</p>
+    <div class="callout tight">Retail and Amazon reach is <b>rented</b>. The channel keeps the customer. Q4 is the loudest, most expensive quarter for reach, and the one where routines break.</div>
+    <p class="para light">Two risks shape every play. AG1 now sells gummies, so "powders taste like dirt" is fading; how often members actually take Grüns is the claim a competitor cannot copy. And discount dependency is already visible, so every Q4 offer here is shaped as access, cadence or a bundle, not a deeper discount.</p>
+  </section>
+
+  <section id="s-channels" class="tile">
+    <div class="tnum">02 · How orders reach you</div>
+    <div class="changrid">
+      <div class="chan win"><span class="pct">$29.99</span><b>Subscription</b><span class="cs">gruns.co · 28 packs / 4 weeks · $1.07 a day</span>Email, phone, flavor, cadence, history, card on file. The only channel that renews itself.<span class="cap good">Owned · Customer data: complete</span></div>
+      <div class="chan"><span class="pct">$66.65</span><b>One-time</b><span class="cs">gruns.co</span>Same profile, no renewal. Each one is a subscription not yet offered well.<span class="cap mid">Owned · Renewal: none</span></div>
+      <div class="chan"><b>Amazon</b><span class="cs">Storefront · Subscribe &amp; Save</span>Amazon owns the buyer and the renewal. You get cohorts, never people.<span class="cap bad">Rented · Customer data: aggregate</span></div>
+      <div class="chan"><span class="pct">~6,300</span><b>Retail</b><span class="cs">Sprouts, Target, Walmart and more</span>Big trial volume. A shelf unit leaves no name behind, so the pouch has to carry the way back.<span class="cap bad">Rented · Customer data: none</span></div>
+    </div>
+    <div class="callout tight">Every lever below is about moving people from the right two cards to the left two, then keeping them there. <b>Owned is where the three levers compound.</b></div>
+  </section>
+
+  <section id="s-matrix" class="tile">
+    <div class="tnum">03 · Three levers, every channel</div>
+    <p class="para">Three levers, not four. Timing is the layer that runs across all of them, in section 07.</p>
+    <div class="ovgrid three">
+      <div class="ov lva"><i>A</i><b>Acquire</b><span>New subscribers, not one-off buyers</span></div>
+      <div class="ov lvr"><i>R</i><b>Retain</b><span>Renewal, saves, cadence, win-back</span></div>
+      <div class="ov lvs"><i>S</i><b>Spend per customer</b><span>Household, attach, gifting, prepay</span></div>
+    </div>
+
+    <div class="mx" aria-label="Lever by channel matrix">
+      <div class="mx-head" aria-hidden="true"><span>Lever</span><span>Email</span><span>SMS</span><span>Paid social</span><span>Creator / UGC</span><span>On-site</span><span>Retail / Amazon</span></div>
+      <div class="mx-row a">
+        <div class="mx-lev">Acquire</div>
+        <div class="mx-c"><span class="mx-ch">Email</span><span class="mx-p">Quiz and join welcome</span></div>
+        <div class="mx-c"><span class="mx-ch">SMS</span><span class="mx-p">Day-3 join to first pouch</span></div>
+        <div class="mx-c"><span class="mx-ch">Paid social</span><span class="mx-p">Adherence ads, flighted to the calendar</span></div>
+        <div class="mx-c"><span class="mx-ch">Creator / UGC</span><span class="mx-p">Sub-1K creators, one brief per moment</span></div>
+        <div class="mx-c"><span class="mx-ch">On-site</span><span class="mx-p">Flavor quiz, HSA/FSA shown up front</span></div>
+        <div class="mx-c"><span class="mx-ch">Retail / Amazon</span><span class="mx-p">Pouch QR: shelf buyer to subscriber</span></div>
+      </div>
+      <div class="mx-row r">
+        <div class="mx-lev">Retain</div>
+        <div class="mx-c"><span class="mx-ch">Email</span><span class="mx-p">Win-back by cancel reason</span></div>
+        <div class="mx-c"><span class="mx-ch">SMS</span><span class="mx-p">Pack-21 save, travel skip prompt</span></div>
+        <div class="mx-c"><span class="mx-ch">Paid social</span><span class="mx-p"><span class="mx-no" aria-hidden="true">-</span><span class="sr">Not used for this lever</span></span></div>
+        <div class="mx-c"><span class="mx-ch">Creator / UGC</span><span class="mx-p"><span class="mx-no" aria-hidden="true">-</span><span class="sr">Not used for this lever</span></span></div>
+        <div class="mx-c"><span class="mx-ch">On-site</span><span class="mx-p">Cancel flow: cadence first, discount last</span></div>
+        <div class="mx-c"><span class="mx-ch">Retail / Amazon</span><span class="mx-p"><span class="mx-no" aria-hidden="true">-</span><span class="sr">Not used for this lever</span></span></div>
+      </div>
+      <div class="mx-row s">
+        <div class="mx-lev">Spend per customer</div>
+        <div class="mx-c"><span class="mx-ch">Email</span><span class="mx-p">Household stack, Nütrops attach</span></div>
+        <div class="mx-c"><span class="mx-ch">SMS</span><span class="mx-p">Ship-cutoff gift reminder</span></div>
+        <div class="mx-c"><span class="mx-ch">Paid social</span><span class="mx-p"><span class="mx-no" aria-hidden="true">-</span><span class="sr">Not used for this lever</span></span></div>
+        <div class="mx-c"><span class="mx-ch">Creator / UGC</span><span class="mx-p">Kids add-on stories</span></div>
+        <div class="mx-c"><span class="mx-ch">On-site</span><span class="mx-p">Prepaid plans, gift subscriptions</span></div>
+        <div class="mx-c"><span class="mx-ch">Retail / Amazon</span><span class="mx-p">After the ship cutoffs: shelf and e-gift</span></div>
+      </div>
+      <p class="mx-note">A dash means the channel does not serve that lever. Amazon keeps its own renewal, and paid reach is the wrong tool for people you already own.</p>
+    </div>
+  </section>
+
+  <section id="s-acquire" class="tile">
+    <div class="tnum">04 · Acquire</div>
+    <p class="para">New subscribers, bought when reach is cheap or intent is high, and pulled across from the shelf.</p>
+    <div class="levgrid">
+      <div class="lev"><i>1</i><b>Paid social on the adherence claim</b><span class="act">Paid social</span><br>Format is no longer the difference. How often members take it is.<span class="how"><em>How:</em> lead with adherence, not format. Flight spend into Prime Big Deal Days, Black Friday to Cyber Monday and New Year's Day. Stay light through the World Series, where inventory is costly.</span><span class="ex">"Most supplements die in the cupboard. Grüns members take theirs most days."</span><span class="kpi">KPI: cost per new subscriber · 60-day survival of each paid cohort</span><span class="run"><em>Run it yourself:</em> 8h/wk, or Yobo Senior ($2,000/mo)</span></div>
+
+      <div class="lev"><i>2</i><b>Creator volume, one brief per moment</b><span class="act">Creator / UGC</span><br>Sub-1K creators built this brand. Give them a calendar, not a generic brief.<span class="how"><em>How:</em> seed small creators every month with a brief keyed to the next moment: Child Health Day, Halloween, flu season, New Year.</span><span class="ex">A parent's 20-second Halloween video: one sachet in the lunchbox, the candy bowl left alone.</span><span class="kpi">KPI: posts per brief within 21 days · new subscribers per creator code</span><span class="run"><em>Run it yourself:</em> 20h/wk, or Yobo Lead ($4,000/mo)</span></div>
+
+      <div class="lev"><i>3</i><b>The pouch QR bridge</b><span class="act">Retail / Amazon to on-site</span><br>Q4 shelf traffic is the biggest trial volume of the year. Give it a way home.<span class="how"><em>How:</em> QR on every pouch back to a join page. Scan, pick a flavor, first subscription pouch on us.</span><span class="ex">"Scan the pouch. Tell us your flavor. Your next pouch is on us."</span><span class="kpi">KPI: joins per 1,000 retail units · join to subscription within 30 days</span><span class="run"><em>Run it yourself:</em> 5h/wk, or Yobo Senior ($2,000/mo)</span></div>
+    </div>
+  </section>
+
+  <section id="s-retain" class="tile">
+    <div class="tnum">05 · Retain</div>
+    <p class="para">Retain means renewal, saves, cadence and win-back. Never a reorder play: the subscription already reorders.</p>
+    <div class="levgrid">
+      <div class="lev"><i>1</i><b>The save before the renewal</b><span class="act">SMS · Email</span><br>The save belongs before the renewal, not in the cancel flow.<span class="how"><em>How:</em> segment by packs remaining. At pack 21 of 28, offer a flavor swap, a slower cadence or one skip. Discount last.</span><span class="ex">"A week from your next pouch. Try Berry this time, stretch to 6 weeks, or skip one?"</span><span class="kpi">KPI: renewal rate by cohort vs a held-out control · skip-to-cancel ratio</span><span class="run"><em>Run it yourself:</em> 3h/wk, or Yobo Junior ($500/mo)</span></div>
+
+      <div class="lev"><i>2</i><b>Calendar-aware cadence</b><span class="act">SMS</span><br>Breaks and travel are when a daily habit slips and a pile builds up.<span class="how"><em>How:</em> before Thanksgiving break and winter break, offer ship early or skip one. Use the end of Daylight Saving Time as a routine reset.</span><span class="ex">"Travelling for Thanksgiving? Reply 1 to ship early, 2 to skip one."</span><span class="kpi">KPI: cancels in break weeks vs the prior four weeks · skip share</span><span class="run"><em>Run it yourself:</em> 2h/wk, or Yobo Advisor drafts it ($199/mo)</span></div>
+
+      <div class="lev"><i>3</i><b>Win-back by cancel reason</b><span class="act">Email</span><br>A cancel reason is a brief. Answer the reason, not the person in general.<span class="how"><em>How:</em> households cancelled 60 to 240 days, split by coded reason. Price gets HSA/FSA via Truemed. Taste gets the new seasonal. Too much gets a 6-week cadence. Quitter's Day saves the January joiners.</span><span class="ex">"You left because it piled up. Every 6 weeks works now."</span><span class="kpi">KPI: 60-day reactivation · reactivated households surviving the next renewal</span><span class="run"><em>Run it yourself:</em> 2h/wk, or Yobo Junior ($500/mo)</span></div>
+    </div>
+
+    <div class="gpv">
+      <div class="vcap">Subscribers surviving each renewal · illustrative</div>
+      <div class="hmark"><span class="hmk">the pack-21 save aims here</span></div>
+      <div class="hbars" role="img" aria-label="Illustrative bar chart: subscribers surviving from join through renewal five, with the steepest drop between join and renewal two. Not Grüns data.">
+        <div class="hb"><i style="height:100%"></i><em>Join</em></div>
+        <div class="hb lift"><i style="height:72%"></i><em>R1</em></div>
+        <div class="hb lift"><i style="height:58%"></i><em>R2</em></div>
+        <div class="hb"><i style="height:50%"></i><em>R3</em></div>
+        <div class="hb"><i style="height:45%"></i><em>R4</em></div>
+        <div class="hb"><i style="height:42%"></i><em>R5</em></div>
+      </div>
+      <div class="vnote">Illustrative shape only, <i>not</i> Grüns data. Most loss lands before renewal 2, while the discount is still unpaid. Week one swaps in your real curve.</div>
+    </div>
+  </section>
+
+  <section id="s-spend" class="tile">
+    <div class="tnum">06 · Spend per customer</div>
+    <p class="para">More value per household through the household itself, gifting and attach, not deeper discounts.</p>
+    <div class="levgrid">
+      <div class="lev"><i>1</i><b>The household stack</b><span class="act">Email · On-site</span><br>A subscriber with kids at home is the cheapest growth you have.<span class="how"><em>How:</em> adults plus kids on one cadence and one shipment, offered to subscribers with kids at home. Halloween week is the hook.</span><span class="ex">"Your kids keep stealing them. Add a kids pouch to the same box."</span><span class="kpi">KPI: households with 2+ subscriptions · revenue per household per month</span><span class="run"><em>Run it yourself:</em> 3h/wk, or Yobo Junior ($500/mo)</span></div>
+
+      <div class="lev"><i>2</i><b>Gift and prepay windows</b><span class="act">On-site · Email · SMS</span><br>The cultural calendar and the ship cutoffs set when a gift can still arrive.<span class="how"><em>How:</em> prepaid plans on Cyber Monday. Gift subscriptions through Diwali, Hanukkah and Christmas. A last push on Green Monday before the USPS cutoffs, then e-gift and shelf.</span><span class="ex">"Ground Advantage cutoff is Dec 17. After that, an e-gift subscription in one tap."</span><span class="kpi">KPI: prepay take-up · gift subscriptions that reach a paid renewal</span><span class="run"><em>Run it yourself:</em> 4h/wk, or Yobo Lead ($4,000/mo)</span></div>
+
+      <div class="lev"><i>3</i><b>Nütrops attach and seasonal adds</b><span class="act">Email · On-site</span><br>About 10 seasonals in 2026 means a new reason to add something every few weeks.<span class="how"><em>How:</em> offer Nütrops after three renewals. Give subscribers first taste of each seasonal, such as Berry Far Far Away.</span><span class="ex">"Three renewals in. Add Nütrops to the same box, same day."</span><span class="kpi">KPI: attach rate · seasonal adds per subscriber</span><span class="run"><em>Run it yourself:</em> 2h/wk, or Yobo Junior ($500/mo)</span></div>
+    </div>
+  </section>
+
+  <section id="s-timing" class="tile">
+    <div class="tnum">07 · Timing, across all three</div>
+    <p class="para">Not a fourth lever. The same calendar tells each lever when to push and when to hold. Thirteen weeks from Monday Oct 5, plus the resolution weeks that follow.</p>
+    <div class="gpv">
+      <div class="vcap">13-week calendar · US · verified dates</div>
+      <div class="legend" aria-label="Legend">
+        <em class="lv a">Acquire</em><em class="lv r">Retain</em><em class="lv s">Spend</em><span class="lg"><em class="lv h">Hold</em> no promo</span><span class="lg"><span class="keyd">Key</span> sets the quarter</span>
+      </div>
+      <ol class="cal">
+        <li class="cw"><div class="cw-wk"><b>W1</b>Week of Oct 5</div><div class="cw-m">
+          <div class="cm"><b>Oct 5</b><strong>Child Health Day</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+          <div class="cm key"><b>Oct 6 to 7</b><strong>Prime Big Deal Days · Target Circle Deal Days</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+          <div class="cm"><b>Oct 7</b><strong>National Kale Day</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W2</b>Week of Oct 12</div><div class="cw-m">
+          <div class="cm hold"><b>Oct 12</b><strong>Columbus Day / Indigenous Peoples' Day</strong><span class="lvs"><em class="lv h">Hold</em></span></div>
+          <div class="cm"><b>Oct onward</b><strong>Flu season rises</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W3</b>Week of Oct 19</div><div class="cw-m">
+          <div class="cm"><b>Oct 20</b><strong>NBA season opener</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+          <div class="cm hold"><b>Oct 23 to 31</b><strong>World Series: costly, skip</strong><span class="lvs"><em class="lv h">Hold</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W4</b>Week of Oct 26</div><div class="cw-m">
+          <div class="cm key"><b>Oct 31</b><strong>Halloween</strong><span class="lvs"><em class="lv s">Spend</em></span></div>
+          <div class="cm key"><b>Nov 1</b><strong>Daylight Saving Time ends</strong><span class="lvs"><em class="lv r">Retain</em></span></div>
+          <div class="cm hold"><b>Nov 1 to 2</b><strong>Dia de los Muertos: respectful presence</strong><span class="lvs"><em class="lv h">Hold</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W5</b>Week of Nov 2</div><div class="cw-m">
+          <div class="cm"><b>Nov 8</b><strong>Diwali</strong><span class="lvs"><em class="lv s">Spend</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W6</b>Week of Nov 9</div><div class="cw-m">
+          <div class="cm hold"><b>Nov 11</b><strong>Veterans Day: low volume</strong><span class="lvs"><em class="lv h">Hold</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W7</b>Week of Nov 16</div><div class="cw-m">
+          <div class="cm"><b>Nov 19 to Dec 30</b><strong>Trans-Siberian Orchestra tour, regional</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W8</b>Week of Nov 23</div><div class="cw-m">
+          <div class="cm"><b>Nov 23 to 27</b><strong>K-12 Thanksgiving break</strong><span class="lvs"><em class="lv r">Retain</em></span></div>
+          <div class="cm"><b>Nov 26</b><strong>Thanksgiving · NFL games</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+          <div class="cm key"><b>Nov 27 to 30</b><strong>Black Friday to Cyber Monday</strong><span class="lvs"><em class="lv a">Acquire</em><em class="lv s">Spend</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W9</b>Week of Nov 30</div><div class="cw-m">
+          <div class="cm"><b>Dec 1</b><strong>Giving Tuesday</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+          <div class="cm"><b>Dec 4 to 12</b><strong>Hanukkah</strong><span class="lvs"><em class="lv s">Spend</em></span></div>
+          <div class="cm"><b>Dec 6</b><strong>CFP Selection Day</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W10</b>Week of Dec 7</div><div class="cw-m">
+          <div class="cm"><b>Dec 3 to 9</b><strong>College finals begin</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+          <div class="cm"><b>Dec 4 to 12</b><strong>Hanukkah continues</strong><span class="lvs"><em class="lv s">Spend</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W11</b>Week of Dec 14</div><div class="cw-m">
+          <div class="cm"><b>Dec 14</b><strong>Green Monday</strong><span class="lvs"><em class="lv s">Spend</em></span></div>
+          <div class="cm"><b>Dec 16 to 24</b><strong>Las Posadas</strong><span class="lvs"><em class="lv r">Retain</em></span></div>
+          <div class="cm key"><b>Dec 17 to 19</b><strong>USPS holiday ship cutoffs</strong><span class="lvs"><em class="lv s">Spend</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W12</b>Week of Dec 21</div><div class="cw-m">
+          <div class="cm key"><b>Dec 21 to Jan 4</b><strong>K-12 winter break</strong><span class="lvs"><em class="lv r">Retain</em></span></div>
+          <div class="cm"><b>Dec 25</b><strong>Christmas · NBA and NFL games</strong><span class="lvs"><em class="lv a">Acquire</em><em class="lv s">Spend</em></span></div>
+          <div class="cm"><b>Dec 26 to Jan 1</b><strong>Kwanzaa</strong><span class="lvs"><em class="lv r">Retain</em></span></div>
+        </div></li>
+        <li class="cw"><div class="cw-wk"><b>W13</b>Week of Dec 28</div><div class="cw-m">
+          <div class="cm"><b>Dec 30 · Jan 1</b><strong>CFP quarterfinals</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+          <div class="cm"><b>Dec 31</b><strong>New Year's Eve</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+          <div class="cm key"><b>Jan 1</b><strong>New Year's Day · Dry January begins</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+        </div></li>
+        <li class="cw next"><div class="cw-wk"><b>Next</b>New year resolve</div><div class="cw-m">
+          <div class="cm"><b>Jan 1 to 31</b><strong>Dry January</strong><span class="lvs"><em class="lv a">Acquire</em></span></div>
+          <div class="cm"><b>Jan 8</b><strong>Quitter's Day: save the January joiners</strong><span class="lvs"><em class="lv r">Retain</em></span></div>
+        </div></li>
+      </ol>
+      <div class="calnote">Every date is verified for 2026 and 2027. School break dates vary by district, and the flu peak is a historical range, not a forecast. Lunar New Year (Feb 6, 2027) falls in the next quarter.</div>
+    </div>
+
+    <div class="tcall">
+      <div class="callout"><b>Acquire:</b> buy reach when intent peaks (Prime Day, Black Friday, Jan 1) and go light when inventory is costly.</div>
+      <div class="callout"><b>Retain:</b> saves land before breaks and travel, not after the cancel. Winter break is the highest skip and cancel risk of the quarter.</div>
+      <div class="callout"><b>Spend:</b> gifting and prepay ride the cultural calendar and close at the ship cutoffs.</div>
+    </div>
+  </section>
+
+  <section id="s-rollout" class="tile yellow">
+    <div class="tnum">08 · 90-day rollout</div>
+    <div class="gpv">
+      <div class="vcap">Three phases on the calendar</div>
+      <div class="tl4">
+        <div class="tln"><i></i><b>Weeks 1-4</b><span>Instrument &amp; test</span><em>Prime Day · Halloween · clocks change</em></div>
+        <div class="tln"><i></i><b>Weeks 5-9</b><span>The BFCM push</span><em>Diwali · Thanksgiving · Cyber Monday</em></div>
+        <div class="tln"><i></i><b>Weeks 10-13</b><span>Protect &amp; pre-load</span><em>Ship cutoffs · winter break</em></div>
+        <div class="tln fin"><i></i><b>Jan 1</b><span>resolutions open to a list</span><em></em></div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="ph"><b>Weeks 1-4</b>Instrument &amp; test</div>
+      <p class="para">Build the real renewal curve and code cancel reasons. QR into the next pouch artwork. A paid test on Prime Big Deal Days. The household-stack email in Halloween week. A routine-reset message as the clocks change. Pack-21 save goes live against a held-out control.</p>
+      <div class="gate">Gate: renewal curve in hand · save flow live vs control · creative approval under five business days</div>
+    </div>
+
+    <div class="phase">
+      <div class="ph"><b>Weeks 5-9</b>The BFCM push</div>
+      <p class="para">Acquisition peaks on Black Friday to Cyber Monday with the adherence creative and creator briefs. Prepaid plans open on Cyber Monday. Diwali and Hanukkah gift subscriptions. Thanksgiving skip-or-ship-early prompts.</p>
+      <div class="gate">Gate: cost per new subscriber inside target · no rise in discount depth · break-week cancels below baseline</div>
+    </div>
+
+    <div class="phase">
+      <div class="ph"><b>Weeks 10-13</b>Protect &amp; pre-load</div>
+      <p class="para">Green Monday and the ship-cutoff gift push, then e-gift and shelf. Winter-break saves to every active household. Resolution creative and the January welcome built before New Year's Eve, so Jan 1 opens to a list, not only to paid traffic.</p>
+      <div class="gate">Gate: winter-break cancels below baseline · January creative approved · Monday scorecard by lever and channel</div>
+    </div>
+  </section>
+
+  <section id="s-roles" class="tile">
+    <div class="tnum">09 · Roles</div>
+    <div class="diffgrid">
+      <div class="diff"><b>Growth / CRM lead <span>· decides &amp; approves</span></b>Approves every send, offer and price. Owns the calendar and the margin guardrails</div>
+      <div class="diff"><b>Paid &amp; creator lead <span>· owns acquisition channels</span></b>Paid social budgets and flights. Creator briefs per moment</div>
+      <div class="diff"><b>Retail &amp; Amazon <span>· owns the rented channels</span></b>Shelf, listings, what each chain permits on pack. Supplies scan data</div>
+      <div class="diff"><b>Brand &amp; legal <span>· clears claims</span></b>The adherence claim, kids copy and cultural moments, before they run</div>
+      <div class="diff"><b>YoboLabs <span>· builds &amp; operates</span></b>Join page, flows, segments, calendar briefs, cohort reporting, Monday scorecard</div>
+    </div>
+  </section>
+
+  <section id="s-exchange" class="tile dark">
+    <div class="tnum light">10 · What we need · what you get</div>
+    <div class="xgrid">
+      <div class="xc"><b>What we need from you</b>
+        <ul>
+          <li>Shopify export with subscription state</li>
+          <li>Klaviyo access and current flows</li>
+          <li>Junip and Amazon Seller Central access</li>
+          <li>Ad accounts and the Q4 budget</li>
+          <li>The next pouch print date</li>
+          <li>Margin guardrails for bundles and prepay</li>
+          <li>One approval session a week</li>
+        </ul>
+      </div>
+      <div class="xc"><b>What you get from us</b>
+        <ul>
+          <li>Your real renewal curve in week one</li>
+          <li>Every play drafted against the calendar</li>
+          <li>Coded cancel reasons instead of guesses</li>
+          <li>A creator brief for every key moment</li>
+          <li>Monday scorecard by lever and channel</li>
+          <li>Nothing goes out without your approval</li>
+        </ul>
+      </div>
+    </div>
+    <div class="say sm pop">Three levers, one calendar. Start in week one, open January to a list.</div>
+  </section>
+
+  <p class="src">Facts from gruns.co and published coverage, Sept 2026: ~6,300 doors, ~$300M annualised in month 24, $29.99 subscription (28 packs every 4 weeks, $1.07 a day) vs $66.65 one-time, ~10 seasonals in 2026, 4.8 from 100,000+ Junip reviews. Calendar dates verified against 2026 and 2027 sources (Amazon, USPS, OPM, CDC, ESPN, CBS Sports, NFL, Almanac and others) on 2 Oct 2026. Hours per week are estimates. Curves, shares and projections are illustrative, not Grüns data. Week one replaces them. Prepared by YoboLabs. Not affiliated with or endorsed by Grüns.</p>
+
+  <footer class="ft">YoboLabs · yobolabs.ai · Grüns · Growth Plan v2 · October 2026 · Confidential</footer>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('gpBtn'),nav=document.getElementById('gpNav'),scrim=document.getElementById('gpScrim');
+  if(!btn||!nav||!scrim)return;
+  function setOpen(open,focusBtn){
+    btn.classList.toggle('open',open);nav.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Close section menu':'Open section menu');
+    nav.setAttribute('aria-hidden',open?'false':'true');
+    if(open){nav.removeAttribute('inert');scrim.hidden=false;var f=nav.querySelector('a');if(f)f.focus();}
+    else{nav.setAttribute('inert','');scrim.hidden=true;if(focusBtn)btn.focus();}
+  }
+  btn.addEventListener('click',function(){setOpen(btn.getAttribute('aria-expanded')!=='true',false);});
+  scrim.addEventListener('click',function(){setOpen(false,true);});
+  document.addEventListener('keydown',function(e){if((e.key==='Escape'||e.key==='Esc')&&btn.getAttribute('aria-expanded')==='true'){setOpen(false,true);}});
+  Array.prototype.forEach.call(nav.querySelectorAll('a'),function(a){a.addEventListener('click',function(){setOpen(false,false);});});
+})();
+</script>
+
+</body>
+</html>

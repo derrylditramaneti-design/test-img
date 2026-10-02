@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="A 90-day plan that copies five proven moves from AG1, Seed, Ritual, Bloom and Lemme to lift day-90 subscriber retention.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E5C36'/%3E%3Cpath d='M9 21l5-10 4 6 5-8' stroke='%23C8F05A' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<title>Gruns Growth Plan C</title>
+<style>
+  /* Grüns declares --font-secondary: "Retail Display","Helvetica Neue",Helvetica,Arial.
+     Retail Display is licensed, so we run their own declared fallback stack. */
+  :root{
+    --ink:#16231A; --ink-2:#4A5C4E; --ink-3:#77887B;
+    --ground:#FAF8F0; --surface:#FFFFFF; --surface-2:#F1EFE4;
+    --line:#E2DFD0; --line-soft:#EDEBDF;
+    --green:#0E5C36; --green-ink:#F3FBF4;
+    --lime:#C8F05A; --lime-ink:#14200F;
+    --yellow:#FFD84D;
+    --sans:"Retail Display","Helvetica Neue",Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+    --r:6px;
+    color-scheme:light;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--sans); font-size:16px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:var(--sans); margin:0; text-wrap:balance; letter-spacing:-.02em}
+  p{margin:0}
+  a{color:inherit}
+
+  .wrap{width:100%; max-width:960px; margin-inline:auto; padding-inline:20px}
+  @media (min-width:768px){ .wrap{padding-inline:32px} }
+
+  /* masthead */
+  .top{border-bottom:1px solid var(--line)}
+  .top-in{display:flex; align-items:center; justify-content:space-between; gap:12px; padding-block:14px}
+  .logo{display:block; height:24px; width:auto}
+  @media (min-width:768px){ .logo{height:28px} }
+  .for{font-size:13px; color:var(--ink-3)}
+  .lockup{display:flex; align-items:center; gap:10px}
+  .client{display:block; height:22px; width:auto; border-radius:3px}
+  @media (min-width:768px){ .client{height:26px} }
+
+
+  /* hero */
+  .hero{background:var(--green); color:var(--green-ink)}
+  .hero-in{padding-block:40px 36px}
+  @media (min-width:768px){ .hero-in{padding-block:64px 56px} }
+  .kicker{font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--lime)}
+  .hero h1{font-size:clamp(33px,8.2vw,58px); line-height:1.05; font-weight:700; margin-top:14px; max-width:14ch}
+  .hero p{margin-top:16px; font-size:clamp(16px,2.4vw,19px); color:rgba(243,251,244,.88); max-width:40ch}
+  .metric{margin-top:26px; display:inline-flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+    background:var(--lime); color:var(--lime-ink); border-radius:var(--r); padding:12px 16px}
+  .metric b{font-size:22px; font-weight:700; letter-spacing:-.02em}
+  .metric span{font-size:13.5px; font-weight:500}
+
+  /* sections */
+  section + section{border-top:1px solid var(--line)}
+  h2{font-size:clamp(21px,4vw,27px); font-weight:700}
+  .sub{margin-top:8px; color:var(--ink-2); font-size:15px; max-width:58ch}
+
+  /* plan overview: hanging-label statements */
+  .stmts{margin-top:18px; display:grid; gap:0}
+  .stmt{display:grid; gap:4px; padding-block:14px; border-top:1px solid var(--line-soft)}
+  .stmt:first-child{border-top:none; padding-top:6px}
+  @media (min-width:700px){ .stmt{grid-template-columns:160px minmax(0,1fr); gap:24px; align-items:baseline} }
+  .stmt dt{font-family:var(--mono); font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--green)}
+  .stmt dd{margin:0; font-size:15.5px; color:var(--ink-2); line-height:1.55; max-width:62ch}
+  .stmt dd b{color:var(--ink); font-weight:600}
+
+  /* stage disclosures */
+  .stages{margin-top:20px; display:grid; gap:10px}
+  .stage{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  .stage[open]{border-color:var(--green)}
+  .stage > summary{list-style:none; cursor:pointer; padding:16px; display:grid; gap:10px; transition:background .16s ease}
+  .stage > summary::-webkit-details-marker{display:none}
+  .stage > summary:hover{background:var(--surface-2)}
+  .stage > summary:focus-visible{outline:2px solid var(--green); outline-offset:-2px}
+  @media (min-width:760px){
+    .stage > summary{grid-template-columns:132px minmax(0,1fr) auto; align-items:center; gap:20px; padding:16px 20px}
+  }
+  .stage h3{font-size:17px; font-weight:700}
+  .s-q{display:block; font-size:14.5px; color:var(--ink-2); line-height:1.5}
+  .s-open{display:block; margin-top:5px; font-family:var(--mono); font-size:11.5px; color:var(--ink-3)}
+  .stage[open] .s-open{color:var(--green)}
+  .move{display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:13.5px;
+    font-variant-numeric:tabular-nums; flex-wrap:wrap}
+  .move .from{color:var(--ink-3)}
+  .move .to{background:var(--lime); color:var(--lime-ink); font-weight:600; padding:3px 8px; border-radius:4px}
+  .stage.last .to{background:var(--yellow)}
+  .s-body{padding:2px 16px 18px; border-top:1px solid var(--line-soft)}
+  @media (min-width:760px){ .s-body{padding:2px 20px 20px} }
+  .play{padding-top:16px}
+  .play h4{font-size:15.5px; font-weight:700}
+  .play p{font-size:14.5px; color:var(--ink-2); line-height:1.55; margin-top:5px; max-width:66ch}
+  .play p b{color:var(--ink); font-weight:600}
+  .pmeta{display:flex; flex-wrap:wrap; gap:6px 18px; margin-top:9px; font-family:var(--mono); font-size:12px; line-height:1.5}
+  .hrs{color:var(--ink-3)}
+  .stop{color:var(--ink-2); max-width:62ch}
+  .stop b{color:var(--green); font-weight:600; text-transform:uppercase; letter-spacing:.05em; font-size:11px}
+  .tier{margin-top:18px; padding-top:14px; border-top:1px solid var(--line-soft); font-size:13.5px; color:var(--ink-2); line-height:1.55}
+  .tier b{color:var(--green); font-weight:600}
+
+  .aside{margin-top:16px; background:var(--surface-2); border-radius:var(--r); padding:14px 16px;
+    font-size:14px; color:var(--ink-2); line-height:1.55}
+  .aside b{color:var(--ink); font-weight:600}
+
+  /* week one */
+  .steps{margin-top:20px; display:grid; gap:14px}
+  @media (min-width:768px){ .steps{grid-template-columns:repeat(3,1fr); gap:18px} }
+  .step{display:grid; gap:7px; padding-top:14px; border-top:2px solid var(--green)}
+  .step .when{font-family:var(--mono); font-size:12px; font-weight:600; color:var(--green)}
+  .step h3{font-size:16px; font-weight:700}
+  .step p{font-size:14.5px; color:var(--ink-2); line-height:1.5}
+  .five{margin-top:16px; font-size:14.5px; color:var(--ink-2); line-height:1.7; max-width:68ch}
+  .five b{color:var(--ink); font-weight:600}
+
+  /* rhythm */
+  .rhythm{margin-top:20px; display:grid; gap:0}
+  .rrow{display:grid; gap:4px; padding-block:14px; border-bottom:1px solid var(--line-soft)}
+  @media (min-width:700px){ .rrow{grid-template-columns:120px minmax(0,1fr); gap:24px; align-items:baseline} }
+  .rrow:last-child{border-bottom:none}
+  .rrow .rw{font-family:var(--mono); font-size:13px; font-weight:600; color:var(--ink)}
+  .rrow p{font-size:14.5px; color:var(--ink-2); line-height:1.5}
+  .rrow.gate{background:var(--surface-2); border-radius:var(--r); padding-inline:16px; border-bottom:none; margin-block:4px}
+  .rrow.gate .rw{color:var(--green)}
+  .rrow.gate p{color:var(--ink); font-weight:600}
+
+  /* money */
+  .money{margin-top:20px; display:grid; gap:14px}
+  @media (min-width:768px){ .money{grid-template-columns:1fr 1fr; gap:18px} }
+  .price{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:18px}
+  .price .big{font-size:30px; font-weight:700; letter-spacing:-.025em; line-height:1}
+  .price .big span{font-size:15px; font-weight:600; letter-spacing:0}
+  .price .cap{font-size:13.5px; color:var(--ink-3); margin-top:5px}
+  .price p{font-size:14.5px; color:var(--ink-2); margin-top:12px; line-height:1.5}
+  .need{background:var(--surface-2); border-radius:var(--r); padding:18px}
+  .need h3{font-size:16px; font-weight:700; margin-bottom:10px}
+  .need ul{margin:0; padding-left:18px; font-size:14.5px; color:var(--ink-2); line-height:1.6}
+  .need li{margin-bottom:6px}
+  .need li:last-child{margin-bottom:0}
+  .need b{color:var(--green); font-weight:600}
+
+  /* watch */
+  .watch{margin-top:18px; display:grid; gap:0}
+  .w{display:grid; gap:5px; padding-block:16px; border-bottom:1px solid var(--line-soft)}
+  .w:last-child{border-bottom:none}
+  @media (min-width:700px){ .w{grid-template-columns:190px minmax(0,1fr); gap:24px; align-items:start} }
+  .w h3{font-size:15.5px; font-weight:700}
+  .w p{font-size:14.5px; color:var(--ink-2); line-height:1.55; max-width:64ch}
+  .w .sig{display:block; margin-top:7px; font-family:var(--mono); font-size:12px; color:var(--green); line-height:1.5}
+
+  /* decision */
+  .decide{background:var(--green); color:var(--green-ink); border-radius:var(--r); padding:26px 20px}
+  @media (min-width:768px){ .decide{padding:32px} }
+  .decide h2{font-size:clamp(20px,3.6vw,26px)}
+  .decide p{margin-top:12px; font-size:15.5px; color:rgba(243,251,244,.86); max-width:54ch}
+
+  /* evidence */
+  .disc{border:1px solid var(--line); border-radius:var(--r); background:var(--surface); margin-top:16px}
+  .disc > summary{padding:14px 16px; cursor:pointer; font-weight:600; font-size:15px; list-style:none;
+    display:flex; justify-content:space-between; align-items:center; gap:14px; min-height:48px}
+  .disc > summary::-webkit-details-marker{display:none}
+  .disc > summary::after{content:"+"; font-family:var(--mono); color:var(--ink-3); font-size:18px; line-height:1}
+  .disc[open] > summary::after{content:"-"}
+  .disc > summary:focus-visible{outline:2px solid var(--green); outline-offset:-2px; border-radius:var(--r)}
+  .dbody{padding:0 16px 16px; font-size:14px; color:var(--ink-2); line-height:1.6}
+  .dbody p{margin-bottom:10px}
+  .dbody p:last-child{margin-bottom:0}
+  .dbody b{color:var(--ink)}
+  .chips{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0}
+  .chip{font-family:var(--mono); font-size:11.5px; background:var(--surface-2); border:1px solid var(--line);
+    padding:4px 9px; border-radius:4px; color:var(--ink-2)}
+
+  /* growth outcome */
+  .outcome{margin-top:20px; display:grid; gap:16px; align-items:start}
+  @media (min-width:768px){ .outcome{grid-template-columns:minmax(0,1fr) auto; gap:32px} }
+  .o-big{font-size:clamp(22px,4.2vw,30px); font-weight:700; letter-spacing:-.025em; line-height:1.15}
+  .o-why{margin-top:10px; font-size:15px; color:var(--ink-2); line-height:1.55; max-width:60ch}
+  .o-target{background:var(--lime); color:var(--lime-ink); border-radius:var(--r); padding:14px 18px;
+    display:flex; align-items:baseline; gap:10px; justify-self:start; white-space:nowrap}
+  .o-target b{font-size:30px; font-weight:700; letter-spacing:-.03em; line-height:1}
+  .o-target span{font-size:13.5px; font-weight:500}
+
+  .gt{width:100%; border-collapse:collapse; margin-top:22px; font-size:14.5px}
+  .gt caption{text-align:left; font-size:13.5px; color:var(--ink-3); padding-bottom:10px}
+  .gt th{text-align:left; font-family:var(--mono); font-size:11.5px; font-weight:600; color:var(--ink-3);
+    padding:0 14px 8px 0; border-bottom:1px solid var(--line)}
+  .gt td{padding:13px 14px 13px 0; border-bottom:1px solid var(--line-soft); vertical-align:top; color:var(--ink-2)}
+  .gt tr:last-child td{border-bottom:none}
+  .gt tbody th{text-align:left; font-weight:600; color:var(--ink); white-space:nowrap;
+    padding:13px 14px 13px 0; border-bottom:1px solid var(--line-soft); vertical-align:top; font-size:14.5px}
+  .gt tbody tr:last-child th{border-bottom:none}
+  .gt .now{font-family:var(--mono); font-variant-numeric:tabular-nums; color:var(--ink-3); white-space:nowrap}
+  .gt .tgt{padding-right:0}
+  .gt .tgt span{font-family:var(--mono); font-variant-numeric:tabular-nums; background:var(--lime);
+    color:var(--lime-ink); font-weight:600; padding:3px 8px; border-radius:4px; display:inline-block}
+  .gt tr:last-child .tgt span{background:var(--yellow)}
+  @media (max-width:699px){
+    .gt thead{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%)}
+    .gt tr{display:grid; gap:3px; padding-block:14px; border-bottom:1px solid var(--line-soft)}
+    .gt tr:last-child{border-bottom:none}
+    .gt td{display:grid; grid-template-columns:106px minmax(0,1fr); gap:12px; padding:1px 0; border:none; align-items:baseline}
+    .gt td::before{content:attr(data-l); font-family:var(--mono); font-size:11.5px; color:var(--ink-3)}
+    .gt tbody th{display:block; font-size:16px; padding:0 0 4px; border:none}
+  }
+
+  /* a11y + polish */
+  .skip{position:absolute; left:-9999px; top:0; background:var(--green); color:var(--green-ink);
+    padding:10px 16px; border-radius:0 0 var(--r) 0; font-size:14px; font-weight:600; z-index:10}
+  .skip:focus{left:0}
+  ::selection{background:var(--lime); color:var(--lime-ink)}
+  p, dd, li, .s-q{text-wrap:pretty}
+  .hrs, .pmeta{font-variant-numeric:tabular-nums}
+  .stage > summary:active{background:var(--surface-2); transform:translateY(1px)}
+  .disc > summary:active{transform:translateY(1px)}
+  .stage > summary, .disc > summary{transition:background .16s ease, transform .1s ease}
+  /* bottom padding runs slightly heavier than top so sections sit optically even */
+  section{padding-block:34px 40px}
+  @media (min-width:768px){ section{padding-block:50px 58px} }
+
+  /* A CEO prints this or saves it as PDF. Disclosures must not swallow the playbook. */
+  @media print{
+    :root{--ground:#FFFFFF; --surface:#FFFFFF; --surface-2:#F4F2E9}
+    body{font-size:10.5pt; line-height:1.45}
+    .skip{display:none}
+    .hero{background:#FFFFFF !important; color:var(--ink) !important; border-bottom:2px solid var(--green)}
+    .hero h1{font-size:30pt}
+    .hero p{color:var(--ink-2) !important}
+    .kicker{color:var(--green) !important}
+    .metric{background:#FFFFFF !important; border:1.5px solid var(--green); color:var(--ink) !important; padding:8px 12px}
+    .decide{background:#FFFFFF !important; color:var(--ink) !important; border:1.5px solid var(--green)}
+    .decide p{color:var(--ink-2) !important}
+    details > div{display:block !important}
+    .stage > summary, .disc > summary{cursor:default}
+    .disc > summary::after{content:none}
+    .stage, .play, .w, .step, .rrow, .gt tr{break-inside:avoid}
+    section{break-inside:auto; padding-block:16px 20px}
+    h2, h3, h4{break-after:avoid}
+    .move .to, .gt .tgt span{background:#FFFFFF !important; border:1px solid var(--green); color:var(--ink) !important}
+  }
+
+  footer{border-top:1px solid var(--line); padding-block:20px 30px; font-size:13px; color:var(--ink-3)}
+  footer div + div{margin-top:4px}
+
+  @media (prefers-reduced-motion:reduce){ *{transition:none !important; animation:none !important} }
+</style>
+</head>
+<body>
+<a class="skip" href="#plan">Skip to the plan</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <img class="logo" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/646e88ab9ffc03f2.svg" alt="Yobo" width="95" height="28">
+    <div class="lockup"><span class="for">Prepared for</span><img class="client" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/f9bdb04eac9f00f5.png" alt="Gr&uuml;ns" width="60" height="28"></div>
+  </div>
+</header>
+
+<main id="plan">
+<div class="hero">
+  <div class="wrap hero-in">
+    <div class="kicker">90-day growth plan</div>
+    <h1>Copy what already worked here.</h1>
+    <p>Five named gaps against five named brands, and twelve weeks spent closing them.</p>
+    <div class="metric"><b>55% to 65%</b><span>day-90 subscriber retention, in 90 days</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section>
+    <h2>What this plan bets on</h2>
+    <p class="sub">DTC subscription supplements is one of the most thoroughly solved growth categories of the last decade, and the brands that solved it did it in public. This is not a set of hypotheses. It is a set of transplants.</p>
+    <dl class="stmts">
+      <div class="stmt">
+        <dt>The bet</dt>
+        <dd>This category is already solved. <b>Copy what worked here rather than invent.</b> Every play below names the brand that proved it, the published benchmark, and the gap you are closing.</dd>
+      </div>
+      <div class="stmt">
+        <dt>The cost</dt>
+        <dd>Originality. You will always run one cycle behind whoever is inventing, and you accept that in exchange for knowing what good looks like before you spend.</dd>
+      </div>
+      <div class="stmt">
+        <dt>The trap</dt>
+        <dd>A move that worked for AG1 in 2022 worked under 2022 CPMs and a category that did not exist yet. <b>Several stop-conditions below fire on the condition, not the number.</b></dd>
+      </div>
+      <div class="stmt">
+        <dt>Subscription rule</dt>
+        <dd>Every repeat benchmark here is retention, churn or reactivation. Many published DTC repeat-rates are transactional and not comparable, which is why the benchmarks are AG1, Ritual and Seed rather than retail-led brands.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>How we label benchmarks</h2>
+    <p class="sub">A plan built on other people's numbers only works if you can see which numbers are real. Three labels run through this file.</p>
+    <p class="aside"><b>Published</b> <span class="chip">published</span> means the brand or a named outlet stated it. <b>Reported</b> <span class="chip">reported</span> means a credible third party inferred it from ad libraries, site structure or category reporting. <b>Assumed</b> <span class="chip">assumed</span> means we estimated it and it has not been checked. Any assumed benchmark a play depends on gets verified in week one, before that play's budget is committed. If a number moves the plan, it does not stay assumed.</p>
+  </section>
+
+  <section>
+    <h2>Growth outcome</h2>
+    <div class="outcome">
+      <div>
+        <p class="o-big">Subscriber retention at day 90 after the first order.</p>
+        <p class="o-why">This is where the benchmark brands differ most, and it is the one a gummy format alone does not win. Taste gets you the first order. <b>It does not get you the fourth.</b> Every gap below is measured against a brand that already reached a number on this metric.</p>
+      </div>
+      <div class="o-target"><b>65%</b><span>from roughly 55%, by day 90</span></div>
+    </div>
+
+    <table class="gt">
+      <caption>Five gaps, each against a named brand. Where Gr&uuml;ns sits is assumed until week one measures it.</caption>
+      <thead>
+        <tr><th scope="col">Brand</th><th scope="col">Their proven move</th><th scope="col">Where Gr&uuml;ns sits</th><th scope="col">The delta</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">AG1</th><td data-l="Their move">Owned one daily-ritual claim for 16 years, then launched gummies in 2026</td><td data-l="Gr&uuml;ns" class="now">claim exists, unused</td><td data-l="Delta" class="tgt"><span>claim in every hero</span></td></tr>
+        <tr><th scope="row">Seed</th><td data-l="Their move">Post-purchase education as the retention engine, not persuasion before the sale</td><td data-l="Gr&uuml;ns" class="now">no programme</td><td data-l="Delta" class="tgt"><span>3/14/30 ladder live</span></td></tr>
+        <tr><th scope="row">Ritual</th><td data-l="Their move">Proof used as a retention mechanism rather than an acquisition badge</td><td data-l="Gr&uuml;ns" class="now">study on PDP only</td><td data-l="Delta" class="tgt"><span>study at day 35 to 60</span></td></tr>
+        <tr><th scope="row">Bloom</th><td data-l="Their move">Micro-creator volume as the acquisition engine</td><td data-l="Gr&uuml;ns" class="now">73% sub-1K, paused</td><td data-l="Delta" class="tgt"><span>150 creators a month</span></td></tr>
+        <tr><th scope="row">Lemme and Bloom</th><td data-l="Their move">Revenue per customer grown through household multi-SKU attachment</td><td data-l="Gr&uuml;ns" class="now">8% Kids attach</td><td data-l="Delta" class="tgt"><span>bundle, margin held</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Week one</h2>
+    <p class="sub">Measure before spending a dollar. Roughly six hours of work, and one of the three outcomes can end this plan on day seven.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="when">Days 1 to 4, 5h</div>
+        <h3>Build the real retention curve.</h3>
+        <p>Day 30, 60, 90 and 180 by acquisition cohort, out of Shopify plus the billing platform. If day-90 retention comes back above 68%, stop and pick a different option. You are already ahead of the benchmark and this plan has nothing to offer you.</p>
+      </div>
+      <div class="step">
+        <div class="when">Day 1, 1h</div>
+        <h3>Subscribe to four competitors.</h3>
+        <p>AG1, Bloom, Ritual and Seed, on a clean email. Then it runs itself. Their post-purchase sequences arrive over six weeks and become the source material for the winback and onboarding work.</p>
+      </div>
+      <div class="step">
+        <div class="when">Day 1, start it</div>
+        <h3>Open the legal path for claim language.</h3>
+        <p>Under Unilever this gates the most important play in the file. Start it in week one, not week two, because the review clock is longer than the build.</p>
+      </div>
+    </div>
+    <p class="aside"><b>Week-one output.</b> A real retention curve, and four competitor funnels arriving in your inbox. The second one is the cheapest competitive research available and almost nobody does it.</p>
+  </section>
+
+  <section>
+    <h2>Closing the gaps</h2>
+    <p class="sub">One row per benchmark gap. Each names the brand whose move it copies, and what it costs to run by hand. Open any row for its plays.</p>
+
+    <div class="stages">
+
+      <details class="stage">
+        <summary>
+          <div><h3>The adherence claim</h3><span class="s-open">2 plays</span></div>
+          <span class="s-q">AG1 owned one daily-ritual claim for 16 years. You have a better one and it is sitting in a gallery image.</span>
+          <div class="move"><span class="from">claim unused</span><span>&rarr;</span><span class="to">every hero</span></div>
+        </summary>
+        <div class="s-body">
+          <div class="play">
+            <h4>Take the adherence claim.</h4>
+            <p>Your differentiation narrows to taste, price and kids the day their gummies get distribution, and taste is copyable. A longitudinal adherence dataset is not. <b>95% take it 4 to 6 days a week. 80% daily.</b> That is the claim. Put it in the Meta hero, the TikTok hook and the homepage.</p>
+            <p class="pmeta"><span class="hrs">8h setup, 3h/wk</span><span class="stop"><b>Stop if</b> legal will not clear it in some form by day 21. Do not run a hedged version, because a hedged claim underperforms no claim</span></p>
+          </div>
+          <div class="play">
+            <h4>Harvest the AG1 defectors.</h4>
+            <p>Their gummy launch is pushing their own customers to re-evaluate format right now, and your "6 Best AG1 Alternatives" post means half the work exists. Finish it: a real comparison page and paid search on AG1 alternatives, AG1 vs, AG1 gummies, ending in a subscription offer rather than a blog CTA.</p>
+            <p class="pmeta"><span class="hrs">12h setup</span><span class="stop"><b>Stop if</b> CPA on those terms runs above $80. That auction is defended by a much bigger budget</span></p>
+          </div>
+          <p class="tier">Runs in days 1 to 30, gated on the legal path opened in week one. <b>Yobo Senior, $2,000/mo</b> takes the paid campaign and the on-site work.</p>
+        </div>
+      </details>
+
+      <details class="stage">
+        <summary>
+          <div><h3>Education after the sale</h3><span class="s-open">2 plays</span></div>
+          <span class="s-q">Seed's retention engine is education after the sale, not persuasion before it. You go quiet at the order confirmation.</span>
+          <div class="move"><span class="from">no programme</span><span>&rarr;</span><span class="to">ladder live, day 30</span></div>
+        </summary>
+        <div class="s-body">
+          <div class="play">
+            <h4>Deliver the 3/14/30 ladder.</h4>
+            <p>You already do the hard part. You sell a precise expectation ladder up front, day 3 fewer cravings, day 14 energy and digestion, day 30 immunity and skin, and then go silent after the order confirmation. <b>The content strategy is written. Only the delivery is missing.</b> Highest-ratio win in this file. Ship with a 10% holdout.</p>
+            <p class="pmeta"><span class="hrs">10h setup</span><span class="stop"><b>Stop if</b> month-1 churn does not improve 15% by day 60. Then look at fulfilment timing instead, because a late first shipment breaks a day-3 promise no email can repair</span></p>
+          </div>
+          <div class="play">
+            <h4>Winback, reason-matched.</h4>
+            <p>By day 31 the four competitor sequences have arrived and you can see exactly how Ritual and Seed structure theirs. Copy the structure, not the voice, because Ritual's clinical register would be actively wrong on your brand. Split by cancel reason.</p>
+            <p class="pmeta"><span class="hrs">8h setup</span><span class="stop"><b>Stop if</b> reactivation stays under 3%</span></p>
+          </div>
+          <p class="tier">Needs structured cancel reasons captured before day 31. <b>Yobo Junior, $500/mo</b> builds the ladder, the winback and the segments behind them.</p>
+        </div>
+      </details>
+
+      <details class="stage">
+        <summary>
+          <div><h3>Proof at the moment of doubt</h3><span class="s-open">1 play</span></div>
+          <span class="s-q">Ritual made proof a retention mechanism rather than an acquisition badge. Yours is a purchase badge.</span>
+          <div class="move"><span class="from">on the PDP</span><span>&rarr;</span><span class="to">day 35 to 60</span></div>
+        </summary>
+        <div class="s-body">
+          <div class="play">
+            <h4>Move the study to the moment of doubt.</h4>
+            <p>Your placebo-controlled study, <b>+40.1% vitamin C and +20.5% folate</b>, currently works as a purchase badge. Send it instead at day 35 to 60, where the honeymoon ends and "is this actually doing anything?" starts. Not "buy this, it is proven" but "you have taken this five weeks, here is what is measurably happening."</p>
+            <p class="pmeta"><span class="hrs">4h setup</span><span class="stop"><b>Stop if</b> the day 35 to 60 cohort shows no cancel-rate difference against holdout by day 75</span></p>
+          </div>
+          <p class="tier">The cheapest play in the file and it reuses an asset you already paid for. <b>Yobo Junior, $500/mo</b> covers it inside the same flow work.</p>
+        </div>
+      </details>
+
+      <details class="stage">
+        <summary>
+          <div><h3>Creator volume</h3><span class="s-open">1 play</span></div>
+          <span class="s-q">Bloom's creator-native acquisition is the benchmark everywhere else. Here you are the benchmark, at 73% sub-1K-view creators.</span>
+          <div class="move"><span class="from">paused</span><span>&rarr;</span><span class="to">150 a month</span></div>
+        </summary>
+        <div class="s-body">
+          <div class="play">
+            <h4>Restart micro-creator volume.</h4>
+            <p>This is not invention, it is defence. <b>Volume creator programmes are exactly what dies under post-acquisition brand review.</b> The number others copy from you is your own historic 73% sub-1K-view roster. Rebuild to 150 creators a month.</p>
+            <p class="pmeta"><span class="hrs">roughly 20h/wk of sourcing, briefing and chasing</span><span class="stop"><b>Stop if</b> under 40% post within 21 days. Rewrite the brief once; if a second cohort fails too, the constraint is your approval process, not the creators</span></p>
+          </div>
+          <p class="tier">Creator volume at scale sits at <b>Yobo Lead, $4,000/mo</b>. That is the 20 hours a week. <b>Senior, $2,000/mo</b> is the fallback and it is genuinely weaker here: it can run the briefs and the paid amplification, but not sourcing at this volume, so expect a smaller monthly cohort.</p>
+        </div>
+      </details>
+
+      <details class="stage last">
+        <summary>
+          <div><h3>Household attachment</h3><span class="s-open">1 play</span></div>
+          <span class="s-q">Lemme and Bloom both grew revenue per customer through multi-SKU attachment. You have the Kids SKU and the reviews already asking for it.</span>
+          <div class="move"><span class="from">8% attach</span><span>&rarr;</span><span class="to">bundle, margin held</span></div>
+        </summary>
+        <div class="s-body">
+          <div class="play">
+            <h4>Ship the household bundle.</h4>
+            <p>Adult plus Kids on one subscription. You have the Kids SKU, the Shrek collab proving character licensing works here, and reviews arriving unprompted as "my kids love them too." Household subscriptions churn structurally lower, so this is a revenue play that pays a retention dividend.</p>
+            <p class="pmeta"><span class="hrs">margin by SKU needed before day 61</span><span class="stop"><b>Do not ship</b> if bundle margin falls below blended subscription margin, even when conversion looks good</span></p>
+          </div>
+          <p class="tier">Conditional on margin data. The new price point needs <b>Yobo Lead, $4,000/mo</b>; below that tier the bundle can be merchandised but not repriced.</p>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>The rhythm</h2>
+    <p class="sub">Three phases, one real gate. The gate is what makes this a benchmark plan rather than a list of copied tactics.</p>
+    <div class="rhythm">
+      <div class="rrow"><div class="rw">Week 1</div><p>Measure. Retention curve built, four competitor subscriptions started, legal path opened. Nothing launches and nothing is spent.</p></div>
+      <div class="rrow"><div class="rw">Days 1 to 30</div><p>Close the cheap gaps. Adherence claim, the 3/14/30 ladder, the study moved to the moment of doubt.</p></div>
+      <div class="rrow"><div class="rw">Days 31 to 60</div><p>The two expensive benchmarks. Creator volume restarts, comparison search goes live, winback ships off the competitor sequences now sitting in your inbox.</p></div>
+      <div class="rrow gate"><div class="rw">Week 8</div><p>Score every play against its benchmark. Anything under 60% of benchmark gets killed, not optimised.</p></div>
+      <div class="rrow"><div class="rw">Days 61 to 90</div><p>Household bundle, then put the remaining budget behind whatever cleared the cull.</p></div>
+    </div>
+    <p class="aside"><b>Why kill rather than tune.</b> A play failing to reach a number someone else already hit has a wrong premise, not a tuning problem. The benchmark says the number is reachable, so a miss means the transplant did not take. That rule is the entire discipline of this option, and it only works if you apply it on the date rather than after one more test.</p>
+  </section>
+
+  <section>
+    <h2>Run it yourself, or hand it over</h2>
+    <p class="sub">This plan is written to be executed by your team. Yobo is the accelerator, not the prerequisite.</p>
+    <div class="money">
+      <div class="price">
+        <div class="big">20-30<span> hrs / week</span></div>
+        <div class="cap">Spiking past 45 in days 31 to 60.</div>
+        <p>The first month is light because the plays are small and already specified. The spike is creator sourcing, briefing and chasing, which is roughly 20 hours a week on its own and does not compress.</p>
+      </div>
+      <div class="need">
+        <h3>If you would rather not</h3>
+        <ul>
+          <li><b>Researcher, $20</b> keeps the competitor teardowns continuous, though the teardowns are genuinely self-serve: subscribe to four brands and read what arrives</li>
+          <li><b>Junior, $500</b> takes email, SMS, segments and every flow</li>
+          <li><b>Senior, $2,000</b> adds paid, landing pages and SEO</li>
+          <li><b>Lead, $4,000</b> adds creator volume and the new price point</li>
+        </ul>
+      </div>
+    </div>
+    <p class="aside"><b>The honest read.</b> Days 1 to 30 is the most self-runnable month of any of the four options, because every play is copied from something visible and the benchmarks tell you what good looks like before you start. Days 31 to 60 is where it breaks, and it breaks on creator volume specifically. Everything else here stays in reach of a small in-house team.</p>
+  </section>
+
+  <section>
+    <h2>Three things to watch</h2>
+    <div class="watch">
+      <div class="w">
+        <h3>Whether the conditions still hold</h3>
+        <div>
+          <p>Bloom's creator economics were bought in a cheaper market. A benchmark is a number plus the conditions that produced it, and only the number travels.</p>
+          <span class="sig">Track cost-per-creator-post against the historical figure. More than 2x means you are copying into conditions that already killed the move.</span>
+        </div>
+      </div>
+      <div class="w">
+        <h3>Whether AG1 notices</h3>
+        <div>
+          <p>The comparison-search play is a direct attack inside their auction, and they have the budget to make it expensive rather than lose it.</p>
+          <span class="sig">Watch their bid density on those terms weekly. A sharp rise within 14 days is the stop signal regardless of CPA.</span>
+        </div>
+      </div>
+      <div class="w">
+        <h3>Whether the delta was ever real</h3>
+        <div>
+          <p>Four of these benchmarks are measured against assumed Gr&uuml;ns numbers. If day-90 retention is actually 68%, you have built twelve weeks of work to close a gap that does not exist.</p>
+          <span class="sig">That is why week one is measurement with zero spend, and why the retention curve carries a stop condition.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="decide">
+      <h2>Spend week one proving the gap is real, then close it with moves that already worked.</h2>
+      <p>Roughly six hours of your team's time before a dollar moves. If the curve says you are already at benchmark, we tell you to pick a different option. If it says you are not, every play from day eight is a transplant with a published number attached.</p>
+    </div>
+
+    <details class="disc">
+      <summary>Evidence and working assumptions</summary>
+      <div class="dbody">
+        <p>Compiled from public sources on 21 September 2026: gruns.co, press coverage of the Unilever acquisition, and category reporting on AG1, Bloom, Lemme, Ritual and Seed. <b>No Gr&uuml;ns account, analytics or private performance data has been inspected.</b></p>
+        <p><b>Published figures we build on rather than estimate:</b> 95% of members take it 4 to 6 days a week and 80% daily; 73% of historic creator partnerships were sub-1K views; the placebo-controlled study showing +40.1% vitamin C and +20.5% folate; roughly $2.85 per serving against AG1 at $3.30.</p>
+        <p><b>Estimates, all assumed and all replaced by measured values in week one.</b> Four of the five gaps in the table above are sized against these, which is why the retention curve carries a stop condition rather than a target.</p>
+        <div class="chips">
+          <span class="chip">55% day-90 retention, assumed</span>
+          <span class="chip">9% monthly churn, assumed</span>
+          <span class="chip">420,000 subscribers, assumed</span>
+          <span class="chip">8% Kids attach, assumed</span>
+          <span class="chip">no post-purchase education programme, assumed</span>
+        </div>
+        <p>Competitor moves are labelled published where the brand or a named outlet stated the figure, and reported where a third party inferred it. Any assumed benchmark a play depends on is verified before that play's budget is committed.</p>
+        <p>Illustrative plan. No campaigns launched, no accounts connected, no budget committed.</p>
+      </div>
+    </details>
+  </section>
+
+</div>
+</main>
+
+  <footer class="wrap">
+    <div>Prepared by Yobo, your AI growth marketer.</div>
+    <div>Gr&uuml;ns, September 2026.</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html><html lang="en" class="h-full overflow-hidden __variable_c22fe1 __variable_876a94 __variable_2b17f2 __variable_164d0d __variable_a2484d __variable_1773dd __variable_6dc098 __variable_3c3578 __variable_184d01 __variable_587b49 __variable_d65ff6 __variable_659eae __variable_a5811e __variable_4cc5e5 __variable_5c6d1b __variable_13e87b"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, user-scalable=no"/><link rel="stylesheet" href="https://bbqchickencali.pages.yobolabs.ai/_next/static/css/5b1b688d84f285d6.css?dpl=dpl_Bg1yAn3tgTnKq3QQzWxR3pp9RdUb" data-precedence="next"/><link rel="stylesheet" href="https://bbqchickencali.pages.yobolabs.ai/_next/static/css/32474e6f63c8fd33.css?dpl=dpl_Bg1yAn3tgTnKq3QQzWxR3pp9RdUb" data-precedence="next"/><link rel="stylesheet" href="https://bbqchickencali.pages.yobolabs.ai/_next/static/css/8baafc4be7cef424.css?dpl=dpl_Bg1yAn3tgTnKq3QQzWxR3pp9RdUb" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="https://bbqchickencali.pages.yobolabs.ai/_next/static/chunks/webpack-f1ecb8f02ad86f3d.js?dpl=dpl_Bg1yAn3tgTnKq3QQzWxR3pp9RdUb"/><link rel="preload" href="https://www.googletagmanager.com/gtm.js?id=GTM-WZQBS6BD" as="script"/><meta name="next-size-adjust" content=""/><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"/><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#ffffff"/></head><body class="h-full overflow-hidden"><div hidden=""><!--$?--><template id="B:0"></template><!--/$--></div><style>html, body { height: auto !important; overflow-y: scroll !important; overflow-x: hidden !important; scroll-behavior: smooth !important; background: #ffffff !important; color-scheme: light; }</style><div data-site-label="bbqchickencali" data-page-slug="bbq-growth-plan" style="display:contents"><style>
+        html, body {
+          height: auto !important;
+          overflow-y: scroll !important;
+          /* Never let a wide block force a sideways drag on a phone. */
+          max-width: 100vw !important;
+          /* Momentum scrolling, and no grey tap flash on touch. */
+          -webkit-overflow-scrolling: touch;
+          -webkit-tap-highlight-color: transparent;
+          /* iOS inflates font sizes on rotate without this. */
+          -webkit-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+          overflow-x: hidden !important;
+          scroll-behavior: smooth !important;
+          /* Published landing pages render on WHITE to match the editor canvas.
+             The slides app shell is dark (body defaults to zinc-950 rgb(9,9,11));
+             without this the page's light-designed content sits on black. */
+          background: #ffffff !important;
+          color-scheme: light;
+          scrollbar-width: auto;
+          scrollbar-color: rgba(120,120,120,0.6) rgba(241,241,241,1);
+        }
+        /* The reserved scrollbar gutter below is a DESKTOP affordance. On a
+           touch device there is no scrollbar to reserve room for, and the
+           gutter reads as an unexplained strip down the edge. */
+        @media (hover: none) and (pointer: coarse) {
+          html, body { overflow-y: auto !important; scrollbar-width: none; }
+          html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; }
+        }
+        html::-webkit-scrollbar, body::-webkit-scrollbar { width: 12px; height: 12px; }
+        html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+          background: rgba(241,241,241,1);
+        }
+        html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+          background: rgba(120,120,120,0.6); border-radius: 6px;
+          border: 2px solid rgba(241,241,241,1);
+        }
+        html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
+          background: rgba(90,90,90,0.85);
+        }
+        /* Fill exactly one screen and centre the content, so a short page (a
+           signup form, say) needs no scroll at all.
+
+           Both min-height lines are deliberate and must stay in this order.
+           dvh tracks the LIVE viewport; vh on mobile Safari is sized to the
+           browser chrome's collapsed state, so a 100vh page is taller than what
+           you can actually see and scrolls by exactly the height of the address
+           bar. An engine without dvh support keeps the vh line. This cannot be
+           expressed in a React style object - the second key would simply win
+           and the fallback would be lost.
+           NOTE: no backticks in this block. It lives inside a template literal,
+           so a backtick here ends the literal and breaks the whole file. */
+        .mc-page {
+          min-height: 100vh;
+          min-height: 100dvh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        /* Content taller than the screen must still scroll normally rather than
+           being clipped by the centring above. */
+        @media (max-height: 560px) {
+          .mc-page { justify-content: flex-start; }
+        }
+        /* Card hover lift */
+        [data-mc-card] { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important; }
+        [data-mc-card]:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(0,0,0,0.35); }
+        /* Image hover zoom (opt-in via data attribute) */
+        [data-mc-image-zoom] { transition: transform 0.4s ease !important; }
+        [data-mc-image-zoom]:hover { transform: scale(1.03); }
+        /* Button hover lift + brightness */
+        [data-mc-btn] { transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease !important; }
+        [data-mc-btn]:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 10px 24px rgba(0,0,0,0.25); }
+        /* Pulse animation (for CTA buttons w/ animate=pulse) */
+        @keyframes mc-pulse {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(0,255,127,0.7); }
+          50% { box-shadow: 0 0 0 14px rgba(0,255,127,0); }
+        }
+        [data-mc-animate="pulse"] { animation: mc-pulse 2s ease-in-out infinite; }
+        /* Glow animation */
+        @keyframes mc-glow {
+          0%, 100% { box-shadow: 0 0 8px rgba(0,255,127,0.4); }
+          50% { box-shadow: 0 0 20px rgba(0,255,127,0.8); }
+        }
+        [data-mc-animate="glow"] { animation: mc-glow 2.4s ease-in-out infinite; }
+      </style><div class="mc-page" style="padding-top:env(safe-area-inset-top, 0px);padding-bottom:env(safe-area-inset-bottom, 0px);padding-left:env(safe-area-inset-left, 0px);padding-right:env(safe-area-inset-right, 0px)"><div><div class="microsite-custom-code" style="background-color:#ffffff;min-height:100vhpx;max-width:100%px;margin-left:auto;margin-right:auto;overflow:visible"><style>@import url(https://use.typekit.net/lpt8xdb.css);
+.microsite-custom-code .dna{--red:#d6001c;--ink:#111114;--gray:#6a6a74;--faint:#9a9aa2;--line:#e5e5e8;--tile:#f6f6f7;--green:#22c55e;
+  font-family:basic-sans,Inter,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);
+  background:#fff;max-width:480px;margin:0 auto;padding:18px 14px 28px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.microsite-custom-code .dna *{box-sizing:border-box}
+.microsite-custom-code .dna .hd{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;padding:0 4px}
+.microsite-custom-code .dna .logoimg{height:22px;width:auto;display:block}
+.microsite-custom-code .dna .prep{font-size:16px;color:var(--gray);text-align:right}
+
+.microsite-custom-code .dna .tile{background:var(--tile);border-radius:16px;padding:16px 15px 18px;margin-bottom:12px}
+.microsite-custom-code .dna .tile.dark{background:var(--ink)}
+.microsite-custom-code .dna .tile.hero{background:var(--red)}
+.microsite-custom-code .dna .tnum{font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--gray);margin-bottom:12px}
+.microsite-custom-code .dna .tnum.light{color:rgba(255,255,255,.75)}
+.microsite-custom-code .dna .verify{font-weight:600;text-transform:none;letter-spacing:0;color:var(--red);font-size:9.5px}
+.microsite-custom-code .dna .tile.hero .verify,.microsite-custom-code .dna .tile.dark .verify{color:#ffd2d8}
+
+.microsite-custom-code .dna .herobox{background:#fff;border-radius:12px;padding:18px 16px;display:grid;place-items:center;margin-bottom:14px}
+.microsite-custom-code .dna .herobox img{width:82%;max-width:280px;height:auto}
+.microsite-custom-code .dna .herotag{color:#fff;font-size:38px;line-height:1.04;font-weight:900;letter-spacing:-.02em}
+.microsite-custom-code .dna .herosub{color:rgba(255,255,255,.85);font-size:11.5px;margin-top:10px;line-height:1.5}
+
+.microsite-custom-code .dna .statgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.microsite-custom-code .dna .statgrid.three{grid-template-columns:1fr 1fr 1fr}
+.microsite-custom-code .dna .st{background:#fff;border-radius:10px;padding:12px 10px;text-align:center}
+.microsite-custom-code .dna .sv{display:block;font-size:20px;font-weight:900;letter-spacing:-.02em;font-family:inherit}
+.microsite-custom-code .dna .sl{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--faint);margin-top:3px}
+
+.microsite-custom-code .dna .palgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.microsite-custom-code .dna .pal{background:#fff;border-radius:10px;padding:8px;font-size:9px;font-family:inherit;color:var(--gray)}
+.microsite-custom-code .dna .pal i{display:block;height:44px;border-radius:7px;margin-bottom:6px}
+.microsite-custom-code .dna .pal b{display:block;font-size:10.5px;color:var(--ink);font-weight:700}
+
+.microsite-custom-code .dna .chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:4px}
+.microsite-custom-code .dna .chips.small{margin-top:10px}
+.microsite-custom-code .dna .chip{background:#fff;border-radius:999px;padding:7px 13px;font-size:11.5px;font-weight:700;color:#2a2a30}
+.microsite-custom-code .dna .para{font-size:19px;margin:10px 0 0;color:#2a2a30}
+.microsite-custom-code .dna .para.light{color:rgba(255,255,255,.8)}
+.microsite-custom-code .dna .para.soft{color:var(--faint);font-size:11px}
+
+.microsite-custom-code .dna .bigsay{color:#fff;font-size:34px;line-height:1.02;font-weight:900;letter-spacing:-.02em}
+.microsite-custom-code .dna .bigsay span{color:var(--red)}
+
+.microsite-custom-code .dna .diffgrid,.microsite-custom-code .dna .compgrid{display:grid;grid-template-columns:1fr;gap:8px}
+.microsite-custom-code .dna .diff,.microsite-custom-code .dna .comp{background:#fff;border-radius:10px;padding:13px 14px;font-size:19px;color:var(--gray);line-height:1.45}
+.microsite-custom-code .dna .diff b,.microsite-custom-code .dna .comp b{display:block;font-size:23px;color:var(--ink);font-weight:800;margin-bottom:4px}
+
+.microsite-custom-code .dna .menu{display:flex;flex-direction:column;gap:6px}
+.microsite-custom-code .dna .mi{background:#fff;border-radius:10px;padding:10px 12px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.microsite-custom-code .dna .mi b{font-size:13px;font-weight:800}
+.microsite-custom-code .dna .mi span{font-size:10.5px;color:var(--faint);text-align:right}
+
+.microsite-custom-code .dna .audgrid{display:flex;flex-direction:column;gap:8px}
+.microsite-custom-code .dna .aud{background:#fff;border-radius:10px;padding:11px 12px;font-size:11.5px;color:#2a2a30;line-height:1.5}
+.microsite-custom-code .dna .aud b{display:block;font-size:9.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--red);margin-bottom:3px}
+
+.microsite-custom-code .dna .opp{background:#fff;border-radius:10px;border-left:3px solid var(--green);padding:10px 12px;font-size:11.5px;margin:8px 0 0;color:#2a2a30}
+.microsite-custom-code .dna .opp b{color:var(--ink)}
+
+.microsite-custom-code .dna .outgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.microsite-custom-code .dna .out{background:#fff;border-radius:10px;padding:11px 12px;font-size:19px;color:#2a2a30;line-height:1.4}
+.microsite-custom-code .dna .out b{display:block;font-size:23px;font-weight:800;margin-bottom:2px}
+.microsite-custom-code .dna .out .ol{display:block;font-size:8.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-top:7px}
+.microsite-custom-code .dna .out .flag{display:inline-block;background:#eefbe9;color:#1a7f37;border-radius:999px;padding:3px 10px;font-size:14px;font-weight:800;margin-top:4px;text-transform:uppercase;letter-spacing:.03em}
+.microsite-custom-code .dna .out .flag.coming{background:#fff3e0;color:#8a5a12}
+
+.microsite-custom-code .dna .src{font-size:9.5px;color:var(--faint);margin:16px 4px 0;line-height:1.6}
+.microsite-custom-code .dna .ft{border-top:1px solid var(--line);margin:16px 4px 0;padding-top:12px;font-size:16px;color:var(--gray);text-align:center}
+
+@media(min-width:760px){
+  .microsite-custom-code .dna{max-width:960px;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+  .microsite-custom-code .dna .hd,.microsite-custom-code .dna .src,.microsite-custom-code .dna .ft{grid-column:1/-1}
+  .microsite-custom-code .dna .tile{margin-bottom:0}
+  .microsite-custom-code .dna .tile.hero{grid-column:1/-1}
+  .microsite-custom-code .dna .herotag{font-size:50px}
+}
+
+/* growth plan additions */
+.microsite-custom-code .gp .herotag .dim{color:rgba(255,255,255,.55)}
+.microsite-custom-code .gp .say{color:#fff;font-size:30px;font-weight:800;line-height:1.32;letter-spacing:-.01em}
+.microsite-custom-code .gp .say.sm{font-size:30px;margin-bottom:12px}
+.microsite-custom-code .gp .say.green{color:#6fed45;margin-top:14px;margin-bottom:0}
+.microsite-custom-code .gp .tile.red{background:var(--red)}
+.microsite-custom-code .gp .tile.red .para.light{color:rgba(255,255,255,.85)}
+.microsite-custom-code .gp .changrid{display:flex;flex-direction:column;gap:8px}
+.microsite-custom-code .gp .chan{background:#fff;border-radius:10px;padding:12px 13px;font-size:19px;color:#2a2a30;line-height:1.5}
+.microsite-custom-code .gp .chan.win{outline:2px solid var(--green)}
+.microsite-custom-code .gp .chan .pct{float:right;font-size:23px;font-weight:900;letter-spacing:-.02em}
+.microsite-custom-code .gp .chan b{display:block;font-size:23px;font-weight:800}
+.microsite-custom-code .gp .chan .cs{display:block;font-size:16px;color:var(--faint);margin-bottom:4px}
+.microsite-custom-code .gp .chan .cap{display:block;font-size:16px;font-weight:700;margin-top:6px}
+.microsite-custom-code .gp .cap.bad{color:var(--red)} .microsite-custom-code .gp .cap.mid{color:#8a5a12} .microsite-custom-code .gp .cap.good{color:#1a7f37}
+.microsite-custom-code .gp .callout{background:var(--ink);color:#fff;border-radius:10px;padding:12px 14px;font-size:19px;font-weight:600;line-height:1.5;margin-top:10px}
+.microsite-custom-code .gp .callout.tight{background:#fff;color:var(--ink);border:1px solid var(--line);font-weight:500}
+.microsite-custom-code .gp .drow{display:flex;flex-direction:column;align-items:flex-start;gap:8px;background:#fff;border-radius:10px;padding:12px;margin-bottom:7px}
+.microsite-custom-code .gp .dc{flex:1;font-size:19px;color:var(--gray);line-height:1.4}
+.microsite-custom-code .gp .dc b{display:block;font-size:23px;color:var(--ink);font-weight:800}
+.microsite-custom-code .gp .act{flex:0 0 auto;background:#eefbe9;color:#1a7f37;border-radius:999px;padding:5px 11px;font-size:14px;font-weight:800;white-space:nowrap;text-transform:uppercase;letter-spacing:.02em}
+.microsite-custom-code .gp .act.none{background:#e7e7ea;color:#5a5a62}
+.microsite-custom-code .gp .steps{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.microsite-custom-code .gp .step{background:#fff;border-radius:10px;padding:12px 13px;font-size:19px;color:#2a2a30;line-height:1.45;position:relative;padding-left:48px}
+.microsite-custom-code .gp .step i{position:absolute;left:12px;top:12px;width:27px;height:27px;border-radius:50%;background:var(--red);color:#fff;font-style:normal;font-weight:800;font-size:15px;display:grid;place-items:center;line-height:1}
+.microsite-custom-code .gp .step b{display:block;font-size:23px;font-weight:800;line-height:27px}
+.microsite-custom-code .gp .levgrid{display:grid;grid-template-columns:1fr;gap:8px}
+.microsite-custom-code .gp .lev{background:#fff;border-radius:10px;padding:12px 13px 13px 48px;font-size:19px;color:var(--gray);line-height:1.45;position:relative}
+.microsite-custom-code .gp .lev i{position:absolute;left:12px;top:12px;width:27px;height:27px;border-radius:50%;background:var(--ink);color:#fff;font-style:normal;font-weight:800;font-size:15px;display:grid;place-items:center;line-height:1}
+.microsite-custom-code .gp .lev b{display:block;font-size:23px;color:var(--ink);font-weight:800;line-height:27px}
+.microsite-custom-code .gp .kpi{display:block;font-size:16px;color:#1a7f37;font-weight:700;margin-top:5px}
+.microsite-custom-code .gp .phase{background:#fff;border-radius:10px;padding:12px 13px;margin-bottom:8px}
+.microsite-custom-code .gp .ph{font-size:16px;color:var(--faint)}
+.microsite-custom-code .gp .ph b{font-size:23px;color:var(--red);font-weight:900;margin-right:8px}
+.microsite-custom-code .gp .phase .para{font-size:19px;margin-top:6px}
+.microsite-custom-code .gp .gate{background:#eefbe9;color:#1a7f37;border-radius:8px;padding:8px 11px;font-size:16px;font-weight:700;margin-top:9px}
+.microsite-custom-code .gp .xgrid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:6px}
+.microsite-custom-code .gp .xc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:15px 16px 16px}
+.microsite-custom-code .gp .xc b{display:block;color:#fff;font-size:23px;font-weight:800;margin-bottom:11px}
+.microsite-custom-code .gp .xc ul{margin:0;padding-left:20px;color:rgba(255,255,255,.82);font-size:19px;line-height:1.45;list-style:disc}
+.microsite-custom-code .gp .xc li{margin-bottom:10px}
+.microsite-custom-code .gp .xc li:last-child{margin-bottom:0}
+.microsite-custom-code .gp .xc li::marker{color:#6fed45}
+.microsite-custom-code .gp .phimg{border:1.5px dashed #c9c9d0;border-radius:10px;padding:22px 14px;text-align:center;font-size:10px;
+  font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-top:12px;line-height:1.6;background:rgba(255,255,255,.5)}
+.microsite-custom-code .gp .phimg span{display:block;text-transform:none;letter-spacing:0;font-weight:500;font-size:10.5px;margin-top:3px}
+.microsite-custom-code .gp .phimg.light{border-color:rgba(255,255,255,.45);color:rgba(255,255,255,.75);background:rgba(255,255,255,.08)}
+.microsite-custom-code .gp .phimg.ready{border-style:solid;border-color:rgba(255,255,255,.7)}
+.microsite-custom-code .gp .phrow{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+.microsite-custom-code .gp .phrow .phimg{margin-top:0}
+.microsite-custom-code .gp .ex{display:block;background:#f6f6f7;border-radius:7px;padding:6px 9px;font-size:16px;color:#2a2a30;margin-top:6px;font-style:italic}
+@media(min-width:760px){
+  .microsite-custom-code .gp .phrow{grid-template-columns:1fr 1fr}
+  .microsite-custom-code .gp .phrow:has(> :nth-child(3)){grid-template-columns:1fr 1fr 1fr}
+  .microsite-custom-code .gp .levgrid{grid-template-columns:1fr 1fr 1fr}
+  .microsite-custom-code .gp .changrid{flex-direction:row} .microsite-custom-code .gp .chan{flex:1}
+  .microsite-custom-code .gp .xgrid{grid-template-columns:1fr 1fr}
+  .microsite-custom-code .gp .drow{flex-direction:row;align-items:center;gap:10px}
+  .microsite-custom-code .gp .tile.dark,.microsite-custom-code .gp .tile.red{grid-column:1/-1}
+  .microsite-custom-code .gp .tile{grid-column:1/-1}
+  .microsite-custom-code .dna .diffgrid{grid-template-columns:1fr 1fr}
+}
+
+/* ============ built visuals (replace image placeholders) ============ */
+.microsite-custom-code .gp .gpv{background:#fff;border-radius:10px;padding:12px 12px 11px;margin-top:12px}
+.microsite-custom-code .gp .phrow .gpv{margin-top:0}
+.microsite-custom-code .gp .gpv .vcap{font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--faint);margin-bottom:9px;line-height:1.5}
+.microsite-custom-code .gp .gpv svg{display:block;width:100%;height:auto;overflow:visible}
+.microsite-custom-code .gp .gpv .vnote{font-size:16px;color:var(--gray);line-height:1.55;margin-top:8px}
+.microsite-custom-code .gp .gpv .vnote i{font-style:normal;font-weight:800;color:#1a7f37}
+
+/* 1 · California map */
+.microsite-custom-code .gp .m-ca{fill:#eeeef0;stroke:#c9c9d0;stroke-width:1.4}
+.microsite-custom-code .gp .m-lead{fill:none;stroke:#c9c9d0;stroke-width:1}
+.microsite-custom-code .gp .m-h{font-size:11.5px;font-weight:800;fill:var(--ink)}
+.microsite-custom-code .gp .m-s{font-size:10px;font-weight:500;fill:var(--gray)}
+.microsite-custom-code .gp .m-name{font-size:11px;fill:#2a2a30}
+.microsite-custom-code .gp .m-state{font-size:10px;font-weight:800;fill:#c8c8d0;letter-spacing:.14em}
+.microsite-custom-code .gp .m-pin{fill:var(--red)}
+.microsite-custom-code .gp .m-pindot{fill:#fff}
+.microsite-custom-code .gp .m-soon{fill:#fff3e0;stroke:#b5771f;stroke-width:1.4}
+.microsite-custom-code .gp .m-soondot{fill:#b5771f}
+.microsite-custom-code .gp .m-key{fill:var(--red)}
+.microsite-custom-code .gp .m-keysoon{fill:#b5771f}
+
+/* 2 + 3 · flow and systems diagrams */
+.microsite-custom-code .gp .fx-b{fill:#fbfbfc;stroke:#e5e5e8;stroke-width:1.4}
+.microsite-custom-code .gp .fx-b.win{stroke:#22c55e;stroke-width:2}
+.microsite-custom-code .gp .fx-b.off{fill:#fff;stroke:#c9c9d0;stroke-width:1.4;stroke-dasharray:5 4}
+.microsite-custom-code .gp .fx-hub{fill:var(--ink)}
+.microsite-custom-code .gp .fx-hub.list{fill:#fff;stroke:var(--red);stroke-width:2}
+.microsite-custom-code .gp .fx-t{font-size:17px;font-weight:800;fill:var(--ink)}
+.microsite-custom-code .gp .fx-s{font-size:13px;fill:var(--gray)}
+.microsite-custom-code .gp .fx-p{font-size:22px;font-weight:900;fill:var(--ink)}
+.microsite-custom-code .gp .fx-ht{font-size:18px;font-weight:800;fill:#fff}
+.microsite-custom-code .gp .fx-hs{font-size:11px;fill:rgba(255,255,255,.72)}
+.microsite-custom-code .gp .fx-rt{font-size:18px;font-weight:800;fill:var(--red)}
+.microsite-custom-code .gp .fx-rs{font-size:11px;fill:var(--gray)}
+.microsite-custom-code .gp .fx-a{fill:none;stroke:#c9c9d0;stroke-width:1.6}
+.microsite-custom-code .gp .fx-a.g{stroke:#1a7f37;stroke-width:2}
+.microsite-custom-code .gp .fx-a.cut{stroke:#c9c9d0;stroke-width:1.4;stroke-dasharray:5 4}
+.microsite-custom-code .gp .fx-xc{fill:#fff;stroke:var(--red);stroke-width:1.4}
+.microsite-custom-code .gp .fx-x{stroke:var(--red);stroke-width:1.8;stroke-linecap:round}
+
+/* 4 · transactions by hour */
+.microsite-custom-code .gp .hmark,.microsite-custom-code .gp .hbars{display:grid;grid-template-columns:repeat(15,1fr);gap:2px}
+.microsite-custom-code .gp .hmk{grid-column:4/7;font-size:13px;font-weight:800;color:#1a7f37;text-align:center;border-bottom:1.5px dashed #22c55e;padding-bottom:3px}
+.microsite-custom-code .gp .hbars{align-items:end;height:112px;margin-top:5px}
+.microsite-custom-code .gp .hb{height:100%;display:flex;flex-direction:column;justify-content:flex-end}
+.microsite-custom-code .gp .hb i{display:block;background:#dcdce1;border-radius:3px 3px 0 0}
+.microsite-custom-code .gp .hb.lift i{background:#22c55e}
+.microsite-custom-code .gp .hb em{font-style:normal;font-size:12px;color:var(--faint);text-align:center;margin-top:4px;height:9px;white-space:nowrap}
+
+/* 5 · lifecycle loop */
+.microsite-custom-code .gp .lc{display:flex;flex-direction:column}
+.microsite-custom-code .gp .lcn{background:#fbfbfc;border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:19px;font-weight:700;color:#2a2a30;display:flex;align-items:center;gap:8px}
+.microsite-custom-code .gp .lcn i{flex:0 0 auto;width:17px;height:17px;border-radius:50%;background:var(--ink);color:#fff;font-style:normal;font-weight:800;font-size:9px;display:grid;place-items:center}
+.microsite-custom-code .gp .lcn.loop{border-color:#f3c4cb;background:#fff6f7}
+.microsite-custom-code .gp .lcn.loop i{background:var(--red)}
+.microsite-custom-code .gp .lcn.loop b{font-weight:800;color:var(--red)}
+.microsite-custom-code .gp .lca{text-align:center;font-size:11px;line-height:13px;color:#c2c2ca}
+
+/* 6 · Insiders GOLD card */
+.microsite-custom-code .gp .ic{position:relative;overflow:hidden;max-width:290px;margin:0 auto;aspect-ratio:1.586;border-radius:12px;
+  background:linear-gradient(145deg,#22222a 0%,#0b0b0e 62%);padding:13px 14px;display:flex;flex-direction:column;justify-content:space-between}
+.microsite-custom-code .gp .ic::after{content:'';position:absolute;inset:0;background:radial-gradient(120px 120px at 88% 6%,rgba(214,0,28,.42),rgba(214,0,28,0) 72%)}
+.microsite-custom-code .gp .icgold{position:absolute;z-index:2;top:12px;right:12px;background:linear-gradient(135deg,#f7e2a6,#c9a24a);color:#3b2c07;
+  border-radius:999px;padding:3px 9px;font-size:10px;font-weight:900;letter-spacing:.12em}
+.microsite-custom-code .gp .icbrand{position:relative;z-index:2;color:var(--red);font-size:21px;font-weight:900;letter-spacing:-.03em;line-height:1}
+.microsite-custom-code .gp .ic .iclogo{position:relative;z-index:2;display:block;align-self:flex-start;height:22px;width:auto;max-width:70%}
+.microsite-custom-code .gp .icfoot{position:relative;z-index:2}
+.microsite-custom-code .gp .icname{color:#fff;font-size:18px;font-weight:800;letter-spacing:-.01em}
+.microsite-custom-code .gp .ictag{color:rgba(255,255,255,.72);font-size:12px;font-weight:700;letter-spacing:.15em;margin-top:6px}
+
+/* 7 · rollout timeline */
+.microsite-custom-code .gp .tl4{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.microsite-custom-code .gp .tl4::before{content:'';position:absolute;left:12.5%;right:12.5%;top:8px;height:2px;background:var(--line)}
+.microsite-custom-code .gp .tln{position:relative;text-align:center;padding:0 3px}
+.microsite-custom-code .gp .tln i{display:block;position:relative;z-index:2;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--red);margin:0 auto 8px}
+.microsite-custom-code .gp .tln b{display:block;font-size:16px;font-weight:900;color:var(--ink);letter-spacing:-.01em}
+.microsite-custom-code .gp .tln span{display:block;font-size:12px;color:var(--gray);line-height:1.35;margin-top:2px}
+.microsite-custom-code .gp .tln.fin i{border-color:#1a7f37}
+.microsite-custom-code .gp .tln.fin b,.microsite-custom-code .gp .tln.fin span{color:#1a7f37}
+
+/* ============ restyled visuals + deck-fidelity additions ============ */
+
+/* rollout timeline · deck sub-labels */
+.microsite-custom-code .gp .tln em{display:block;font-style:normal;font-size:11px;color:var(--faint);line-height:1.45;margin-top:5px}
+
+/* nine-lever overview grid (deck page 06, top grid) */
+.microsite-custom-code .gp .ovgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
+.microsite-custom-code .gp .ov{background:#fff;border-radius:9px;padding:10px 10px 10px 40px;position:relative;line-height:1.35;min-width:0}
+.microsite-custom-code .gp .ov i{position:absolute;left:9px;top:12px;width:24px;height:24px;border-radius:50%;background:#f0f0f2;color:var(--gray);
+  font-style:normal;font-weight:800;font-size:13px;display:grid;place-items:center;line-height:1}
+.microsite-custom-code .gp .ov b{display:block;font-size:23px;font-weight:800;color:var(--ink);letter-spacing:-.01em;line-height:1.2}
+.microsite-custom-code .gp .ov span{display:block;font-size:16px;color:var(--faint);margin-top:1px}
+.microsite-custom-code .gp .ov span:empty{display:none}
+
+/* lever "How" line, deck wording */
+.microsite-custom-code .gp .lev .how{display:block;border-top:1px solid var(--line);margin-top:7px;padding-top:6px;font-size:16px;color:#2a2a30;line-height:1.45}
+.microsite-custom-code .gp .lev .how em{font-style:normal;font-weight:800;color:var(--ink)}
+
+/* 1 · California map, restyled (cream land, soft-blue ocean) */
+.microsite-custom-code .gp .mapsvg{border-radius:8px;overflow:hidden}
+.microsite-custom-code .gp .m-ocean{fill:#cfe3ee}
+.microsite-custom-code .gp .m-land{fill:#f5f0e4;stroke:#c9c9d0;stroke-width:1.2}
+.microsite-custom-code .gp .m-border{fill:none;stroke:#c9c9d0;stroke-width:1.1}
+.microsite-custom-code .gp .m-isl{fill:#f5f0e4;stroke:#c9c9d0;stroke-width:1}
+.microsite-custom-code .gp .m-sea{font-size:12px;font-weight:500;fill:#9fbccd;letter-spacing:.32em}
+.microsite-custom-code .gp .m-state{font-size:13px;font-weight:500;fill:#c0bbab;letter-spacing:.38em}
+.microsite-custom-code .gp .m-city{fill:#4a4a52}
+.microsite-custom-code .gp .m-cityl{font-size:12px;font-weight:500;fill:#5c5c66}
+.microsite-custom-code .gp .m-pin{fill:#e0202f}
+.microsite-custom-code .gp .m-pin.soon{fill:#f4808a}
+.microsite-custom-code .gp .m-hole{fill:#fff}
+.microsite-custom-code .gp .m-lbl{font-size:13px;font-weight:500;fill:#17171b}
+.microsite-custom-code .gp .m-sub{font-size:11px;font-weight:500;fill:#6a6a74}
+
+/* 2 · channel flow, restyled (white boxes, one black POS box) */
+.microsite-custom-code .gp .flowsvg .fx-b{fill:#fff;stroke:#d9d9de;stroke-width:1.3}
+.microsite-custom-code .gp .flowsvg .fx-b.win{stroke:#1a7f37;stroke-width:2}
+.microsite-custom-code .gp .flowsvg .fx-hub{fill:#111114}
+.microsite-custom-code .gp .flowsvg .fx-a{stroke:#c1c1c9;stroke-width:1.7}
+.microsite-custom-code .gp .flowsvg .fx-a.g{stroke:#1a7f37;stroke-width:2.1}
+
+/* ============ section image shots (tent cards + signup) ============ */
+.microsite-custom-code .gp .shot{margin:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.55);border-radius:10px;padding:8px}
+.microsite-custom-code .gp .shot img{display:block;width:100%;border-radius:6px}
+.microsite-custom-code .gp .shot .shotfull{max-height:520px;object-fit:contain;object-position:top;background:#fff}
+.microsite-custom-code .gp .shot figcaption{font-size:16px;color:rgba(255,255,255,.78);text-align:center;line-height:1.5;margin-top:7px;text-transform:none;letter-spacing:0}
+.microsite-custom-code .gp .tcgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.microsite-custom-code .gp .fcgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.microsite-custom-code .gp .fcard{display:block;text-decoration:none}
+.microsite-custom-code .gp .fcard img{display:block;width:100%;border-radius:6px}
+.microsite-custom-code .gp .fcap{display:block;text-align:center;font-size:16px;font-weight:700;color:#fff;margin-top:6px;word-break:break-all;text-decoration:underline;text-underline-offset:2px}
+
+/* ============ burger section nav ============ */
+.microsite-custom-code .gp .navbtn{position:fixed;top:14px;right:14px;z-index:120;width:44px;height:44px;border:0;border-radius:10px;background:#111114;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.28);transition:background .2s}
+.microsite-custom-code .gp .navbtn span{display:block;width:20px;height:2.5px;background:#fff;border-radius:2px;transition:transform .25s,opacity .2s}
+.microsite-custom-code .gp .navbtn.open{background:var(--red)}
+.microsite-custom-code .gp .navbtn.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.microsite-custom-code .gp .navbtn.open span:nth-child(2){opacity:0}
+.microsite-custom-code .gp .navbtn.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.microsite-custom-code .gp .navmenu{position:fixed;top:0;right:0;bottom:0;z-index:119;width:min(84vw,320px);background:#111114;color:#fff;box-shadow:-8px 0 30px rgba(0,0,0,.35);transform:translateX(105%);transition:transform .3s cubic-bezier(.22,.8,.3,1);padding:64px 18px 22px;overflow-y:auto;display:flex;flex-direction:column}
+.microsite-custom-code .gp .navmenu.open{transform:none}
+.microsite-custom-code .gp .navmenu .navhd{font-size:16px;font-weight:900;text-transform:uppercase;letter-spacing:.16em;color:#e9b949;margin:0 6px 14px}
+.microsite-custom-code .gp .navmenu a{display:flex;align-items:baseline;gap:12px;padding:14px 8px;font-size:18px;font-weight:800;letter-spacing:-.01em;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.08)}
+.microsite-custom-code .gp .navmenu a i{font-style:normal;font-size:15px;font-weight:900;color:var(--red);min-width:20px}
+.microsite-custom-code .gp .navmenu a:active,.microsite-custom-code .gp .navmenu a:hover{background:rgba(255,255,255,.08)}
+.microsite-custom-code .gp .navscrim{position:fixed;inset:0;z-index:118;background:rgba(0,0,0,.5)}
+.microsite-custom-code .gp .tile{scroll-margin-top:16px}
+
+/* keep header "Prepared by" clear of the fixed burger button */
+.microsite-custom-code .gp.dna .hd{padding-right:54px}
+</style><div><div><div class="dna gp">
+  <header class="hd">
+    <img class="logoimg" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/logos/bbq-chicken-logo.png" alt="bb.q Chicken">
+    <div class="prep">Prepared by <b>YoboLabs</b></div>
+  </header>
+
+  <button class="navbtn" id="gpNavBtn" aria-label="Open section menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="navscrim" id="gpScrim" hidden></div>
+  <nav class="navmenu" id="gpNav" aria-hidden="true">
+    <div class="navhd">Growth Plan</div>
+    <a href="#s-summary"><i>01</i>The situation</a>
+    <a href="#s-outlets"><i>02</i>Outlets</a>
+    <a href="#s-channels"><i>03</i>How orders reach you</a>
+    <a href="#s-data"><i>04</i>Customer data</a>
+    <a href="#s-coke"><i>05</i>Free Coke loop</a>
+    <a href="#s-levers"><i>06</i>9 growth levers</a>
+    <a href="#s-rollout"><i>07</i>90-day rollout</a>
+    <a href="#s-roles"><i>08</i>Roles</a>
+    <a href="#s-exchange"><i>09</i>What we need · what you get</a>
+  </nav>
+
+  <!-- 01 COVER -->
+  <section id="gp-top" class="tile hero">
+    <div class="herotag">THE OTHER ~60%<br>IS YOURS TO GROW.<br><span class="dim">DINE-IN AND PICKUP.</span></div>
+  </section>
+
+  <!-- 02 ONE-LINE SUMMARY -->
+  <section id="s-summary" class="tile dark">
+    <div class="tnum light">01 · The situation</div>
+    <p class="para light">About ~40% of sales run through marketplaces that keep the customer. We walked the Alhambra store and mapped every channel. None of them leaves you with a guest you own. This plan builds a guest list the store owns, then uses it to grow repeat visits, in 90 days.</p>
+  </section>
+
+  <!-- 03 OUTLETS -->
+  <section id="s-outlets" class="tile">
+    <div class="tnum">02 · Outlets</div>
+    <div class="outgrid">
+      <div class="out"><b>Chino Hills</b></div>
+      <div class="out"><b>Alhambra</b><span class="flag">flagship</span></div>
+      <div class="out"><b>Temple City</b></div>
+      <div class="out"><b>Rowland Heights</b></div>
+      <div class="out"><b>Arcadia</b></div>
+      <div class="out"><b>Sacramento</b><span class="flag coming">coming · Oct-Nov 2026</span></div>
+    </div>
+    <div class="gpv">
+      <div class="vcap">Where the six outlets sit</div>
+      <svg class="mapsvg" viewBox="0 0 460 200" role="img" aria-label="Map of central and southern California: Arcadia, Temple City, Alhambra, Rowland Heights and Chino Hills east of Los Angeles, and Sacramento to the north opening October to November 2026">
+        <rect class="m-ocean" x="0" y="0" width="460" height="200"/>
+        <path class="m-land" d="M120 0 C138 14 152 32 164 54 C176 74 190 86 205 104 C210 114 206 122 203 130 C214 140 224 146 238 154 C258 164 278 174 296 186 C306 191 316 196 326 200 L460 200 L460 0 Z"/>
+        <path class="m-border" d="M368 0 L456 96"/>
+        <path class="m-border" d="M456 96 C444 122 438 152 434 200"/>
+        <path class="m-isl" d="M164 148 c8-5 20-4 24 1 c3 4-6 8-14 8 c-8 0-14-5-10-9z"/>
+        <path class="m-isl" d="M186 164 c7-4 17-3 20 1 c3 4-5 7-12 7 c-7 0-11-4-8-8z"/>
+        <path class="m-isl" d="M212 182 c6-3 14-3 16 1 c2 3-4 6-10 6 c-6 0-9-4-6-7z"/>
+
+        <text class="m-sea" x="34" y="146">PACIFIC</text>
+        <text class="m-sea" x="34" y="166">OCEAN</text>
+        <text class="m-state" x="296" y="70">CALIFORNIA</text>
+
+        <g transform="translate(215,50)">
+          <path class="m-pin soon" d="M0 0c-3-6.4-8.6-8.6-8.6-14.3a8.6 8.6 0 0 1 17.2 0C8.6-8.6 3-6.4 0 0z"/>
+          <circle class="m-hole" cx="0" cy="-14.3" r="3.1"/>
+        </g>
+        <text class="m-lbl" x="228" y="40">Sacramento</text>
+        <text class="m-sub" x="228" y="54">(opening Oct-Nov 2026)</text>
+
+        <circle class="m-city" cx="230" cy="140" r="3.4"/>
+        <text class="m-cityl" x="238" y="144">Los Angeles</text>
+
+        <g transform="translate(272,102)"><path class="m-pin" d="M0 0c-3-6.4-8.6-8.6-8.6-14.3a8.6 8.6 0 0 1 17.2 0C8.6-8.6 3-6.4 0 0z"/><circle class="m-hole" cx="0" cy="-14.3" r="3.1"/></g>
+        <text class="m-lbl" x="282" y="96">Arcadia</text>
+        <g transform="translate(288,118)"><path class="m-pin" d="M0 0c-3-6.4-8.6-8.6-8.6-14.3a8.6 8.6 0 0 1 17.2 0C8.6-8.6 3-6.4 0 0z"/><circle class="m-hole" cx="0" cy="-14.3" r="3.1"/></g>
+        <text class="m-lbl" x="298" y="112">Temple City</text>
+        <g transform="translate(268,134)"><path class="m-pin" d="M0 0c-3-6.4-8.6-8.6-8.6-14.3a8.6 8.6 0 0 1 17.2 0C8.6-8.6 3-6.4 0 0z"/><circle class="m-hole" cx="0" cy="-14.3" r="3.1"/></g>
+        <text class="m-lbl" x="278" y="128">Alhambra</text>
+        <g transform="translate(316,158)"><path class="m-pin" d="M0 0c-3-6.4-8.6-8.6-8.6-14.3a8.6 8.6 0 0 1 17.2 0C8.6-8.6 3-6.4 0 0z"/><circle class="m-hole" cx="0" cy="-14.3" r="3.1"/></g>
+        <text class="m-lbl" x="326" y="152">Rowland Heights</text>
+        <g transform="translate(350,180)"><path class="m-pin" d="M0 0c-3-6.4-8.6-8.6-8.6-14.3a8.6 8.6 0 0 1 17.2 0C8.6-8.6 3-6.4 0 0z"/><circle class="m-hole" cx="0" cy="-14.3" r="3.1"/></g>
+        <text class="m-lbl" x="360" y="174">Chino Hills</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 04 CHANNELS -->
+  <section id="s-channels" class="tile">
+    <div class="tnum">03 · How orders reach you today</div>
+    <div class="changrid">
+      <div class="chan"><span class="pct">~40%</span><b>Marketplace</b><span class="cs">DoorDash, Uber Eats</span>Delivery and pickup. Orders flow into Toast automatically. Commission on every order.<span class="cap bad">Customer data: none · You control: no</span></div>
+      <div class="chan"><span class="pct">~30%</span><b>bb.q app &amp; Storefront</b><span class="cs">built by DoorDash</span>Delivery, pickup, dine-in QR (Table D4). Name, phone, email captured at checkout. Data sits with HQ / DoorDash.<span class="cap mid">Customer data: HQ holds it · You control: partial</span></div>
+      <div class="chan win"><span class="pct">~30%</span><b>Store-direct</b><span class="cs">phone pickup, waiter-taken dine-in orders</span>Nothing captured today.<span class="cap good">Customer data: none yet · You control: yes</span></div>
+    </div>
+    <div class="callout">Marketplace demand is rented: the platform owns the guest and takes a cut. Every order moved to direct pickup or dine-in saves that commission and puts the customer on your list.</div>
+    <div class="gpv">
+      <div class="vcap">Every channel lands in the POS</div>
+      <svg class="flowsvg" viewBox="0 0 440 212" role="img" aria-label="Marketplace, bb.q app and Storefront, and store-direct orders all flow into the POS">
+        <defs>
+          <marker id="cfArr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c9c9d0"/></marker>
+          <marker id="cfArrG" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#1a7f37"/></marker>
+        </defs>
+        <rect class="fx-b" x="1" y="6" width="252" height="58" rx="12"/>
+        <text class="fx-t" x="16" y="33">Marketplace</text>
+        <text class="fx-s" x="16" y="52">DoorDash, Uber Eats</text>
+        <text class="fx-p" x="242" y="43" text-anchor="end">~40%</text>
+
+        <rect class="fx-b" x="1" y="77" width="252" height="58" rx="12"/>
+        <text class="fx-t" x="16" y="104">bb.q app &amp; Storefront</text>
+        <text class="fx-s" x="16" y="123">delivery, pickup, dine-in QR</text>
+        <text class="fx-p" x="242" y="114" text-anchor="end">~30%</text>
+
+        <rect class="fx-b win" x="1" y="148" width="252" height="58" rx="12"/>
+        <text class="fx-t" x="16" y="175">Store-direct</text>
+        <text class="fx-s" x="16" y="194">phone pickup, waiter dine-in</text>
+        <text class="fx-p" x="242" y="185" text-anchor="end">~30%</text>
+
+        <path class="fx-a" d="M255 35 C296 35 300 104 324 104" marker-end="url(#cfArr)"/>
+        <path class="fx-a" d="M255 106 C296 106 300 112 324 112" marker-end="url(#cfArr)"/>
+        <path class="fx-a g" d="M255 177 C296 177 300 120 324 120" marker-end="url(#cfArrG)"/>
+
+        <rect class="fx-hub" x="330" y="82" width="110" height="68" rx="12"/>
+        <text class="fx-ht" x="385" y="112" text-anchor="middle">POS</text>
+        <text class="fx-hs" x="385" y="132" text-anchor="middle">all orders land here</text>
+      </svg>
+      <div class="vnote"><i>Green</i> is the channel the store fully controls. Marketplace orders arrive with no guest attached.</div>
+    </div>
+  </section>
+
+  <!-- 05 DATA -->
+  <section id="s-data" class="tile">
+    <div class="tnum">04 · Where your customer data lives today</div>
+    <div class="drow"><div class="dc"><b>bb.q app &amp; Storefront (DoorDash)</b>name, phone, email, items, tab size for app + dine-in QR orders · owned by HQ</div><span class="act">Ask HQ · verify export</span></div>
+    <div class="drow"><div class="dc"><b>Toast POS (4 stores)</b>every order + daypart, marketplace included but no guest attached · phone/email only via receipts · Free Coke button lives here</div><span class="act">Export Week 1</span></div>
+    <div class="drow"><div class="dc"><b>Square POS (Arcadia, Sacramento)</b>same for the H Mart stores · Free Coke discount lives here · merges into the one guest list</div><span class="act">Export Week 1</span></div>
+    <div class="drow"><div class="dc"><b>Marketplaces</b>DoorDash and Uber Eats keep the guest · a bucket to shrink, not a data source</div><span class="act none">No action</span></div>
+    <div class="callout tight"><b>One customer list</b> across all owned channels.</div>
+    <div class="gpv">
+      <div class="vcap">Owned systems into one guest list</div>
+      <svg viewBox="0 0 440 250" role="img" aria-label="Toast POS, bb.q Storefront and Square POS feed one unified guest list; marketplaces do not">
+        <defs>
+          <marker id="syArr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#c9c9d0"/></marker>
+        </defs>
+        <rect class="fx-b" x="1" y="6" width="214" height="52" rx="11"/>
+        <text class="fx-t" x="15" y="30">Toast POS</text>
+        <text class="fx-s" x="15" y="48">4 stores</text>
+
+        <rect class="fx-b" x="1" y="68" width="214" height="52" rx="11"/>
+        <text class="fx-t" x="15" y="92">Storefront</text>
+        <text class="fx-s" x="15" y="110">bb.q app &amp; DoorDash</text>
+
+        <rect class="fx-b" x="1" y="130" width="214" height="52" rx="11"/>
+        <text class="fx-t" x="15" y="154">Square POS</text>
+        <text class="fx-s" x="15" y="172">Arcadia, Sacramento</text>
+
+        <path class="fx-a" d="M217 32 C252 32 256 88 288 90" marker-end="url(#syArr)"/>
+        <path class="fx-a" d="M217 94 L288 94" marker-end="url(#syArr)"/>
+        <path class="fx-a" d="M217 156 C252 156 256 100 288 98" marker-end="url(#syArr)"/>
+
+        <rect class="fx-hub list" x="294" y="54" width="146" height="82" rx="12"/>
+        <text class="fx-rt" x="367" y="86" text-anchor="middle">Unified</text>
+        <text class="fx-rt" x="367" y="107" text-anchor="middle">guest list</text>
+        <text class="fx-rs" x="367" y="125" text-anchor="middle">all owned channels</text>
+
+        <rect class="fx-b off" x="64" y="196" width="214" height="52" rx="11"/>
+        <text class="fx-t" x="78" y="220">Marketplaces</text>
+        <text class="fx-s" x="78" y="238">DoorDash, Uber Eats</text>
+
+        <path class="fx-a cut" d="M294 222 L364 142"/>
+        <circle class="fx-xc" cx="329" cy="182" r="12"/>
+        <path class="fx-x" d="M324 177 L334 187 M334 177 L324 187"/>
+      </svg>
+      <div class="vnote">The marketplaces keep the guest, so nothing flows from them into the list. That bucket is one to shrink, not a data source.</div>
+    </div>
+  </section>
+
+  <!-- 06 FREE COKE LOOP -->
+  <section id="s-coke" class="tile red">
+    <div class="tnum light">05 · The Free Coke loop</div>
+    <div class="say sm">"Join the bb.q Alhambra newsletter, get a free Coke." Redeemed with one button in Toast.</div>
+    <div class="steps">
+      <div class="step"><i>1</i><b>Scan</b>Printed sign at every register and table. Cashier says one line.</div>
+      <div class="step"><i>2</i><b>Join</b>Landing page asks name, phone, email + consent. Ten seconds. The store's own list, separate from the bb.q app.</div>
+      <div class="step"><i>3</i><b>Free Coke</b>Coupon texts instantly (COKE-4D7K, today only). Cashier taps a "Newsletter Coke −$2.99" button. Every tap is a logged redemption.</div>
+      <div class="step"><i>4</i><b>Thank-you text</b>2-3 hours later: "Thanks for coming in today. How was everything?" Two buttons: Great / Not great.</div>
+      <div class="step"><i>5</i><b>Review ask</b>Great goes to the Google review link first, Yelp second. Not great goes straight to the owner, not the internet.</div>
+    </div>
+    <div class="phrow">
+      <figure class="shot">
+        <div class="tcgrid">
+          <img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/bbq/tent-mock-1.jpg" alt="bb.q Free Coke tent card on a table, design 1" loading="lazy">
+          <img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/bbq/tent-mock-2.jpg" alt="bb.q Free Coke tent card on a table, design 2" loading="lazy">
+          <img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/bbq/tent-mock-3.jpg" alt="bb.q Free Coke tent card on a table, design 3" loading="lazy">
+          <img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/bbq/tent-mock-4.jpg" alt="bb.q Free Coke tent card on a table, design 4" loading="lazy">
+        </div>
+        <figcaption>Tent card designs · "Join the bb.q Alhambra newsletter, free Coke today" + scan-to-join QR</figcaption>
+      </figure>
+      <figure class="shot">
+        <div class="fcgrid">
+          <a class="fcard" href="https://bbqchickencali.pages.yobolabs.ai/join" target="_blank" rel="noopener">
+            <img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/bbq/form-signup.jpg" alt="Free Coke signup page" loading="lazy">
+            <span class="fcap">bbqchickencali.pages.yobolabs.ai/join</span>
+          </a>
+          <a class="fcard" href="https://bbqchickencali.pages.yobolabs.ai/sms" target="_blank" rel="noopener">
+            <img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/bbq/form-text-offers.jpg" alt="Text JOIN offers page" loading="lazy">
+            <span class="fcap">bbqchickencali.pages.yobolabs.ai/sms</span>
+          </a>
+        </div>
+      </figure>
+    </div>
+    <p class="para light small">Why the review ask is separate from the Coke: Yelp and Google ban incentivised reviews, and the FTC's 2024 rule adds real exposure. So the drink pays for the opt-in; the review ask goes out later, with no reward attached.</p>
+  </section>
+
+  <!-- 07 NINE LEVERS -->
+  <section id="s-levers" class="tile">
+    <div class="tnum">06 · The nine growth levers</div>
+    <p class="para" style="margin:0 0 12px">Nine practical levers to build the customer list, raise repeat visits, and shift orders toward direct channels.</p>
+    <div class="ovgrid">
+      <div class="ov"><i>1</i><b>Reviews</b><span>Yelp &amp; Google Maps</span></div>
+      <div class="ov"><i>2</i><b>New customer leads</b><span></span></div>
+      <div class="ov"><i>3</i><b>Lead conversion</b><span></span></div>
+      <div class="ov"><i>4</i><b>Retention</b><span>Win-back at day 45 and 90</span></div>
+      <div class="ov"><i>5</i><b>Lifecycle</b><span>The always-on journey</span></div>
+      <div class="ov"><i>6</i><b>Bundles</b><span>Group and family boxes</span></div>
+      <div class="ov"><i>7</i><b>Day &amp; time discounts</b><span>Weekday lunch first</span></div>
+      <div class="ov"><i>8</i><b>Marketplace to direct</b><span>Pull orders out of the ~40%</span></div>
+      <div class="ov"><i>9</i><b>Membership benefits</b><span>Insiders, alongside HQ</span></div>
+    </div>
+    <div class="levgrid">
+      <div class="lev"><i>1</i><b>Reviews · monitored and answered</b>Every new review lands in the owner's WhatsApp with a drafted reply for one-tap approval; negatives are intercepted via the thank-you text before they reach the internet.<span class="how"><em>How:</em> connect Google Business and Yelp; send Great guests to review links, route Not great replies to the owner first.</span><span class="ex">Example: a 2★ "Food okay, service slow" arrives with an apology reply drafted, one tap to post.</span><span class="kpi">KPI: reviews/week · average rating · 100% response rate</span></div>
+      <div class="lev"><i>2</i><b>New customer leads</b>Three sources: Free Coke QR, a takeout QR stand at the door, and a "text us for the lunch deal" link on Google Maps and Yelp.<span class="how"><em>How:</em> place QR signs at register, tables, and pickup door; add the text link to listings.</span><span class="kpi">KPI: opt-ins per day per store · target 15%+ of transactions</span></div>
+      <div class="lev"><i>3</i><b>Lead conversion</b>A guest who joined but hasn't ordered again in 7 days gets one message with a reason to come back.<span class="how"><em>How:</em> trigger a single personalized SMS based on the last item tried and a current offer.</span><span class="ex">Example: "You tried the Golden Original last week. The Crispy Mayo Rice Bowl is $9.99 all day this week."</span><span class="kpi">KPI: second-visit rate within 30 days · target 25%+</span></div>
+      <div class="lev"><i>4</i><b>Retention</b>"We miss you" at day 45, stronger offer at day 90, tiered by spend; sends of 1-3k, never blasts.<span class="how"><em>How:</em> segment by spend and recency; send a soft touch to gold-tier guests and a stronger offer to one-timers.</span><span class="ex">Gold-tier: "We miss you. 10% off your next order." One-timer: "It's been a while. 25% off your next order."</span><span class="kpi">KPI: reactivated guests/month · revenue per message</span></div>
+      <div class="lev"><i>5</i><b>Lifecycle · the always-on version</b>Winning messages become one automated journey across all stores, running with minimal owner effort.<span class="how"><em>How:</em> Welcome, Day-7 nudge, 30-day reactivation, Tier upgrade, 60-90 day win-back, Loop.</span><span class="kpi">KPI: % of guests on a journey · monthly repeat rate</span></div>
+      <div class="lev"><i>6</i><b>Bundles</b>Whole Chicken + 2 Beers ($29.99) for Fri/Sat dine-in groups; Half &amp; Half Family Box ($34.99: Half &amp; Half, Cheese Balls, 2 pouch drinks) for family takeout. Example pricing, pending HQ menu rules.<span class="how"><em>How:</em> test two simple bundles built for clear occasions: group dine-in and family takeout.</span><span class="kpi">KPI: average ticket vs baseline · bundle attach rate</span></div>
+      <div class="lev"><i>7</i><b>Day &amp; time discounts · weekday lunch first</b>The dining room is empty at noon with a ~$9.99 bowl on the wall. Send Tue-Thu at 10:45am to evening-only guests and offices within a mile.<span class="how"><em>How:</em> target by daypart and nearby geography, then compare lunch lift vs the prior 4 weeks.</span><span class="ex">Example: "Lunch at bb.q? KFC bowls $9.99, Tue-Thu 11a-2p."</span><span class="kpi">KPI: 11-2 transactions per store vs prior 4 weeks</span></div>
+      <div class="lev"><i>8</i><b>Marketplace to direct · pull orders out of the ~40%</b>Pickup-only bundles and "order direct, skip the app fees" offers go to the newsletter list. Each moved order saves commission and keeps the guest.<span class="how"><em>How:</em> promote direct pickup bundles with occasional free add-ons (Free Cheese Balls on $30+) and a clear direct-order message.</span><span class="ex">~$6-9 commission saved per order (illustrative).</span><span class="kpi">KPI: direct pickup vs marketplace pickup · commission saved/month</span></div>
+      <div class="lev"><i>9</i><b>Membership benefits · yours, alongside HQ's</b>Not a second points program. A "bb.q Alhambra Insiders" text list with first taste of new LTOs, birthday Cheese Balls, Friday first beer $2 with any chicken, and early access to K-pop collab drops.<span class="how"><em>How:</em> position it as insider benefits layered on top of HQ's program.</span><span class="kpi">KPI: opt-out under ~1%/month · gold-tier visit frequency</span></div>
+    </div>
+    <div class="phrow">
+      <div class="gpv">
+        <div class="vcap">Transactions by hour · typical weekday</div>
+        <div class="hmark"><span class="hmk">11-2 + lift</span></div>
+        <div class="hbars">
+          <div class="hb"><i style="height:9%"></i><em>8a</em></div>
+          <div class="hb"><i style="height:12%"></i><em></em></div>
+          <div class="hb"><i style="height:17%"></i><em></em></div>
+          <div class="hb lift"><i style="height:23%"></i><em>11a</em></div>
+          <div class="hb lift"><i style="height:30%"></i><em></em></div>
+          <div class="hb lift"><i style="height:23%"></i><em></em></div>
+          <div class="hb"><i style="height:16%"></i><em>2p</em></div>
+          <div class="hb"><i style="height:19%"></i><em></em></div>
+          <div class="hb"><i style="height:31%"></i><em></em></div>
+          <div class="hb"><i style="height:48%"></i><em>5p</em></div>
+          <div class="hb"><i style="height:65%"></i><em></em></div>
+          <div class="hb"><i style="height:72%"></i><em></em></div>
+          <div class="hb"><i style="height:59%"></i><em>8p</em></div>
+          <div class="hb"><i style="height:41%"></i><em></em></div>
+          <div class="hb"><i style="height:22%"></i><em>10p</em></div>
+        </div>
+        <div class="vnote">Shape only, not store data. The 11a-2p window is where lever 7 aims; the evening peak already runs itself.</div>
+      </div>
+      <div class="gpv">
+        <div class="vcap">The lifecycle journey · lever 5</div>
+        <div class="lc">
+          <div class="lcn"><i>1</i>Welcome</div>
+          <div class="lca">&#8595;</div>
+          <div class="lcn"><i>2</i>Day-7 nudge</div>
+          <div class="lca">&#8595;</div>
+          <div class="lcn"><i>3</i>30-day reactivation</div>
+          <div class="lca">&#8595;</div>
+          <div class="lcn"><i>4</i>Tier upgrade</div>
+          <div class="lca">&#8595;</div>
+          <div class="lcn"><i>5</i>60-90 day win-back</div>
+          <div class="lca">&#8595;</div>
+          <div class="lcn loop"><i>&#8635;</i><b>Loop back to the top</b></div>
+        </div>
+        <div class="vnote">One automated journey, running across all stores.</div>
+      </div>
+      <div class="gpv">
+        <div class="vcap">Insiders membership · lever 9</div>
+        <div class="ic">
+          <div class="icgold">GOLD</div>
+          <img class="iclogo" src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/logos/bbq-chicken-logo-dark.png" alt="bb.q Chicken">
+          <div class="icfoot">
+            <div class="icname">Alhambra Insiders</div>
+            <div class="ictag">GOOD FOOD BRINGS US TOGETHER</div>
+          </div>
+        </div>
+        <div class="vnote">Perks and access, layered on top of the HQ program. Not a second points scheme.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 ROLLOUT -->
+  <section id="s-rollout" class="tile">
+    <div class="tnum">07 · 90-day rollout</div>
+    <div class="gpv">
+      <div class="vcap">Three phases into the Sacramento opening</div>
+      <div class="tl4">
+        <div class="tln"><i></i><b>Weeks 1-2</b><span>Setup &amp; capture</span><em>Data exports · In-store capture · Tools connected</em></div>
+        <div class="tln"><i></i><b>Weeks 3-6</b><span>First campaigns</span><em>Send and test · Drive orders · Measure results</em></div>
+        <div class="tln"><i></i><b>Weeks 7-13</b><span>Automate &amp; scale</span><em>Always-on journeys · Scale per store · Prepare Sacramento</em></div>
+        <div class="tln fin"><i></i><b>Sacramento</b><span>opens with a list</span><em></em></div>
+      </div>
+    </div>
+    <div class="phase"><div class="ph"><b>Weeks 1-2</b>Setup &amp; capture</div>
+      <p class="para">Pull Toast + Square exports, request Storefront data from HQ. Set up the "Newsletter Coke" button, brief cashiers, connect Google Business + Yelp, register the SMS sender, print QR signs for every register and table.</p>
+      <div class="gate">Gate: all stores capturing · baseline report · HQ answer on Storefront data</div></div>
+    <div class="phase"><div class="ph"><b>Weeks 3-6</b>First campaigns</div>
+      <p class="para">Weekday lunch send, Friday bundle send, thank-you + review flow live, first "order direct" pickup offer, 1k "we miss you" test.</p>
+      <div class="gate">Gate: ≥2% conversion · lunch transactions up · rating trend up</div></div>
+    <div class="phase"><div class="ph"><b>Weeks 7-13</b>Automate &amp; scale</div>
+      <p class="para">Winning messages become the always-on journey; Insiders perks launch; Monday per-store scorecard in WhatsApp; Sacramento pre-opening page live 4 weeks out, opening-week offer on day one.</p>
+      <div class="gate">Gate: 5,000+ guests on the list · repeat rate up · owner time under 30 min/week · Sacramento opens with a list</div></div>
+  </section>
+
+  <!-- 09 ROLES -->
+  <section id="s-roles" class="tile">
+    <div class="tnum">08 · Roles</div>
+    <div class="diffgrid">
+      <div class="diff"><b>Owner · decides &amp; approves</b>Approves campaigns in WhatsApp (30 min/week), owns the HQ conversation on Storefront data, signs off bundle pricing and perks</div>
+      <div class="diff"><b>Store manager · runs the floor side</b>Sets up the Toast/Square discount button, briefs cashiers on the one-line script, flags what guests say, approves review replies when the owner is unavailable</div>
+      <div class="diff" style="grid-column:1/-1"><b>YoboLabs · builds &amp; operates</b>Landing page, coupons, SMS/email sender, all campaign drafts and flows, review monitoring, weekly scorecard</div>
+    </div>
+  </section>
+
+  <!-- 10 EXCHANGE -->
+  <section id="s-exchange" class="tile dark">
+    <div class="tnum light">09 · What we need · what you get</div>
+    <div class="xgrid">
+      <div class="xc"><b>What we need from you</b>
+        <ul><li>Login/export access to Toast (4 stores)</li><li>Square (Arcadia, later Sacramento)</li><li>Storefront/bb.q app dashboard</li><li>Google Business and Yelp owner access</li><li>Business details for SMS sender registration</li><li>One question to HQ on local messaging</li><li>30 minutes a week in WhatsApp</li></ul></div>
+      <div class="xc"><b>What you get from us</b>
+        <ul><li>Real guest count and repeat rate by end of Week 1</li><li>Every campaign drafted, ready to approve, live same day</li><li>Every review answered within the hour, in your voice</li><li>Monday scorecard per store</li><li>Nothing goes out without approval</li></ul></div>
+    </div>
+    <div class="say sm green">Built to start lean, prove lift quickly, and scale across all six outlets.</div>
+  </section>
+
+  <footer class="ft">YoboLabs · yobolabs.ai · bb.q Chicken · Growth Plan · September 2026 · Confidential</footer>
+</div>
+</div></div></div></div></div></div><!--$?--><template id="B:1"></template><!--/$--><div data-toast-container="true" class="fixed top-0 z-[10001] pointer-events-none flex max-h-screen w-full flex-col-reverse p-4 sm:top-4 sm:right-4 sm:flex-col md:max-w-[420px]"></div><script>requestAnimationFrame(function(){$RT=performance.now()});</script><script>(self.__next_f=self.__next_f||[]).push([0])</script><title>Growth Plan</title><meta name="robots" content="index, follow"/><link rel="canonical" href="https://bbqchickencali.pages.yobolabs.ai/bbq-growth-plan"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta property="og:title" content="Growth Plan"/><meta property="og:url" content="https://bbqchickencali.pages.yobolabs.ai/bbq-growth-plan"/><meta property="og:site_name" content="BBQ Chicken"/><meta property="og:locale" content="en_US"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Growth Plan"/><div hidden id="S:1"></div><script>$RB=[];$RV=function(b){$RT=performance.now();for(var a=0;a<b.length;a+=2){var c=b[a],e=b[a+1];null!==e.parentNode&&e.parentNode.removeChild(e);var f=c.parentNode;if(f){var g=c.previousSibling,h=0;do{if(c&&8===c.nodeType){var d=c.data;if("/$"===d||"/&"===d)if(0===h)break;else h--;else"$"!==d&&"$?"!==d&&"$~"!==d&&"$!"!==d&&"&"!==d||h++}d=c.nextSibling;f.removeChild(c);c=d}while(c);for(;e.firstChild;)f.insertBefore(e.firstChild,c);g.data="$";g._reactRetry&&g._reactRetry()}}b.length=0};
+$RC=function(b,a){if(a=document.getElementById(a))(b=document.getElementById(b))?(b.previousSibling.data="$~",$RB.push(b,a),2===$RB.length&&(b="number"!==typeof $RT?0:$RT,a=performance.now(),setTimeout($RV.bind(null,$RB),2300>a&&2E3<a?2300-a:b+300-a))):a.parentNode.removeChild(a)};$RC("B:1","S:1")</script><div hidden id="S:0"></div><script>$RC("B:0","S:0")</script></body></html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><title>Growth audit, Drunk Elephant</title><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root,:host{--bg:#09090b;--card:#18181b;--active:#252528;--border:#26262b;--border2:#1e1e22;--green:#6FED45;--green-br:#6FED45;--green-line:#166534;--green-dk:#0a1f12;--blue:#3b82f6;--red:#ef4444;--amber:#f59e0b;--t1:#f4f4f5;--t2:#a1a1aa;--t3:#71717a;--ui:'Inter',system-ui,-apple-system,sans-serif;--display:'Satoshi','Inter',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--t1);font-family:var(--ui);font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+body{display:flex;justify-content:center}
+.app{width:100%;max-width:398px;background:var(--bg);color:var(--t1)}
+.btn{background:var(--green);color:#04120a;border:none;border-radius:9px;font-weight:700;cursor:pointer;font-family:var(--ui)}
+.btnghost{background:transparent;border:1px solid #3f3f46;color:var(--t1);border-radius:9px;cursor:pointer;font-weight:600;font-family:var(--ui)}
+.top{display:flex;align-items:center;justify-content:space-between;padding:13px 15px;border-bottom:1px solid var(--border)}
+.top .hlogo{display:inline-flex;align-items:center}.top .hlogo svg{height:20px;width:auto;display:block}
+.step{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600}
+.step .dots{display:flex;gap:5px}.step .d{width:6px;height:6px;border-radius:50%;background:var(--t3)}.step .d.on{background:var(--green)}
+.body-pad{padding:22px 16px 26px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t3)}
+.scanline{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--green-br);background:var(--green-dk);border:1px solid var(--green-line);border-radius:999px;padding:3px 10px}
+.scanline svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.2}
+.h1{font-family:var(--display);font-size:25px;font-weight:800;letter-spacing:-.03em;line-height:1.14;margin:11px 0 0}
+.h1 em{font-style:normal;color:var(--green-br)}
+.sub{font-size:13.5px;color:var(--t2);line-height:1.5;margin-top:9px}
+/* KPI card — DS anatomy: line-icon + label + big value + delta + basis + tooltip */
+.kpi{border:1px solid var(--border);border-radius:12px;background:var(--card);padding:16px;margin-top:18px}
+.kpi .khd{display:flex;align-items:center;gap:8px}
+.kpi .kic{width:20px;height:20px;stroke:var(--t2);fill:none;stroke-width:1.75}
+.kpi .klbl{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t3)}
+.kpi .info{margin-left:auto;width:16px;height:16px;border:1px solid var(--border);border-radius:50%;color:var(--t3);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:default}
+.kpi .kval{font-size:38px;font-weight:800;letter-spacing:-.02em;margin:9px 0 2px;line-height:1}
+.kpi .kdelta{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;color:var(--green-br);background:var(--green-dk);border:1px solid var(--green-line);border-radius:7px;padding:2px 8px;vertical-align:middle;margin-left:9px}
+.kpi .krecover{font-size:14px;color:var(--t2);margin-top:12px}
+.kpi .krecover b{color:var(--green-br);font-weight:800;font-size:19px}
+.kpi .kbasis{font-size:11.5px;color:var(--t3);margin-top:5px;line-height:1.45}
+.minis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.mini{border:1px solid var(--border);border-radius:11px;background:var(--card);padding:12px 13px}
+.mini .l{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--t3)}
+.mini .v{font-size:20px;font-weight:800;margin-top:5px}
+.src{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--t3);margin-top:16px;line-height:1.4}
+.src svg{width:14px;height:14px;stroke:var(--t3);fill:none;stroke-width:2;flex:0 0 auto}
+.cta{width:100%;padding:14px;font-size:15px;margin-top:20px}
+.gline{width:100%;padding:12px;font-size:13.5px;margin-top:10px}
+.micro{font-size:12px;color:var(--t3);text-align:center;margin-top:13px;line-height:1.5}
+</style>
+<div class="app">
+  <div class="top">
+    <span class="hlogo" role="img" aria-label="YoboLabs"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/dd53a1d331c97bc7.png" alt="YoboLabs" style="height:20px;width:auto;display:block"></span>
+    <div class="step"><span>Growth audit</span><span class="dots"><i class="d on"></i><i class="d on"></i><i class="d on"></i><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i></span></div>
+  </div>
+  <div class="body-pad">
+    <span class="scanline"><svg viewBox="0 0 24 24"><path d="M20 20l-4-4"/><circle cx="10.5" cy="10.5" r="6.5"/></svg>Scanned your Shopify orders</span>
+    <div class="h1">You're leaving <em>~$15,000</em> on the table</div>
+    <div class="sub">116 customers bought once and went quiet. A single Win-Back campaign is built to bring them back.</div>
+
+    <div class="kpi">
+      <div class="khd">
+        <svg class="kic" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        <span class="klbl">Dormant customers</span>
+        <span class="info" title="Customers with 1+ order and no purchase in 90 days. Recoverable = 116 × 42% typical win-back × $310 AOV. Source: your Shopify order history.">i</span>
+      </div>
+      <div class="kval">116<span class="kdelta">90+ days quiet</span></div>
+      <div class="krecover">Recoverable: <b>~$15,000</b></div>
+      <div class="kbasis">116 lapsed × 42% typical win-back rate × $310 avg order value</div>
+    </div>
+
+    <div class="minis">
+      <div class="mini"><div class="l">Lapsed 90d+</div><div class="v">116</div></div>
+      <div class="mini"><div class="l">Avg order value</div><div class="v">$310</div></div>
+    </div>
+
+    <div class="src"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg>Pulled from your connected Shopify store — no numbers made up.</div>
+
+    <button class="btn cta">Build the Win-Back campaign</button>
+    <button class="btnghost gline">See all 116 customers</button>
+    <div class="micro">Free to build and preview. You only pay when you launch.</div>
+  </div>
+</div>
+
+</html>

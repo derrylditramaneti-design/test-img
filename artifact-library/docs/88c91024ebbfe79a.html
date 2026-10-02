@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business DNA, Drunk Elephant</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#f4f4f5}
+.dnaR-wrap{max-width:420px;margin:24px auto;background:#fff}
+/* ===== dnaR — bb.q Business DNA skin, scoped to the "Brand DNA — full profile" phone mock only.
+   Adapted from bbq-chicken/pages/original/page.css (.dna/.tile/.tnum/.sub/.chip/.para).
+   Prefix .dnaR- so nothing collides with this prototype's existing CSS.
+   Inter only — the bb.q typekit face is client-specific and is deliberately NOT imported. ===== */
+/* new home: #mockify Brand-discovery section — own scroll viewport, white bg scoped here only */
+.dnaR-slot{display:block;width:393px;height:852px;overflow-y:auto;border-radius:9px;background:#fff}
+.dnaR-slot::-webkit-scrollbar{width:6px}.dnaR-slot::-webkit-scrollbar-thumb{background:#d4d4d8;border-radius:3px}
+.dnaR-fig{flex:0 0 auto;max-width:100%}
+.dnaR-fig .mkdev{width:max-content}
+.dnaR-cap{font-size:11.5px;color:#52525b;line-height:1.4;max-width:318px}
+.dnaR-cap b{color:#18181b;font-weight:800}
+.dnaR{--r:#d6001c;--ink:#111114;--gy:#6a6a74;--ft:#9a9aa2;--ln:#e5e5e8;--tl:#f6f6f7;
+  font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  background:#fff;color:#2a2a30;line-height:1.5;text-align:left;
+  padding:0 8px 14px;-webkit-font-smoothing:antialiased}
+.dnaR *{box-sizing:border-box}
+.dnaR-bar{position:sticky;top:0;z-index:3;display:flex;align-items:center;justify-content:space-between;
+  gap:8px;background:#fff;border-bottom:1px solid var(--ln);margin:0 -8px 9px;padding:9px 11px 8px}
+.dnaR-bar b{font-size:11px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.dnaR-x{font-size:13px;line-height:1;color:var(--ft)}
+.dnaR-tile{background:var(--tl);border-radius:13px;padding:11px 10px 12px;margin-bottom:8px}
+.dnaR-tile.dnaR-dark{background:var(--ink)}
+.dnaR-tile.dnaR-hero{background:var(--r)}
+.dnaR-tnum{font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gy);margin-bottom:9px}
+.dnaR-tnum.dnaR-lt{color:rgba(255,255,255,.75)}
+.dnaR-sub{font-size:7.5px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--r);margin:10px 0 5px}
+.dnaR-sub.dnaR-lt{color:#ffd2d8}
+.dnaR-tnum + .dnaR-sub{margin-top:0}
+.dnaR-idrow{display:flex;align-items:center;gap:8px}
+.dnaR-idmark{width:40px;height:40px;flex:0 0 auto;background:#fff;border-radius:10px;display:grid;place-items:center;padding:4px}
+.dnaR-idmark img{width:100%;height:auto;display:block;border-radius:6px}
+.dnaR-idname{font-size:14px;font-weight:900;letter-spacing:-.02em;line-height:1.15;color:var(--ink)}
+.dnaR-idsub{font-size:8.5px;color:var(--ft);margin-top:2px;line-height:1.35}
+.dnaR-para{font-size:10.5px;margin:8px 0 0;color:#2a2a30}
+.dnaR-para.dnaR-lt{color:rgba(255,255,255,.85)}
+.dnaR-say{color:#fff;font-size:13px;line-height:1.35;font-weight:800;letter-spacing:-.01em;margin:0}
+.dnaR-chips{display:flex;flex-wrap:wrap;gap:5px}
+.dnaR-chip{background:#fff;border-radius:999px;padding:5px 10px;font-size:9.5px;font-weight:700;color:#2a2a30}
+.dnaR-palgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
+.dnaR-pal{background:#fff;border-radius:8px;padding:6px;font-size:8px;color:var(--gy);text-align:center}
+.dnaR-pal i{display:block;height:24px;border-radius:5px;margin-bottom:4px}
+.dnaR-statgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px}
+.dnaR-st{background:#fff;border-radius:8px;padding:8px 5px;text-align:center}
+.dnaR-st b{display:block;font-size:15px;font-weight:900;letter-spacing:-.02em;color:var(--ink)}
+.dnaR-st span{display:block;font-size:6.8px;text-transform:uppercase;letter-spacing:.07em;color:var(--ft);margin-top:2px;line-height:1.3}
+.dnaR-card{background:#fff;border-radius:9px;padding:9px 10px;font-size:10px;color:#2a2a30;line-height:1.5}
+.dnaR-card + .dnaR-card{margin-top:5px}
+.dnaR-card b{color:var(--ink);font-weight:800}
+.dnaR-list{display:flex;flex-direction:column;gap:5px}
+.dnaR-li{background:#fff;border-radius:9px;padding:8px 10px;font-size:9.8px;color:#2a2a30;line-height:1.45}
+.dnaR-kv{display:flex;flex-direction:column;gap:1px}
+.dnaR-kv i{font-style:normal;font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;color:var(--ft)}
+.dnaR-opp{background:#fff;border-radius:9px;padding:9px 10px;font-size:9.8px;color:#2a2a30;line-height:1.5}
+.dnaR-opp + .dnaR-opp{margin-top:5px}
+.dnaR-opp b{display:block;font-size:10.5px;font-weight:800;color:var(--ink);margin-bottom:1px}
+</style>
+</head>
+<body>
+<div class="dnaR-wrap"><div class="dnaR"><div class="dnaR-bar"><b>Brand DNA</b><span class="dnaR-x">&times;</span></div><section class="dnaR-tile"><div class="dnaR-idrow"><span class="dnaR-idmark"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/1bdaac368a3abd5a.png" alt="Drunk Elephant Skincare"></span><div><div class="dnaR-idname">Drunk Elephant Skincare</div><div class="dnaR-idsub">Beauty &amp; Personal Care</div></div></div><p class="dnaR-para">Drunk Elephant is a high-performance skincare brand committed to using only ingredients that either directly benefit the skin's health or support the integrity of their formulations. They focus on 'biocompatible' skincare that avoids the 'Suspicious 6' to deliver a clear, glowing complexion.</p><div class="dnaR-sub">Industry</div><div class="dnaR-chips"><span class="dnaR-chip">Beauty &amp; Personal Care</span></div></section><section class="dnaR-tile"><div class="dnaR-tnum">Brand colors</div><div class="dnaR-palgrid"><div class="dnaR-pal"><i style="background:#E7FE3A"></i>#E7FE3A</div><div class="dnaR-pal"><i style="background:#E4F372"></i>#E4F372</div><div class="dnaR-pal"><i style="background:#93F655"></i>#93F655</div><div class="dnaR-pal"><i style="background:#FFFFFF;border:1px solid #e2e2e6"></i>#FFFFFF</div><div class="dnaR-pal"><i style="background:#1A1A1A"></i>#1A1A1A</div></div></section><section class="dnaR-tile"><div class="dnaR-tnum">Brand personality</div><div class="dnaR-chips"><span class="dnaR-chip">Playful</span><span class="dnaR-chip">Scientific</span><span class="dnaR-chip">Transparent</span><span class="dnaR-chip">Bold</span><span class="dnaR-chip">Friendly</span></div></section><section class="dnaR-tile"><div class="dnaR-tnum">Target audience</div><div class="dnaR-card dnaR-kv"><i>Age</i><span>Women and men aged 18-40</span></div><div class="dnaR-card dnaR-kv"><i>Location</i><span>primarily located in urban areas with middle-to-high disposable income.</span></div></section><section class="dnaR-tile"><div class="dnaR-tnum">Engagement metrics</div><div class="dnaR-statgrid"><div class="dnaR-st"><b>0.06%</b><span>Engagement</span></div><div class="dnaR-st"><b>932</b><span>Avg likes</span></div><div class="dnaR-st"><b>209</b><span>Avg comments</span></div></div></section><section class="dnaR-tile dnaR-hero"><div class="dnaR-tnum dnaR-lt">Unique selling proposition</div><p class="dnaR-say">A 'clean-clinical' approach that combines high-efficacy active ingredients with a biocompatible philosophy, allowing users to mix products into customized 'skincare smoothies.'</p></section><section class="dnaR-tile"><div class="dnaR-tnum">Key differentiators</div><div class="dnaR-list"><div class="dnaR-li">The 'Suspicious 6' exclusion list</div><div class="dnaR-li">Mixable formulations that allow for customized routines</div><div class="dnaR-li">Iconic, functional packaging designed to preserve ingredient potency</div><div class="dnaR-li">A 'clean-clinical' hybrid identity</div></div></section><section class="dnaR-tile dnaR-dark"><div class="dnaR-tnum dnaR-lt">Positioning statement</div><p class="dnaR-para dnaR-lt">For the results-oriented consumer who refuses to compromise on safety, Drunk Elephant is the prestige skincare brand that delivers professional-grade, biocompatible solutions through a playful and transparent lens.</p></section><section class="dnaR-tile"><div class="dnaR-tnum">Competitive advantages</div><div class="dnaR-list"><div class="dnaR-li">Strong retail presence in Sephora and Ulta</div><div class="dnaR-li">Highly recognizable neon-capped packaging</div><div class="dnaR-li">Pioneer of the 'clean beauty' movement with a clinical focus</div><div class="dnaR-li">Innovative 'skincare smoothie' application concept</div></div></section><section class="dnaR-tile"><div class="dnaR-tnum">01 &middot; Brand overview</div><div class="dnaR-sub">Business description</div><div class="dnaR-card">Drunk Elephant is a powerhouse in the skincare industry, known for its vibrant packaging and serious commitment to ingredient safety. The brand offers a comprehensive range of serums, moisturizers, and treatments that are designed to be mixed and matched, creating a personalized and effective skincare experience.</div><div class="dnaR-sub">Brand personality</div><div class="dnaR-card">The brand's character is a unique blend of scientific authority and whimsical charm. It speaks to its audience like a knowledgeable best friend&mdash;approachable and fun, yet deeply informed about the complexities of skin biology and formulation.</div></section><section class="dnaR-tile"><div class="dnaR-tnum">02 &middot; Target customer</div><div class="dnaR-sub">Primary segment</div><div class="dnaR-card">The 'Skincare Savvy' consumer who is well-versed in active ingredients like Vitamin C and AHAs. They are driven by the desire for a 'lit-from-within' glow and are willing to invest in premium products that guarantee efficacy without irritation.</div><div class="dnaR-sub">Secondary segment</div><div class="dnaR-card">The 'Conscious Minimalist' who seeks a simplified, clean routine. This group is motivated by the brand's 'Suspicious 6' philosophy, trusting that the products will respect their skin's natural barrier while delivering visible results.</div><div class="dnaR-sub">Customer motivations</div><div class="dnaR-list"><div class="dnaR-li">Achieving a visible 'glowy' complexion</div><div class="dnaR-li">Simplifying complex routines through 'smoothies'</div><div class="dnaR-li">Peace of mind from 'clean' and 'biocompatible' ingredients</div><div class="dnaR-li">Social validation from using a trend-setting prestige brand</div></div></section><section class="dnaR-tile"><div class="dnaR-tnum">03 &middot; Competitor landscape</div><div class="dnaR-sub">Direct competitors</div><div class="dnaR-card">While brands like Glow Recipe and Sunday Riley also compete in the prestige 'clean' space, Drunk Elephant distinguishes itself through a more rigorous clinical focus and its unique 'smoothie' application method, which encourages brand loyalty across the entire product line.</div><div class="dnaR-sub">Indirect competitors</div><div class="dnaR-card">Drunk Elephant also faces competition from dermatological brands like La Roche-Posay and luxury houses like Clinique. However, it wins by offering a more modern, lifestyle-oriented brand experience that feels more personal and less 'sterile' than traditional clinical brands.</div></section><section class="dnaR-tile"><div class="dnaR-tnum">04 &middot; Growth opportunities</div><div class="dnaR-opp"><b>Engagement Revitalization</b>Utilize interactive features like 'Add Yours' templates and community polls to turn passive followers into active participants.</div><div class="dnaR-opp"><b>Educational Deep-Dives</b>Create a series of 'Ingredient Spotlights' that explain the science behind C-Firma and T.L.C. Framboos in an easy-to-digest format.</div><div class="dnaR-opp"><b>UGC-First Strategy</b>Incentivize customers to share their 'Skincare Smoothies' and 'Shelfies' to build social proof and reach new audiences organically.</div></section></div></div>
+</body>
+</html>

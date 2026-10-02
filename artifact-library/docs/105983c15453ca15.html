@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><title>Connect, Drunk Elephant</title><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root,:host{--bg:#09090b;--card:#18181b;--active:#252528;--border:#26262b;--border2:#1e1e22;--green:#6FED45;--green-br:#6FED45;--green-line:#166534;--green-dk:#0a1f12;--blue:#3b82f6;--red:#ef4444;--amber:#f59e0b;--t1:#f4f4f5;--t2:#a1a1aa;--t3:#71717a;--ui:'Inter',system-ui,-apple-system,sans-serif;--display:'Satoshi','Inter',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--t1);font-family:var(--ui);font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+body{display:flex;justify-content:center}
+.app{width:100%;max-width:398px;background:var(--bg);color:var(--t1)}
+.btn{background:var(--green);color:#04120a;border:none;border-radius:9px;font-weight:700;cursor:pointer;font-family:var(--ui)}
+.btnsm{background:var(--green);color:#04120a;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-family:var(--ui);height:36px;padding:0 15px;font-size:13px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:13px 15px;border-bottom:1px solid var(--border)}
+.top .hlogo{display:inline-flex;align-items:center}.top .hlogo svg{height:20px;width:auto;display:block}
+.step{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:600}
+.step .dots{display:flex;gap:5px}.step .d{width:6px;height:6px;border-radius:50%;background:var(--t3)}.step .d.on{background:var(--green)}
+.body-pad{padding:24px 16px 26px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t3)}
+.h1{font-family:var(--display);font-size:25px;font-weight:800;letter-spacing:-.03em;line-height:1.15;margin:10px 0 0}
+.sub{font-size:13.5px;color:var(--t2);line-height:1.55;margin-top:9px}
+.row{display:flex;align-items:center;gap:13px;border:1px solid var(--border);border-radius:12px;background:var(--card);padding:14px;margin-top:14px}
+.row.done{border-color:var(--green-line)}
+.av{width:40px;height:40px;border-radius:10px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;font-family:var(--display)}
+.av.sh,.av.kl{background:#232426;color:#f4f4f5;border:1px solid var(--border)}
+.rtx{flex:1;min-width:0}
+.rtx b{font-size:15px;font-weight:700;display:block}
+.rtx span{font-size:12.5px;color:var(--t3);display:block;margin-top:2px;line-height:1.4}
+.rok{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--green-br)}
+.rok svg{width:16px;height:16px;stroke:var(--green-br);fill:none;stroke-width:2.4}
+.badge{font-size:10.5px;font-weight:700;letter-spacing:.03em;color:var(--green-br);background:var(--green-dk);border:1px solid var(--green-line);border-radius:999px;padding:2px 9px}
+.why{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--border2);background:#0c0c0f;border-radius:11px;padding:13px;margin-top:18px}
+.why svg{width:17px;height:17px;stroke:var(--green-br);fill:none;stroke-width:2;flex:0 0 auto;margin-top:1px}
+.why span{font-size:12.5px;color:var(--t2);line-height:1.5}.why b{color:var(--t1)}
+.killed{font-size:11.5px;color:var(--t3);text-align:center;margin-top:16px;line-height:1.5}
+.killed s{color:#52525b}
+.cta{width:100%;padding:14px;font-size:15px;margin-top:20px}
+.secure{display:flex;align-items:center;justify-content:center;gap:7px;font-size:11.5px;color:var(--t3);margin-top:13px}
+.secure svg{width:13px;height:13px;stroke:var(--t3);fill:none;stroke-width:2}
+</style>
+<div class="app">
+  <div class="top">
+    <span class="hlogo" role="img" aria-label="YoboLabs"><img src="https://raw.githubusercontent.com/derrylditramaneti-design/test-img/main/artifact-library/img/dd53a1d331c97bc7.png" alt="YoboLabs" style="height:20px;width:auto;display:block"></span>
+    <div class="step"><span>Connect</span><span class="dots"><i class="d on"></i><i class="d on"></i><i class="d on"></i><i class="d on"></i><i class="d"></i><i class="d"></i><i class="d"></i></span></div>
+  </div>
+  <div class="body-pad">
+    <div class="eyebrow">One step, both tools</div>
+    <div class="h1">Connect your store & email</div>
+    <div class="sub">So we can scan for dormant customers and send the campaigns that win them back. One tap each — nothing to type.</div>
+
+    <div class="row done">
+      <div class="av sh">S</div>
+      <div class="rtx"><b>Shopify</b><span>drunkelephant.myshopify.com</span></div>
+      <span class="rok"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Connected</span>
+    </div>
+    <div class="row">
+      <div class="av kl">K</div>
+      <div class="rtx"><b>Klaviyo</b><span>Sends your email + SMS campaigns</span></div>
+      <button class="btnsm">Connect</button>
+    </div>
+
+    <div class="why"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg><span><b>One tap, not a form.</b> We open the official Shopify / Klaviyo login — no store URL, API key, or copy-paste. Revoke anytime.</span></div>
+
+    <button class="btn cta">Continue</button>
+    <div class="secure"><svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Secured by official OAuth · we never see your password</div>
+  </div>
+</div>
+
+</html>
