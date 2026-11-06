@@ -580,51 +580,6 @@ body.flow .cv2 .tbi{height:64px}
 #fs .fst{font-size:13px;font-weight:700;margin-left:6px}
 #fs .fsi{font-style:normal}
 body.flow #fs .fst{display:none}
-/* 6 Nov phone cover B: wordmark, headline, Daniel, intro, logos. One screen, never scrolls; sizes follow screen height. Phone only. */
-body.flow .s.cv2{flex-direction:column!important;overflow:hidden!important;padding:0 0 env(safe-area-inset-bottom,0px)!important}
-body.flow .s.cv2 .cvl,body.flow .s.cv2 .cv-tx{display:contents!important}
-body.flow .s.cv2 .wm{order:1;width:clamp(96px,14svh,124px);margin:clamp(14px,2.6svh,24px) 20px 0;flex:none}
-body.flow .s.cv2 h1{order:2;font-size:clamp(25px,4svh,34px)!important;line-height:1.08;margin:clamp(8px,1.8svh,16px) 20px 0!important;flex:none}
-body.flow .s.cv2 .dpan{order:3;position:relative;height:auto!important;flex:1 1 0!important;min-height:150px;margin-top:clamp(10px,2svh,18px)}
-body.flow .s.cv2 .dpan img{position:absolute;inset:0;width:100%;height:100%;object-position:50% 16%}
-body.flow .s.cv2 .dpan p{left:20px;bottom:clamp(10px,1.8svh,16px)}
-body.flow .s.cv2 .dpan b{font-size:clamp(18px,2.8svh,24px)}
-body.flow .s.cv2 .dpan span{font-size:clamp(10.5px,1.45svh,12.5px)}
-body.flow .s.cv2 .lead{order:4;font-size:clamp(13.5px,1.85svh,15.5px)!important;line-height:1.42;margin:clamp(10px,1.8svh,16px) 20px 0!important;flex:none}
-body.flow .s.cv2 .tby{order:5;margin:clamp(10px,1.8svh,16px) 20px clamp(12px,2.2svh,20px)!important;flex:none}
-body.flow .s.cv2 .tbl{margin:0 0 clamp(5px,.9svh,8px)!important}
-body.flow .s.cv2 .tbr{grid-template-columns:repeat(3,1fr)!important;gap:clamp(6px,1svh,8px)!important}
-body.flow .s.cv2 .tbi{height:clamp(36px,5.6svh,48px)!important;border-radius:10px}
-body.flow .s.cv2 .tbi img{max-height:62%!important;max-width:74%!important}
-body.flow .s.cv2 .k-surface img,body.flow .s.cv2 .k-kahi img{max-height:30%!important}
-body.flow .s.cv2 .k-dcost img{max-height:44%!important}
-/* 6 Nov phone v3: vertical pages. Phone only (body.flow). #stage scrolls up/down, every slide is a page, gentle snap.
-   Sideways swipe belongs to carousels (How it works, Pricing). Desktop rules above are untouched. */
-body.flow #stage{overflow-y:auto;overflow-x:hidden;scroll-snap-type:y proximity;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-body.flow #stage::-webkit-scrollbar{display:none}
-body.flow .s{display:flex!important;position:relative!important;inset:auto!important;min-height:var(--ph,100svh);height:auto;overflow:visible!important;scroll-snap-align:start}
-body.flow .s.cv2{height:var(--ph,100svh);overflow:hidden!important}
-body.flow .s.gal{height:var(--ph,100svh);min-height:0}
-body.flow .gal .gg{overscroll-behavior:auto}
-body.flow .s.on.in-f,body.flow .s.on.in-b{animation:none}
-body.flow #prev,body.flow #next{transform:rotate(90deg)}
-/* carousels: one card at a time, next one peeking, snap per card */
-.mcd{display:none}
-body.flow .hw,body.flow .pcs{display:flex!important;grid-template-columns:none!important;gap:12px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;margin:0 -20px;padding:4px 20px 6px;scroll-padding:0 20px;scrollbar-width:none}
-body.flow .hw::-webkit-scrollbar,body.flow .pcs::-webkit-scrollbar{display:none}
-body.flow .hw>div,body.flow .pcs>.pc{flex:0 0 82%;scroll-snap-align:center;scroll-snap-stop:always}
-body.flow .hw>div{display:flex;flex-direction:column;align-items:center}
-body.flow .hw b{font-size:18px;margin:2px 0 10px}
-body.flow .hw img{width:auto;max-width:100%;height:calc(var(--ph,100svh) - 250px);max-height:560px;min-height:300px;object-fit:contain}
-body.flow .mcd{display:flex;justify-content:center;gap:8px;margin:12px 0 0}
-body.flow .mcd i{width:7px;height:7px;border-radius:50%;background:#c9c6b6;transition:width .2s,background .2s}
-body.flow .mcd i.on{width:20px;border-radius:4px;background:var(--g)}
-/* pricing: free first batch on top, plans swipe */
-body.flow [data-id=price]{display:flex;flex-direction:column}
-body.flow [data-id=price] .bar{order:1;flex-direction:column;gap:8px;margin:4px 0 14px}
-body.flow [data-id=price] .pcs{order:2}
-body.flow [data-id=price] .mcd{order:3}
-body.flow .pcs>.pc{min-height:0}
 </style></head>
 <body>
 <div id="vp"><div id="stage">
@@ -901,7 +856,7 @@ addEventListener('resize',fit);fit();go((parseInt(location.hash.slice(1))||1)-1)
  // swipe: a clear sideways swipe changes slide; vertical moves scroll the slide; filter bars and the viewer keep their own gestures
  var x0,y0,t0,skip;var vp=document.getElementById('vp');
  vp.addEventListener('touchstart',function(e){var t=e.touches[0];x0=t.clientX;y0=t.clientY;t0=Date.now();skip=!!e.target.closest('#lb,select')},{passive:true});
- vp.addEventListener('touchend',function(e){if(skip||x0==null||document.body.classList.contains('flow'))return;var t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=null;
+ vp.addEventListener('touchend',function(e){if(skip||x0==null)return;var t=e.changedTouches[0],dx=t.clientX-x0,dy=t.clientY-y0;x0=null;
   if(Math.abs(dx)>60&&Math.abs(dx)>1.6*Math.abs(dy)&&Date.now()-t0<700)go(cur+(dx<0?1:-1))},{passive:true});
  var it;function wake(){document.body.classList.remove('idle');clearTimeout(it);it=setTimeout(function(){if(innerWidth>=900)document.body.classList.add('idle')},2500)}
  addEventListener('mousemove',wake);addEventListener('keydown',wake);wake()})();
@@ -939,22 +894,5 @@ addEventListener('resize',fit);fit();go((parseInt(location.hash.slice(1))||1)-1)
 
 // 5 Nov: nav full-screen label follows the language
 (function(){function u(){var f=document.querySelector('#fs .fst');if(f)f.textContent=T('Full screen')}document.addEventListener('langchange',u);u()})();
-
-// 6 Nov phone v3: vertical pages. On phone the stage scrolls up/down through every slide; the slide in the middle of the
-// screen becomes 'cur' (videos, demos, progress follow). Arrows, slide list and links scroll to a slide. Desktop unchanged.
-(function(){var B=document.body,core=go,on=false,raf=0;
- function ph(){st.style.setProperty('--ph',st.clientHeight+'px')}
- function at(){var y=st.scrollTop+st.clientHeight*0.45;for(var i=S.length-1;i>=0;i--)if(S[i].offsetTop<=y)return i;return 0}
- function sync(){raf=0;var i=at();if(i!==cur)core(i)}
- st.addEventListener('scroll',function(){if(on&&!raf)raf=requestAnimationFrame(sync)},{passive:true});
- go=function(k){if(!on)return core(k);var i=Math.max(0,Math.min(S.length-1,k));st.scrollTo({top:S[i].offsetTop,behavior:'smooth'})};
- function mode(){var f=B.classList.contains('flow');if(f===on){if(f)ph();return}on=f;
-  if(f){ph();st.scrollTop=S[cur].offsetTop}else{st.scrollTop=0;st.style.removeProperty('--ph')}}
- addEventListener('resize',mode);mode();
- // carousel dots
- [].forEach.call(document.querySelectorAll('.hw,.pcs'),function(c){var n=c.children.length,d=document.createElement('div');d.className='mcd';d.setAttribute('aria-hidden','true');
-  for(var i=0;i<n;i++)d.appendChild(document.createElement('i'));c.parentNode.insertBefore(d,c.nextSibling);
-  function upd(){var w=c.children[0]?c.children[0].offsetWidth+12:1,k=Math.round(c.scrollLeft/w);[].forEach.call(d.children,function(x,j){x.classList.toggle('on',j===k)})}
-  c.addEventListener('scroll',upd,{passive:true});upd()})})();
 </script>
 </body></html>
