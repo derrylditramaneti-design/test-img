@@ -580,6 +580,48 @@ body.flow .cv2 .tbi{height:64px}
 #fs .fst{font-size:13px;font-weight:700;margin-left:6px}
 #fs .fsi{font-style:normal}
 body.flow #fs .fst{display:none}
+/* 6 Nov phone cover v2 (phone only): wordmark, headline, Daniel, intro, logos on one screen.
+   Daniel takes the leftover height. Logo sizes are pixels only (Safari ignores % max-height inside grid tiles). */
+body.flow .s.cv2{display:none;flex-direction:column!important;overflow:hidden!important;padding:0!important}
+body.flow .s.cv2.on{display:flex}
+body.flow .s.cv2 .cvl,body.flow .s.cv2 .cv-tx{display:contents!important}
+body.flow .s.cv2 .wm{order:1;width:110px;margin:18px 20px 0;flex:none}
+body.flow .s.cv2 h1{order:2;font-size:27px!important;line-height:1.08;margin:12px 20px 0!important;flex:none}
+body.flow .s.cv2 .dpan{order:3;position:relative;width:auto;height:auto!important;flex:1 1 0!important;min-height:150px;margin-top:14px}
+body.flow .s.cv2 .dpan img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 16%}
+body.flow .s.cv2 .dpan p{left:20px;bottom:12px}
+body.flow .s.cv2 .dpan b{font-size:21px}
+body.flow .s.cv2 .dpan span{font-size:11.5px}
+body.flow .s.cv2 .lead{order:4;font-size:14.5px!important;line-height:1.4;margin:12px 20px 0!important;flex:none}
+body.flow .s.cv2 .tby{order:5;margin:12px 20px 16px!important;flex:none}
+body.flow .s.cv2 .tbl{margin:0 0 6px!important}
+body.flow .s.cv2 .tbr{grid-template-columns:repeat(3,1fr)!important;gap:8px!important}
+body.flow .s.cv2 .tbi{height:48px!important;border-radius:10px}
+body.flow .s.cv2 .tbi img{max-width:72%!important;max-height:34px!important}
+body.flow .s.cv2 .k-dcost img{max-height:18px!important}
+body.flow .s.cv2 .k-surface img,body.flow .s.cv2 .k-kahi img{max-height:11px!important;max-width:90%!important}
+body.flow .s.cv2 .k-simetri img{max-height:32px!important}
+@media (max-height:700px){
+ body.flow .s.cv2 h1{font-size:24px!important;margin-top:10px!important}
+ body.flow .s.cv2 .lead{font-size:13.5px!important;line-height:1.36;margin-top:10px!important}
+ body.flow .s.cv2 .tby{margin:10px 20px 12px!important}
+ body.flow .s.cv2 .tbi{height:42px!important}
+ body.flow .s.cv2 .tbi img{max-height:30px!important}
+ body.flow .s.cv2 .k-dcost img{max-height:16px!important}
+ body.flow .s.cv2 .k-surface img,body.flow .s.cv2 .k-kahi img{max-height:10px!important}
+ body.flow .s.cv2 .k-simetri img{max-height:28px!important}
+}
+@media (max-height:600px){
+ body.flow .s.cv2 .wm{width:96px;margin-top:14px}
+ body.flow .s.cv2 h1{font-size:22px!important}
+ body.flow .s.cv2 .dpan{margin-top:10px}
+ body.flow .s.cv2 .lead{font-size:13px!important;line-height:1.32}
+ body.flow .s.cv2 .tbi{height:38px!important}
+ body.flow .s.cv2 .tbi img{max-height:27px!important}
+ body.flow .s.cv2 .k-dcost img{max-height:15px!important}
+ body.flow .s.cv2 .k-surface img,body.flow .s.cv2 .k-kahi img{max-height:9.5px!important}
+ body.flow .s.cv2 .k-simetri img{max-height:25px!important}
+}
 </style></head>
 <body>
 <div id="vp"><div id="stage">
